@@ -1,7 +1,7 @@
 # Basics
 site_name: HnuSec 暑期培训 2024
-# repo_url: https://github.com/sast-summer-training-2023/sast-summer-training-2023.github.io
-# repo_name: SAST Summer Training 2023
+repo_url: https://github.com/natro92/HnuSec-Training-Website
+repo_name: HnuSec-Training-Website
 
 theme:
   name: material
@@ -30,12 +30,12 @@ extra_javascript:
 
 plugins:
   - search
-  # - git-revision-date-localized:
-  #     fallback_to_build_date: true
-  #     locale: zh
-  # - git-authors:
-  #     show_contribution: true
-  #     show_line_count: true
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      locale: zh
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
 
 validation:
   absolute_links: ignore
