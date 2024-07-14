@@ -7,6 +7,7 @@
 :card_index_dividers: **培训前各个方向的准备**：
 
 - :globe_with_meridians: **WEB**：[WEB 课前准备](/web/preparation)
+- 🕹️**Pwn**：[Pwn 课前准备](/pwn/preparation)
 - 🔑**Crypto**：[Crypto 课前准备](/crypto/preparation)
 - 👾**Reverse**：[Reverse 课前准备](/reverse/preparation)
 

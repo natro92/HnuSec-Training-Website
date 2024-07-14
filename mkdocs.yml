@@ -90,6 +90,8 @@ nav:
     - index.md
   - Web:
     - 课前准备: web/preparation.md
+  - Pwn:
+    - 课前准备: pwn/preparation.md
   - Crypto:
     - 课前准备: crypto/preparation.md
   - Reverse:
