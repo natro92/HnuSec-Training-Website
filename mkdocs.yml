@@ -91,7 +91,7 @@ nav:
   - Web:
     - 课前准备: web/preparation.md
     - 方向指北: web/guidance.md
-    - 课前预热: web/lession0.md
+    - 课前预热: web/lession.md
   - Pwn:
     - 课前准备: pwn/preparation.md
   - Crypto:
