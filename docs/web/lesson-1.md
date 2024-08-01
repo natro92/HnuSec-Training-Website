@@ -165,6 +165,7 @@ CTFweb指南[MoeCTF_2023/Challenges/Web/Web入门指北/web入门指北.md at ma
 
 主播同款Burp 下载（ https://drive.google.com/file/d/1PxxAGdfmfTn1yb-dcc3xPtPytyH--zHW/view?usp=sharing
 
+感谢各位的聆听，这里只是对web学习进行了一个基础知识的讲解，希望大家共同学习进步（￣︶￣）↗　
 
 # 作业
 使用语雀、Obsidian、Typora等笔记软件，作业内容：
@@ -176,8 +177,10 @@ CTFweb指南[MoeCTF_2023/Challenges/Web/Web入门指北/web入门指北.md at ma
 6. [bp - Bugku CTF](https://ctf.bugku.com/challenges/detail/id/314.html)
 7. 其它题，可以自己找点来练
 
-作业（markdown/PDF）交到 https://github.com/Rxiain/web-work
+作业（markdown/PDF）提交到 https://github.com/Rxiain/web-work
 
-**ddl:** 8月14号
+有问题在答疑群里问
+
+**ddl:** 8月14号24点
 
 *markdown格式的文件注意图片要用图床链接*
