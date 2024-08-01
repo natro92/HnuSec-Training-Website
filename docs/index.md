@@ -68,12 +68,12 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 #### 课前准备
 
 1. 下载好Burp Suite（社区版或pro均可）。
-2. 准备好富文本笔记软件（语雀、Obsiaian、Typora等），支撑后续学习。
+2. 准备好富文本笔记软件（语雀、Obsidian、Typora等），支撑后续学习。
 
 #### 课程讲义 & 课后作业
 
-待课后补充。
-
+[Web第一节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-1)
+作业在最后
 ### 🕹️/👾 8 月 2 日：汇编&IDA
 
 #### 课前准备
