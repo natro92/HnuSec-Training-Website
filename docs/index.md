@@ -74,6 +74,7 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 [Web第一节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-1)
 作业在最后
+-----
 ### 🕹️/👾 8 月 2 日：汇编&IDA
 
 #### 课前准备
@@ -86,3 +87,7 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 待课后补充。
 
 -----
+### 8 月 4 日：misc介绍及基础
+
+#### 课程讲义 & 课后作业
+[misc第一节课讲义 & 作业](https://hnusec-training.natro92.fun/misc/lesson-1)
