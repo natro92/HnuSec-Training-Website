@@ -74,7 +74,11 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 [Web第一节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-1)
 作业在最后
+
+作业（PDF）提交到 http://ctf.miaoaixuan.cn/ 的web作业提交处
+
 -----
+
 ### 🕹️/👾 8 月 2 日：汇编&IDA
 
 #### 课前准备
@@ -87,6 +91,27 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 待课后补充。
 
 -----
+
+
+### 💻 8 月 3 日：初识RCE
+
+[@Ewoji](http://ewojii.com/)
+
+#### 课前准备
+
+1.安装好Linux系统（vm虚拟机或者wsl都可）
+
+2.配置好php语言环境（Windows和Linux都有最好）
+
+3.了解一下正则表达式
+
+#### 课程讲义 & 课后作业
+
+[Web第二节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-3)
+作业在最后
+
+---
+
 ### 8 月 4 日：misc介绍及基础
 
 #### 课程讲义 & 课后作业
