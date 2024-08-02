@@ -129,7 +129,7 @@ Content-Length: 1250
 ## F12
 插件推荐`HackBar V2`，`Max HacKBar`(一个坏了就用另一个😇)
 ## BurpSuite
-## BURP
+### BURP
 Burp Suite是一款集成化的渗透测试工具，包含了很多功能，可以帮助我们高效地完成对Web应用程序的渗透测试和攻击,由Java语言编写
 **抓包、改包的工具**
 配合burp的插件推荐`FoxyProxy`
@@ -141,7 +141,6 @@ Burp Suite是一款集成化的渗透测试工具，包含了很多功能，可�
 1. **Proxy（代理）**：Proxy模块是一个拦截HTTP/S请求和响应的代理服务器。它允许测试人员查看、修改在客户端和服务器之间传递的数据。
 2. **Scanner（扫描器）**：Scanner模块自动地发现Web应用程序中的安全漏洞。它分析Proxy模块捕获的数据，执行各种攻击来识别潜在的安全问题。
 3. **Intruder（入侵者）**：Intruder模块用于自动化定制化的攻击，如枚举标识符、收集有用的数据、利用漏洞等。它通过修改HTTP请求的参数，向服务器发送大量请求来测试系统的弱点。
-   [[LitCTF 2023]Follow me and hack me | NSSCTF](https://www.nssctf.cn/problem/3864)
 5. **Repeater（中继器）**：Repeater模块用于手动修改和重放浏览器和服务器之间的HTTP请求。这有助于测试人员分析应用程序对特定请求的响应。
 6. **Sequencer（序列器）**：Seqencer模块用于测试Web应用程序中会话令牌或其他重要数据项的随机性和预测性。
 7. **Decoder（解码器）**：Decoder模块是一个用于解码和编码数据的工具，支持多种编码格式，如URLu编码、HTML实体编码等。
@@ -151,6 +150,7 @@ Burp Suite是一款集成化的渗透测试工具，包含了很多功能，可�
 
 # Links
 非常好Burp教程[Burp Suite指南](https://t0data.gitbooks.io/burpsuite/content/)
+
 [[LitCTF 2023]Follow me and hack me | NSSCTF](https://www.nssctf.cn/problem/3864)
 
 [ctf.show](https://ctf.show/challenges)
@@ -165,22 +165,31 @@ CTFweb指南[MoeCTF_2023/Challenges/Web/Web入门指北/web入门指北.md at ma
 
 主播同款Burp 下载（ https://drive.google.com/file/d/1PxxAGdfmfTn1yb-dcc3xPtPytyH--zHW/view?usp=sharing
 
-感谢各位的聆听，这里只是对web学习进行了一个基础知识的讲解，希望大家共同学习进步（￣︶￣）↗　
+感谢各位的聆听，这里只是对web学习进行了一个基础知识的讲解，希望大家共同学习进步
+
+（￣︶￣）↗　
 
 # 作业
 使用语雀、Obsidian、Typora等笔记软件，作业内容：
 1. 怎么安装Burp Suite的
+
 2. 做以下题目并写出WriteUp（题解）：
+
 3. [GET - Bugku CTF](https://ctf.bugku.com/challenges/detail/id/70.html) （用hackbar或burp抓包都行）
+
 4. [POST - Bugku CTF](https://ctf.bugku.com/challenges/detail/id/71.html)（用hackbar或burp抓包都行）
+
 5. [本地管理员 - Bugku CTF](https://ctf.bugku.com/challenges/detail/id/79.html)
+
 6. [bp - Bugku CTF](https://ctf.bugku.com/challenges/detail/id/314.html)
+
 7. 其它题，可以自己找点来练
 
-作业（markdown/PDF）提交到 https://github.com/Rxiain/web-work
+
+在ddl前，作业（PDF）与之后web方向的所有作业合并提交到 http://ctf.miaoaixuan.cn/ 的web讲课作业提交处
+
+另外不同课的作业请用**h1标题**来区分
 
 有问题在答疑群里问
 
-**ddl:** 8月14号24点
-
-*markdown格式的文件注意图片要用图床链接*
+**ddl:** 暂定，之后通知，推荐先在两周时间内完成本次作业
