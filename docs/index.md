@@ -89,7 +89,7 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 #### 课程讲义 & 课后作业
 
-待课后补充。
+讲义和作业提交事项在 [Pwn/Re第一节课讲义 & 作业](https://hnusec-training.natro92.fun/pwn/lesson-2)
 
 -----
 
