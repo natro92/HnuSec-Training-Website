@@ -122,3 +122,14 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 [misc第一节课讲义 & 作业](https://hnusec-training.natro92.fun/misc/lesson-1)
 
 -----
+
+### 8 月 5 日：CTF密码方向简介及古典密码
+
+#### 课前准备
+
+1，预先了解CTF密码方向题型分布及大致定义
+
+#### 课程讲义 & 课后作业
+
+[Crypto第一节课讲义&作业](https://hnusec-training.natro92.fun/crypto/lesson-1/)
+
