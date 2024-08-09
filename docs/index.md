@@ -154,6 +154,6 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 #### 课程讲义 & 课后作业
 
-课后补充
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.md
 
 -----
