@@ -157,3 +157,18 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.md
 
 -----
+-----
+
+### 8 月 10 日：反序列化
+
+#### 课前准备
+
+1.学习基础的php语言
+  
+2.安装php环境，集成的phpstudy也可以
+
+#### 课程讲义 & 课后作业
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.10.md
+
+-----
