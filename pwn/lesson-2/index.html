@@ -898,13 +898,13 @@
 </tr>
 <tr>
 <td>JP、JPE</td>
-<td>结果中1的个数为偶数则跳转<br/>jump if parity / jump if parity even</td>
+<td>结果中 1 的个数为偶数则跳转<br/>jump if parity / jump if parity even</td>
 <td>PF=1</td>
 <td></td>
 </tr>
 <tr>
 <td>JNP、JPO</td>
-<td>结果中1的个数不为偶数则跳转<br/>jump if not parity / jump if parity odd</td>
+<td>结果中 1 的个数不为偶数则跳转<br/>jump if not parity / jump if parity odd</td>
 <td>PF=0</td>
 <td></td>
 </tr>
@@ -964,24 +964,19 @@
 </tr>
 <tr>
 <td>JNLE、JG</td>
-<td>大于则跳转 <strong>（有符号数）</strong><br/>jump if not less equal /  jump if greater</td>
+<td>大于则跳转 <strong>（有符号数）</strong><br/>jump if not less equal / jump if greater</td>
 <td>SF=OF 且 ZF=0</td>
-<td></td>
-</tr>
-<tr>
-<td># IDA Pro</td>
-<td></td>
-<td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<h1 id="ida-pro">IDA Pro<a class="headerlink" href="#ida-pro" title="Permanent link">&para;</a></h1>
 <h2 id="_2">基础界面介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="ida-view">IDA View<a class="headerlink" href="#ida-view" title="Permanent link">&para;</a></h3>
 <p>分为图形界面 Graph View 和非图形界面 Non-graph View。用 <code>空格</code> 进行界面切换。</p>
 <h4 id="graph-view">Graph View<a class="headerlink" href="#graph-view" title="Permanent link">&para;</a></h4>
 <p>箭头表示程序流程，蓝色是普通箭头，绿色是满足条件的分支箭头，红色是不满足的。</p>
-<p>用鼠标拖动，<code>ctrl + 滚轮</code> 缩放，<code>w</code> 平铺窗口，<code>1</code> 设置缩放为100%，<code>ctrl + ↑ or ↓</code> 到父母/孩子节点。多选（<code>shift</code> 或者 <code>ctrl + 鼠标</code> 框选）然后右键 group node，能让多个节点合并成一个。右键 layout node 恢复初始视图。</p>
+<p>用鼠标拖动，<code>ctrl + 滚轮</code> 缩放，<code>w</code> 平铺窗口，<code>1</code> 设置缩放为 100%，<code>ctrl + ↑ or ↓</code> 到父母/孩子节点。多选（<code>shift</code> 或者 <code>ctrl + 鼠标</code> 框选）然后右键 group node，能让多个节点合并成一个。右键 layout node 恢复初始视图。</p>
 <h4 id="non-graph-view">Non-graph View<a class="headerlink" href="#non-graph-view" title="Permanent link">&para;</a></h4>
 <p>左侧的箭头表示跳转，实线无条件跳转、虚线是条件跳转。红色表示跳出了当前函数或块的范围。</p>
 <p>左边蓝色圆点是断点，在动态调试的时候用。</p>
@@ -993,12 +988,12 @@
 <p><code>Esc</code> 返回上一个位置。</p>
 <h3 id="subviews">常用 Subviews<a class="headerlink" href="#subviews" title="Permanent link">&para;</a></h3>
 <p>快速打开 subviews <code>ctrl + 1</code></p>
-<p>字符串 strings 窗口：<code>shift + F12</code>
-对象 Names 窗口：<code>shift + F4</code>，字符串以 <code>a</code> 开头
-Functions calls 窗口：函数引用（在伪代码窗口才可使用）</p>
+<p>字符串 strings 窗口：<code>shift + F12</code>。
+对象 Names 窗口：<code>shift + F4</code>，字符串以 <code>a</code> 开头。
+Functions calls 窗口：函数引用（在伪代码窗口才可使用）。</p>
 <p>所有 subviews 都可以 <code>ctrl + F</code> 或者 <code>alt + T</code> 搜索。</p>
 <p>拖动标题可以拉出来窗口并且可以并排显示。想合并窗口需要拖动标题下面那个灰色区域。</p>
-<p>想保存当前布局，<code>Windows - Save desktop</code> 然后再 <code>Load desktop</code>，或者在保存时直接勾选default。注意 debug 时的布局设置需要在 debug 过程中保存哦。</p>
+<p>想保存当前布局，<code>Windows - Save desktop</code> 然后再 <code>Load desktop</code>，或者在保存时直接勾选 default。注意 debug 时的布局设置需要在 debug 过程中保存哦。</p>
 <p>如果布局乱了想重置，<code>Windows - Reset desktop</code> 就好了。</p>
 <h3 id="_3">退出<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>IDA 会询问你是否保存数据库（database）。</p>
@@ -1031,15 +1026,15 @@ Functions calls 窗口：函数引用（在伪代码窗口才可使用）</p>
 支持 C 表达式运算，但在这个时候数字默认为 10 进制 <code>logo + 32*4 = logo + 0x80</code></p>
 <p>按下 <code>X</code> 打开选中对象的交叉引用窗口，或者按下 <code>ctrl + X</code> 显示当前地址的交叉引用情况。这里是指被谁引用（xfer to）。区分 <code>ctrl + J</code>（引用了谁 xfer from，通常用来分析 switch 语句）。</p>
 <h2 id="_6">数据操作<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p><code>alt + L</code> 开始选择。选中数据可以 <code>shift + E</code>  快速导出。按 <code>*</code> 创建数组。</p>
+<p><code>alt + L</code> 开始选择。选中数据可以 <code>shift + E</code> 快速导出。按 <code>*</code> 创建数组。</p>
 <p>字符串可能的乱码问题，在 <code>Options - General - Strings</code> 设置默认编码。可以添加自定义编码。选中字符串 <code>alt + A</code> 单独设定编码。</p>
 <p>更改数据类型：选中对象，按下快捷键，或者查看 <code>Edit</code> 中的相关操作。
 <code>C</code> 将当前内容强制解析为 code ，<code>D</code> 将内容解析为 data， <code>A</code> 将内容解析为字符串，按 <code>*</code> 将内容解析为数组。<code>U</code> 将取消内容解析（还原成原始汇编代码）。</p>
 <p>汇编语句中操作数的操作参考 <code>Edit - Operand type</code>，常用的有 <code>H</code> 转换成十六进制和 <code>R</code> 转换成字符串等。</p>
 <h2 id="_7">重命名和注释<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>按下 <code>N</code> 重命名。</p>
-<p>在 Pseudocode 界面：按下 <code>/</code> 当前行添加注释，按下 <code>Ins</code> 在当前行前添加注释。 </p>
-<p>在 IDA View： </p>
+<p>在 Pseudocode 界面：按下 <code>/</code> 当前行添加注释，按下 <code>Ins</code> 在当前行前添加注释。</p>
+<p>在 IDA View：</p>
 <p>按下 <code>:</code> 单次注释（仅在注释行出现）</p>
 <p>按下 <code>;</code> 重复注释（会在所有使用到该对象的位置重复出现，例如识别的字符串，自动注释即为重复注释。函数头部的注释也为重复注释）</p>
 <p><code>Ins</code> 前置注释，<code>shift + Ins</code> 后置注释。</p>
@@ -1047,42 +1042,45 @@ Functions calls 窗口：函数引用（在伪代码窗口才可使用）</p>
 <h1 id="_8">作业<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
 <h2 id="_9">内容<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p>从简单到难，不要求全部完成，量力而行。遇到困难欢迎在群里讨论，或者等待两个星期后的作业答案（届时会在<strong>该页面</strong>更新，请留意）。</p>
-<p>题目源码位于 <code>pwn / lesson-2-source</code> 文件夹下，请自行编译，推荐使用 Linux 编译成 ELF，更容易分析。也可以尝试编译成 Windows  的 EXE，体验 EXE 和 ELF 的区别。在完成每项作业之前，请先<strong>不要阅读</strong>源码，直接使用可执行文件进行分析。如果分析确实遇到了困难，再查看源码获得提示。</p>
+<p>题目源码位于 <code>pwn / lesson-2-source</code> 文件夹下，请自行编译，推荐使用 Linux 编译成 ELF，更容易分析。也可以尝试编译成 Windows 的 EXE，体验 EXE 和 ELF 的区别。</p>
+<p>在完成每项作业之前，请先<strong>不要阅读</strong>源码，直接使用可执行文件进行分析。如果分析确实遇到了困难，再查看源码获得提示。</p>
 <p>推荐编译指令：<code>gcc test.c -o test -no-pie -fno-pic</code> 。32 位程序请参考 PPT 内容。想增加难度可以尝试 <code>-s</code> 去除符号表。</p>
 <h3 id="_10">分析自己写的代码<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p><strong>学习目的</strong>：熟悉基本编译流程、掌握基础汇编指令</p>
 <p><strong>作业目标</strong>：自行编写 C 语言文件，并使用 IDA 分析程序执行流程（只允许看汇编代码）。</p>
 <p><strong>提交内容</strong>：C 语言文件源码（直接粘贴即可，无需单独提交文件，<strong>不用写太长</strong>），关键函数（main 函数以及自己编写的函数）逐行汇编代码分析。</p>
 <h3 id="ida_func_test">函数分析 ida_func_test<a class="headerlink" href="#ida_func_test" title="Permanent link">&para;</a></h3>
-<p><strong>学习目的</strong>：学会类型转换、了解字符串的小端表示、分析函数运行逻辑
-        （进阶）IDA 变量重命名，栈帧分析</p>
+<p><strong>学习目的</strong>：学会类型转换、了解字符串的小端表示、分析函数运行逻辑</p>
+<p>（进阶）IDA 变量重命名，栈帧分析</p>
 <p><strong>下载链接</strong>：<a href="/pwn/lesson-2-source/ida_func_test.c">源码</a></p>
 <p><strong>作业目标</strong>：找到字符串在汇编中的表示形式，了解 IDA 对字符串的操作</p>
-<p>（进阶，随缘完成x）优化伪代码，分析 IDA 自动分析不理想的可能原因
+<p>（进阶，随缘完成 x）优化伪代码，分析 IDA 自动分析不理想的可能原因
 <img alt="优化伪代码目标" src="/pwn/lesson-2-source/c36674596076ac6f088f5fcde967dab7_MD5.png" /></p>
-<p><strong>提交内容</strong>：在汇编中 <code>Hi CTFer~</code> 的对应片段，在 IDA 中还原字符串的操作（汇编界面）
-（进阶）优化伪代码的步骤，及对应分析</p>
+<p><strong>提交内容</strong>：在汇编中 <code>Hi CTFer~</code> 的对应片段，在 IDA 中还原字符串的操作（汇编界面）</p>
+<p>（进阶）优化伪代码的步骤，及对应分析</p>
 <h3 id="ida_secret">动态调试 ida_secret<a class="headerlink" href="#ida_secret" title="Permanent link">&para;</a></h3>
 <p><strong>学习目的</strong>：了解 IDA 动态调试基础，熟悉动态调试界面</p>
 <p><strong>下载链接</strong>：<a href="/pwn/lesson-2-source/ida_secret.c">源码</a></p>
 <p><strong>作业目标</strong>：请使用 IDA 的动态调试方法，找到 flag 吧。</p>
 <p><strong>提交内容</strong>：分析思路 + 你找到的 flag 值（格式 flag{xxx} ）</p>
-<p><strong>提示</strong>：远程调试时，需要打开 IDA 安装目录下的 <code>dbgsrv</code> 文件夹，找到目标文件对应的平台（如使用 Linux 调试则使用 <code>linux_server</code> '32位' 或 <code>linux_server64</code> '64位'），复制一份到远程机器的可执行文件同目录下。然后运行该 server。</p>
+<p><strong>提示</strong>：远程调试时，需要打开 IDA 安装目录下的 <code>dbgsrv</code> 文件夹，找到目标文件对应的平台（如使用 Linux 调试则使用 <code>linux_server</code> '32 位' 或 <code>linux_server64</code> '64 位'），复制一份到远程机器的可执行文件同目录下。然后运行该 server。</p>
 <p>IDA 标题栏 <code>Debugger</code> 选择 <code>Remote Linux Debugger</code>，并在 <code>Debugger - Process options</code> 中设置 <code>Hostname</code> （远程机器 IP 地址），<code>Port</code> 端口号默认保持不动，即可按下 <code>F9</code> 开始调试，<code>ctrl + F2</code> 终止当前进程。</p>
-<p>调试过程中的快捷键：
-+ <code>F2</code> 下断点（程序运行到断点位置会自动停止）
-+ <code>F7</code> 步入。运行一行汇编指令，遇到 <code>call</code> 指令会进入到其对应的函数内部继续逐行汇编执行
-+ <code>F8</code> 步过。运行一条汇编指令，遇到 <code>call</code> 指令会直接执行，不进入函数内部
-+ <code>F4</code> 执行到鼠标位置
-+ <code>ctrl + F7</code> 执行直到遇到返回（ret）</p>
+<p>调试过程中的快捷键：</p>
+<ul>
+<li><code>F2</code> 下断点（程序运行到断点位置会自动停止）</li>
+<li><code>F7</code> 步入。运行一行汇编指令，遇到 <code>call</code> 指令会进入到其对应的函数内部继续逐行汇编执行</li>
+<li><code>F8</code> 步过。运行一条汇编指令，遇到 <code>call</code> 指令会直接执行，不进入函数内部</li>
+<li><code>F4</code> 执行到鼠标位置</li>
+<li><code>ctrl + F7</code> 执行直到遇到返回（ret）</li>
+</ul>
 <h3 id="ida_obfuscation">花指令 ida_obfuscation<a class="headerlink" href="#ida_obfuscation" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>函数内联汇编为 <code>msvc</code> 的格式，无法使用 <code>gcc</code> 编译。
-请用 <code>clang -fasm-blocks -fno-pic -no-pie -m32 ida_obfuscation.c -o ida_obfuscation</code>(<code>-g</code> 生成调试信息)
-或下载编译好的文件 <code>ida_obfuscation</code>(Linux)、<code>ida_obfuscation.exe</code>(Windows) 进行调试</p>
+<p>函数内联汇编为 <code>msvc</code> 的格式，无法使用 <code>gcc</code> 编译。</p>
+<p>请用 <code>clang -fasm-blocks -fno-pic -no-pie -m32 ida_obfuscation.c -o ida_obfuscation</code>(<code>-g</code> 生成调试信息)</p>
+<p>或下载编译好的文件 <code>ida_obfuscation</code>(Linux)、<code>ida_obfuscation.exe</code>(Windows) 进行调试</p>
 </blockquote>
 <p><strong>学习目的</strong>：了解基本花指令，学会 IDA 的 patch 操作</p>
-<p><strong>下载链接</strong>：<a href="/pwn/lesson-2-source/ida_obfuscation.c">源码</a> 、<a href="/pwn/lesson-2-source/ida_obfuscation">编译好的Linux32位程序</a>、<a href="/pwn/lesson-2-source/ida_obfuscation.exe">编译好的Windows32位程序（无调试信息）</a>  </p>
+<p><strong>下载链接</strong>：<a href="/pwn/lesson-2-source/ida_obfuscation.c">源码</a> 、<a href="/pwn/lesson-2-source/ida_obfuscation">编译好的 Linux32 位程序</a>、<a href="/pwn/lesson-2-source/ida_obfuscation.exe">编译好的 Windows32 位程序（无调试信息）</a></p>
 <p><strong>作业目标</strong>：</p>
 <ul>
 <li>静态分析：修改汇编代码，移除花指令，让 func1 和 func2 能正常生成伪代码。（都有一行 printf 即可）</li>
@@ -1113,7 +1111,7 @@ Functions calls 窗口：函数引用（在伪代码窗口才可使用）</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月10日</span>
   </span>
 
     
