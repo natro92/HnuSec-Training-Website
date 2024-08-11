@@ -149,7 +149,7 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 #### 课前准备
 
 1.学习010Editor的使用
-  
+
 2.尝试下载安装StegSolve工具
 
 #### 课程讲义 & 课后作业
@@ -164,11 +164,25 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.
 #### 课前准备
 
 1.学习基础的php语言
-  
+
 2.安装php环境，集成的phpstudy也可以
 
 #### 课程讲义 & 课后作业
 
 https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.10.md
+
+-----
+
+### 8 月 11 日：动态链接
+
+#### 课前准备
+
+1.安装libcSearcher。这东西有很多版本，正式比赛一般也很少用，所以大家直接安装这个在线版[LibcSearcher · PyPI](https://pypi.org/project/LibcSearcher/)。
+
+2.安装[glibc-all-in-one](https://github.com/matrix1001/glibc-all-in-one)。放在方便访问的目录即可。
+
+3.安装patchelf。
+
+
 
 -----
