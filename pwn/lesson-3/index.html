@@ -10,22 +10,20 @@
       
       
       
-        <link rel="next" href="web/preparation/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>HnuSec 暑期培训 2024 - HnuSec 暑期培训 2024</title>
+        <title>pwn 动态链接和ret2libc - HnuSec 暑期培训 2024</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hnusec-2024" class="md-skip">
+        <a href="#pwn-ret2libc" class="md-skip">
           跳转至
         </a>
       
@@ -84,7 +82,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="HnuSec 暑期培训 2024" class="md-header__button md-logo" aria-label="HnuSec 暑期培训 2024" data-md-component="logo">
+    <a href="../.." title="HnuSec 暑期培训 2024" class="md-header__button md-logo" aria-label="HnuSec 暑期培训 2024" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HnuSec 暑期培训 2024
+              pwn 动态链接和ret2libc
             
           </span>
         </div>
@@ -209,13 +207,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -235,7 +231,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="web/preparation/" class="md-tabs__link">
+        <a href="../../web/preparation/" class="md-tabs__link">
           
   
     
@@ -255,7 +251,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pwn/preparation/" class="md-tabs__link">
+        <a href="../preparation/" class="md-tabs__link">
           
   
     
@@ -275,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="crypto/preparation/" class="md-tabs__link">
+        <a href="../../crypto/preparation/" class="md-tabs__link">
           
   
     
@@ -295,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="reverse/preparation/" class="md-tabs__link">
+        <a href="../../reverse/preparation/" class="md-tabs__link">
           
   
     
@@ -315,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="misc/preparation/" class="md-tabs__link">
+        <a href="../../misc/preparation/" class="md-tabs__link">
           
   
     
@@ -350,7 +346,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="HnuSec 暑期培训 2024" class="md-nav__button md-logo" aria-label="HnuSec 暑期培训 2024" data-md-component="logo">
+    <a href="../.." title="HnuSec 暑期培训 2024" class="md-nav__button md-logo" aria-label="HnuSec 暑期培训 2024" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -377,8 +373,6 @@
       
   
   
-    
-  
   
   
     
@@ -391,22 +385,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="." class="md-nav__link md-nav__link--active">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -418,7 +409,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             首页
@@ -487,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="web/preparation/" class="md-nav__link">
+      <a href="../../web/preparation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="web/guidance/" class="md-nav__link">
+      <a href="../../web/guidance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="web/lesson/" class="md-nav__link">
+      <a href="../../web/lesson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -599,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pwn/preparation/" class="md-nav__link">
+      <a href="../preparation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="crypto/preparation/" class="md-nav__link">
+      <a href="../../crypto/preparation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reverse/preparation/" class="md-nav__link">
+      <a href="../../reverse/preparation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="misc/preparation/" class="md-nav__link">
+      <a href="../../misc/preparation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -859,235 +850,70 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      🏅团队介绍
+      资源
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2024" class="md-nav__link">
+  <a href="#got-plt" class="md-nav__link">
     <span class="md-ellipsis">
-      📏2024 暑期培训
+      got plt
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📏2024 暑期培训">
+    <nav class="md-nav" aria-label="got plt">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#got3" class="md-nav__link">
     <span class="md-ellipsis">
-      🕦课程时间安排及讲解内容
+      got的3种利用方式
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#8-1-httpburpsuite" class="md-nav__link">
+  <a href="#libc" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 8 月 1 日：Http/BurpSuite
+      libc查找函数
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="💻 8 月 1 日：Http/BurpSuite">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      格式化字符串概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="格式化字符串概念">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      课前准备
+      利用
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#buf" class="md-nav__link">
     <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
+      buf位置
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-2-ida" class="md-nav__link">
-    <span class="md-ellipsis">
-      🕹️/👾 8 月 2 日：汇编&amp;IDA
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🕹️/👾 8 月 2 日：汇编&IDA">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      课前准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-3-rce" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 8 月 3 日：初识RCE
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 8 月 3 日：初识RCE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      课前准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-4-misc" class="md-nav__link">
-    <span class="md-ellipsis">
-      8 月 4 日：misc介绍及基础
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8 月 4 日：misc介绍及基础">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      课前准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-5-ctf" class="md-nav__link">
-    <span class="md-ellipsis">
-      8 月 5 日：CTF密码方向简介及古典密码
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8 月 5 日：CTF密码方向简介及古典密码">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      课前准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-7" class="md-nav__link">
-    <span class="md-ellipsis">
-      8 月 7 日：动态调试，还有一些杂七杂八的东西
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-9" class="md-nav__link">
-    <span class="md-ellipsis">
-      8 月 9 日：常见隐写
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8 月 9 日：常见隐写">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      课前准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1097,83 +923,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      -----
+      作业
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="-----">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#8-10" class="md-nav__link">
-    <span class="md-ellipsis">
-      8 月 10 日：反序列化
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8 月 10 日：反序列化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      课前准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-11" class="md-nav__link">
-    <span class="md-ellipsis">
-      8 月 11 日：动态链接
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8 月 11 日：动态链接">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      课前准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    <span class="md-ellipsis">
-      课程讲义 &amp; 课后作业
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1195,200 +949,71 @@
   
 
 
-<h1 id="hnusec-2024">HnuSec 暑期培训 2024<a class="headerlink" href="#hnusec-2024" title="Permanent link">&para;</a></h1>
-<h2 id="_1">🏅团队介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全学院（密码学院），由海南大学网络空间安全协会的优秀会员们组建的网络安全团队，于2018年12月正式成立，是HDCTF网络安全技能挑战赛的举办者，现由曹春杰院长、周晓谊副院长、徐紫枫系主任、王隆娟老师指导。</p>
-<p>实验室现活跃成员20余人，为海南大学本科生、研究生，涉猎Web渗透、漏洞研究、逆向分析、密码算法等多个领域；
-历届实验室成员毕业后除考研、保研外，均有在快手、美团、百度等甲方大厂，更有在北京绿盟、杭州安恒、上海奇安信、深圳深信服等国内知名网络安全企业任职。</p>
-<p>团队成员活跃于国内各项大型CTF竞赛及网络攻防演练活动，取得了优异的成绩。</p>
-<p>团队荣誉查看战队官网</p>
-<p><a href="https://hnusec.github.io/#/">https://hnusec.github.io/#/</a></p>
-<h2 id="2024">📏2024 暑期培训<a class="headerlink" href="#2024" title="Permanent link">&para;</a></h2>
-<p>本次招新面向海南大学23届全体新生，23届以外的学生也可以参与培训课程，并且在培训之后几天内，并提供基础考核学习成果，优异者通过考核同样可以进入实验室。</p>
-<p><strong>考核与培训内容并非强关联，更多考验课后学习补充能力及知识拓展能力。</strong></p>
-<p>本次招新为期两周，具体时间如下</p>
-<p>2024/8/1 - 2024/8/14 （暂定）</p>
-<p>考核时间安排如下</p>
-<p>2024/8/16 暂定 考核方式暂定为 Jeopardy-style CTFs 。</p>
-<hr />
-<p>这里是 2024 HnuSec暑期培训的课程主页。我们将在此集中发布所有课程的课前准备材料、课程讲义、课后作业等各种内容。</p>
-<p>🎬 <strong>培训前各个方向的准备</strong>：</p>
-<ul>
-<li>💻<strong>WEB</strong>：<a href="/web/preparation">WEB 课前准备</a></li>
-<li>🕹️<strong>Pwn</strong>：<a href="/pwn/preparation">Pwn 课前准备</a></li>
-<li>🔑<strong>Crypto</strong>：<a href="/crypto/preparation">Crypto 课前准备</a></li>
-<li>👾<strong>Reverse</strong>：<a href="/reverse/preparation">Reverse 课前准备</a></li>
-<li>🧩<strong>MISC</strong>：<a href="/misc/preparation">MISC 课前准备</a></li>
-</ul>
-<h3 id="_2">🕦课程时间安排及讲解内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>如果未提前申明，则时间定为每晚 19：00 开始。</p>
+<h1 id="pwn-ret2libc">pwn 动态链接和ret2libc<a class="headerlink" href="#pwn-ret2libc" title="Permanent link">&para;</a></h1>
+<h2 id="_1">资源<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="/pwn/lesson-3-source/lesson_3.pptx">ppt课件</a></p>
+<p><a href="/pwn/lesson-3-source/code.zip">代码</a></p>
+<h2 id="got-plt">got plt<a class="headerlink" href="#got-plt" title="Permanent link">&para;</a></h2>
+<p>got表存放函数真实地址。got表可修改。调用库函数<strong>等价</strong>调用plt。</p>
+<p>plt表为函数读取并执行got表所储存地址的代码段。plt不可修改。</p>
+<h3 id="got3">got的3种利用方式<a class="headerlink" href="#got3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>泄露libc地址</li>
+<li>修改got表劫持函数。</li>
+<li>泄露程序地址（启动PIE）</li>
+</ol>
+<h3 id="libc">libc查找函数<a class="headerlink" href="#libc" title="Permanent link">&para;</a></h3>
+<ol>
+<li>使用LibcSearcher查找（未知libc）</li>
+<li>使用pwntools的ELF读取现有libc文件。</li>
+</ol>
+<p>泄露某个函数的真实地址（libc地址）后计算libc基址，然后可以推算system函数和<code>"/bin/sh"</code>的地址。</p>
+<h2 id="_2">格式化字符串概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><code>%n</code>：可往对应<strong>参数所指向地址</strong>写入。写入已输出字符数。</p>
+<p><code>$</code>: 可实现任意位置参数操作。如<code>%8$d</code>为以32位整型输出第9个参数的内容。</p>
 <table>
 <thead>
 <tr>
-<th>日期</th>
-<th>课程安排</th>
-<th>内容大纲</th>
-<th>讲师</th>
+<th>格式化符号</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>8月1日</td>
-<td>WEB第一节</td>
-<td>Http基础及BurpSuite基本使用</td>
-<td>王致轩</td>
+<td><code>%n</code></td>
+<td>写入4字节</td>
 </tr>
 <tr>
-<td>8月2日</td>
-<td>PWN/RE第一节</td>
-<td>汇编基础和ida工具基本使用</td>
-<td>陈骏帆</td>
+<td><code>%hn</code></td>
+<td>写入2字节</td>
 </tr>
 <tr>
-<td>8月3日</td>
-<td>WEB第二节</td>
-<td>初识RCE(远程命令执行)</td>
-<td>兰唐嘉</td>
-</tr>
-<tr>
-<td>8月4日</td>
-<td>MISC第一节</td>
-<td>misc介绍及基础</td>
-<td>汪明轩</td>
-</tr>
-<tr>
-<td>8月5日</td>
-<td>CRY第一节</td>
-<td>CTF密码方向简介及古典密码</td>
-<td>薛明诚</td>
-</tr>
-<tr>
-<td>8月6日</td>
-<td>PWN第二节</td>
-<td>系统调用和shellcode</td>
-<td>李沛繁</td>
-</tr>
-<tr>
-<td>8月7日</td>
-<td>RE第二节</td>
-<td>动态调试</td>
-<td>路人甲</td>
-</tr>
-<tr>
-<td>8月8日</td>
-<td>CRY第二节</td>
-<td>数论基础及RSA入门</td>
-<td>刘春磊</td>
-</tr>
-<tr>
-<td>8月9日</td>
-<td>MISC第二节</td>
-<td>常见隐写</td>
-<td>时渝焱</td>
-</tr>
-<tr>
-<td>8月10日</td>
-<td>WEB第三节</td>
-<td>php反序列化</td>
-<td>张蓝月</td>
-</tr>
-<tr>
-<td>8月11日</td>
-<td>PWN第三节</td>
-<td>动态链接和ret2libc</td>
-<td>陈颂智</td>
-</tr>
-<tr>
-<td>8月12日</td>
-<td>RE第三节</td>
-<td>内容深入</td>
-<td>路人甲</td>
-</tr>
-<tr>
-<td>8月13日</td>
-<td>CRY第三节</td>
-<td>对称密码入门</td>
-<td>李涵宇</td>
-</tr>
-<tr>
-<td>8月14日</td>
-<td>WEB第四节</td>
-<td>sql注入基础</td>
-<td>徐一洋</td>
+<td><code>%hhn</code></td>
+<td>写入1字节</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="8-1-httpburpsuite">💻 8 月 1 日：Http/BurpSuite<a class="headerlink" href="#8-1-httpburpsuite" title="Permanent link">&para;</a></h3>
-<p><a href="http://orxiain.life/">@𝚘𝚛𝚡𝚒𝚊𝚒𝚗.</a></p>
-<h4 id="_3">课前准备<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">利用<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ol>
-<li>下载好Burp Suite（社区版或pro均可）。</li>
-<li>准备好富文本笔记软件（语雀、Obsidian、Typora等），支撑后续学习。</li>
+<li>任意地址写，如修改got表，修改全局变量。</li>
+<li>泄露栈上任意内容，包括libc地址，程序地址，栈地址。</li>
 </ol>
-<h4 id="_4">课程讲义 &amp; 课后作业<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p><a href="https://hnusec-training.natro92.fun/web/lesson-1">Web第一节课讲义 &amp; 作业</a>
-作业在最后</p>
-<p>作业（PDF）提交到 <a href="http://ctf.miaoaixuan.cn/">http://ctf.miaoaixuan.cn/</a> 的web作业提交处</p>
-<hr />
-<h3 id="8-2-ida">🕹️/👾 8 月 2 日：汇编&amp;IDA<a class="headerlink" href="#8-2-ida" title="Permanent link">&para;</a></h3>
-<h4 id="_5">课前准备<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="buf">buf位置<a class="headerlink" href="#buf" title="Permanent link">&para;</a></h3>
 <ol>
-<li>下载好IDA Pro。</li>
-<li>会编写简单的C语言程序，准备好gcc工具。</li>
+<li>栈上，即本文（本节课）所讲，一般而言较简单。</li>
+<li>非栈上。无法修改栈上内容，即无法修改后续参数值，需要利用跳板，一般而言较困难且复杂。参考<a href="https://www.cnblogs.com/w0lf-KP/p/17608654.html">浅谈非栈上格式化字符串 - Kee02p - 博客园 (cnblogs.com)</a></li>
 </ol>
-<h4 id="_6">课程讲义 &amp; 课后作业<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>讲义和作业提交事项在 <a href="https://hnusec-training.natro92.fun/pwn/lesson-2">Pwn/Re第一节课讲义 &amp; 作业</a></p>
-<hr />
-<h3 id="8-3-rce">💻 8 月 3 日：初识RCE<a class="headerlink" href="#8-3-rce" title="Permanent link">&para;</a></h3>
-<p><a href="http://ewojii.com/">@Ewoji</a></p>
-<h4 id="_7">课前准备<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>1.安装好Linux系统（vm虚拟机或者wsl都可）</p>
-<p>2.配置好php语言环境（Windows和Linux都有最好）</p>
-<p>3.了解一下正则表达式</p>
-<h4 id="_8">课程讲义 &amp; 课后作业<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p><a href="https://hnusec-training.natro92.fun/web/lesson-3">Web第二节课讲义 &amp; 作业</a>
-作业在最后</p>
-<hr />
-<h3 id="8-4-misc">8 月 4 日：misc介绍及基础<a class="headerlink" href="#8-4-misc" title="Permanent link">&para;</a></h3>
-<h4 id="_9">课前准备<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<p>1.准备好010Editor</p>
-<h4 id="_10">课程讲义 &amp; 课后作业<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p><a href="https://hnusec-training.natro92.fun/misc/lesson-1">misc第一节课讲义 &amp; 作业</a></p>
-<hr />
-<h3 id="8-5-ctf">8 月 5 日：CTF密码方向简介及古典密码<a class="headerlink" href="#8-5-ctf" title="Permanent link">&para;</a></h3>
-<h4 id="_11">课前准备<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<p>1，预先了解CTF密码方向题型分布及大致定义</p>
-<h4 id="_12">课程讲义 &amp; 课后作业<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
-<p><a href="https://hnusec-training.natro92.fun/crypto/lesson-1/">Crypto第一节课讲义&amp;作业</a></p>
-<hr />
-<h3 id="8-7">8 月 7 日：动态调试，还有一些杂七杂八的东西<a class="headerlink" href="#8-7" title="Permanent link">&para;</a></h3>
-<p>作业：完成第一节课的作业就差不多了，有空可以试着写几个程序玩玩(只是建议，随缘)</p>
-<p>比如：编写一个程序，在这个程序中，制造一个空指针异常，并且尝试编写其异常处理程序。</p>
-<p>课件与其他： <a href="https://hnusec-training.natro92.fun/reverse/2">点我</a></p>
-<hr />
-<h3 id="8-9">8 月 9 日：常见隐写<a class="headerlink" href="#8-9" title="Permanent link">&para;</a></h3>
-<h4 id="_13">课前准备<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<p>1.学习010Editor的使用</p>
-<p>2.尝试下载安装StegSolve工具</p>
-<h4 id="_14">课程讲义 &amp; 课后作业<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p><a href="https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.md">https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.md</a></p>
-<h2 id="-">-----<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<h3 id="8-10">8 月 10 日：反序列化<a class="headerlink" href="#8-10" title="Permanent link">&para;</a></h3>
-<h4 id="_15">课前准备<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>1.学习基础的php语言</p>
-<p>2.安装php环境，集成的phpstudy也可以</p>
-<h4 id="_16">课程讲义 &amp; 课后作业<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<p><a href="https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.10.md">https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.10.md</a></p>
-<hr />
-<h3 id="8-11">8 月 11 日：动态链接<a class="headerlink" href="#8-11" title="Permanent link">&para;</a></h3>
-<h4 id="_17">课前准备<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
-<p>1.安装libcSearcher。这东西有很多版本，正式比赛一般也很少用，所以大家直接安装这个在线版<a href="https://pypi.org/project/LibcSearcher/">LibcSearcher · PyPI</a>。</p>
-<p>2.安装<a href="https://github.com/matrix1001/glibc-all-in-one">glibc-all-in-one</a>。放在方便访问的目录即可。</p>
-<p>3.安装patchelf。</p>
-<h4 id="_18">课程讲义 &amp; 课后作业<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
-<p><a href="/pwn/lesson-2">pwn 动态链接</a></p>
-<hr />
+<h2 id="_4">作业<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>注册<a href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a>，然后做题。</p>
+<p><a href="https://buuoj.cn/challenges#wdb_2018_2nd_easyfmt">wdb_2018_2nd_easyfmt</a></p>
+<p><a href="https://buuoj.cn/challenges#wdb_2018_3rd_soEasy">wdb_2018_3rd_soEasy</a></p>
+<p><a href="https://buuoj.cn/challenges#x_ctf_b0verfl0w">x_ctf_b0verfl0w</a></p>
+<p><a href="https://buuoj.cn/challenges#护网杯_2018_gettingstart">护网杯_2018_gettingstart</a></p>
+<p><a href="https://buuoj.cn/challenges#actf_2019_babystack">actf_2019_babystack</a></p>
+<p>建议多做一些，练一练。包括前面讲的shellcode之类的也练了。可以都写wp，写了我都乐意看。</p>
+<p>做完写wp，wp附答题完成截图。ppt中的思考题可一并放入。ddl为8月14号。然后pdf发邮箱<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#97;&#108;&#116;&#99;&#104;&#97;&#110;&#115;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#109;">&#119;&#97;&#108;&#116;&#99;&#104;&#97;&#110;&#115;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#109;</a>。</p>
+<p>截图如下。截初次解出的答题成功也行。</p>
+<p><img alt="image-20240811222047946" src="../lesson-3-source/image-20240811222047946.png" /></p>
 
 
 
@@ -1420,16 +1045,12 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="贡献者">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.536 5.536 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13v-1.75M0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20H0m24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9V20Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:143779280+glut4micum@users.noreply.github.com">Glut4micum</a>, 
-        <a href="mailto:149402250+mi1n9@users.noreply.github.com">Azrail</a>, 
-        <a href="mailto:18562196602@163.com">wowcheese001</a>, 
-        <a href="mailto:1420970368@qq.com">WaltCSZ</a>, 
-        <a href="mailto:30799041+lurenjia1213@users.noreply.github.com">lurenjia1213</a>
+        <a href="mailto:1420970368@qq.com">WaltCSZ</a>
     </nav>
   </span>
 
@@ -1517,10 +1138,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "navigation.top", "navigation.tabs", "navigation.indexes"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
