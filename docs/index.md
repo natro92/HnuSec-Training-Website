@@ -183,6 +183,8 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.
 
 3.安装patchelf。
 
+#### 课程讲义 & 课后作业
 
+[pwn 动态链接](/pwn/lesson-2)
 
 -----
