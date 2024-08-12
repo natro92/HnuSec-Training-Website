@@ -188,3 +188,14 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.
 [pwn 动态链接](/pwn/lesson-3)
 
 -----
+### 8 月 13 日：对称密码
+
+#### 课前准备
+
+1.阅读[CTFwiki相关部分](https://ctf-wiki.org/crypto/introduction/)做了解
+
+#### 课程讲义 & 课后作业
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson_3.md
+
+-----
