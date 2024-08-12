@@ -46,7 +46,7 @@ tips：域所包含的元素个数称为域的阶或基
 
 ###### 扩展域GF($2^m$)
 
-**GF($2^m$)：**在AES中包含256个元素的有限域可以用GF($2^8$)。该域的每一个元素都可以用一个字节表示。
+**GF($2^m$)：** 在AES中包含256个元素的有限域可以用GF($2^8$)。该域的每一个元素都可以用一个字节表示。
 
 每个元素$A\in GF(2^8)$都可以表示为：$A(x)=a_7x^7+……+a_1x+a_0,  a^i\in GF(2)={0,1}$​
 
@@ -58,7 +58,6 @@ tips：域所包含的元素个数称为域的阶或基
 
 模2加法，二进制加法，只留模2的余数，抛弃进位，即XOR
 
-<img src="C:\Users\a\Desktop\对称密码\屏幕截图 2024-07-23 162230.png" style="zoom:80%;" >
 
 减法计算(即**模2减法**)：
 
@@ -71,11 +70,11 @@ tips：域所包含的元素个数称为域的阶或基
 下图红框中，$1\oplus 0\oplus 1=0$，没有进位：
 
 <img src="https://i-blog.csdnimg.cn/blog_migrate/06e1455058d12c70a6bc22b0fbe46c3d.png" style="zoom: 67%;" >
-$$
-5\times 7=(1+x^2)\times (1+x+x^2)
+
+$$5\times 7=(1+x^2)\times (1+x+x^2)
 \\=1+x+x^2+x^2+x^3+x^4(mod 2)
-\\=1+x+x^3+x^4=27
-$$
+\\=1+x+x^3+x^4=27$$
+
 除法运算(即**模2除法**)：
 
 模2除法是指在除法竖式运算中需要做减法的地方都使用**异或运算。**
@@ -86,15 +85,12 @@ $$
 
 ## 二、分组密码（块密码）[^2]
 
-### 定义
+### (一)定义
 
 将明文消息分割成固定长度的数据块，并使用相同的密钥和算法对每个数据块进行加密
 
 例：加密FOUR_AND_FOUR利用分组密码可以先加密FOUR，再加密 \_AND_ ，最后加密FOUR，即一次加密明文中一个字符块
 
-### （一）加解密
-
-<img src="C:/Users/a/Desktop/对称密码/IMG_20240718_162113.jpg" style="zoom:33%;" >
 
 ### （二）分组模式
 
@@ -140,21 +136,17 @@ $$
 
     (1) 和CBC一样使用64位IV，IV保存在移位寄存器里，用密钥加密IV得出密文
 
-    <img src="C:\Users\a\Desktop\对称密码\IMG_20240719_140732.jpg" style="zoom: 25%;">
-
     (2) 将加密的IV最左边（即最高有效）的 j 位与明文的前 j 位进行异或，产生密文的第1部分，将密文C反馈给IV移位寄存器
 
-    <img src="C:\Users\a\Desktop\对称密码\IMG_20240719_142111.jpg" style="zoom: 25%;" >
 
     (3) IV移位寄存器左移 j 位，即IV所在的位移寄存器内容左移 j 位，因此IV移位寄存器最右j位为不可探测数据，用密文C填充最右 j 位
 
-    <img src="C:\Users\a\Desktop\对称密码\IMG_20240719_154153.jpg" style="zoom: 25%;" >
 
     (4) 重复以上步骤
 
     **完整加密过程：**
 
-    <img src="C:\Users\a\Desktop\对称密码\IMG_20240719_154700.jpg" style="zoom: 25%;" >
+    <img src="https://ctf-wiki.org/crypto/blockcipher/mode/figure/cfb_encryption.png" >
 
     解密过程与加密过程非常相似，不过多赘述
 
@@ -162,7 +154,7 @@ $$
 
     OFB与CFB非常相似，唯一的区别是，CFB将**密文**反馈到加密过程下一阶段，OFB将**IV加密过程的输出**反馈到加密过程下一阶段
 
-    <img src="C:\Users\a\Desktop\对称密码\IMG_20240719_155603.jpg" style="zoom: 25%;" >
+   <img src="https://ctf-wiki.org/crypto/blockcipher/mode/figure/ofb_encryption.png">
 
     可以和CFB加密过程对比着来看
 
@@ -174,7 +166,7 @@ $$
 
     CTR是OFB的变种，用序列号（即计数器）作为输入，在加密每个块后，再使用下一个计数器值填充寄存器。通常使用一个常数作为计数器初始值，并且每次迭代后递增。计数器块的大小等于明文块的大小。CTR模式可以多个文本块并行处理。
 
-    <img src="C:\Users\a\Desktop\对称密码\image-20240719161244286.png" style="zoom: 25%;" />
+    <img src="https://ctf-wiki.org/crypto/blockcipher/mode/figure/ctr_encryption.png"  />
 
 ### （三）DES（数据加密标准）
 
@@ -190,7 +182,7 @@ DES使用56位的密钥和64位的明文块进行加密，初始密钥实际上�
 
 完成初始置换后，生成的64位置换明文块被分为两半，各32位，左半块是左明文(L0)，右半块是右明文(R0)，对这两块执行16轮操作
 
-![图 7](https://www.nssctf.cn//files/2023/5/5/faaaf1f97e.png)
+![图 7](https://s21.ax1x.com/2024/08/12/pAprVAA.png)
 
 ##### (2)获取子密钥
 
@@ -200,25 +192,25 @@ DES使用56位的密钥和64位的明文块进行加密，初始密钥实际上�
 
    `PC-1`置换表如下
 
-   ![图 3](https://www.nssctf.cn//files/2023/5/5/190d319ce5.png)
+   ![图 3](https://s21.ax1x.com/2024/08/12/pApreht.png)
 
 2. 将56位分成前28位C0和后28位D0。
 
 3. 根据轮数，这两部分分别循环左移1位或2位
 
-   ![图 4](https://www.nssctf.cn//files/2023/5/5/574f070ad3.png)
+   ![图 4](https://s21.ax1x.com/2024/08/12/pAprn9P.png)
 
 4. 移动后，将两部分合并成56位后通过压缩置换`PC-2`后得到48位子密钥。
 
    `PC-2`置换表如下
 
-   ![图 5](https://www.nssctf.cn//files/2023/5/5/458f8126c3.png)
+   ![图 5](https://s21.ax1x.com/2024/08/12/pApru1f.png)
 
 ##### （3）Feistel网络
 
 DES的基本结构，加密的各个步骤称为**轮**，DES是一种16轮循环的Feistel网络，下图为Feistel网络中的一轮
 
-<img src="C:\Users\a\Desktop\对称密码\屏幕截图 2024-07-19 173753.png" alt="Feistel网络中的一轮" title="Feistel网络中的一轮" style="zoom: 67%;"   >
+<img src="https://i-blog.csdnimg.cn/blog_migrate/9c38e52844bb38d978c3cf68202d5607.png" alt="Feistel网络中的一轮" title="Feistel网络中的一轮" style="zoom: 67%;"   >
 
 密码函数F的作用是将输入的32比特数据和48比特子密钥进行加密输出32比特
 
@@ -228,7 +220,7 @@ DES的基本结构，加密的各个步骤称为**轮**，DES是一种16轮循�
 
 S盒替换：将异或得到的48位结果分成八个6位的块，每一块通过对应的一个S盒产生一个4位的输出。（8个不同s盒压缩处理）
 
-P盒置换：将S盒得到的输出再和`P`盒进行置换操作。
+P盒置换：将S盒得到的输出再和P盒进行置换操作。
 
 - 一轮下来”右侧“并没有被加密，需要不同的子密钥重复若干次，并在每两轮处理之间将左右数据对调
 - 3轮加密需要两次左右对调，对调只在两轮之间进行，最后一轮结束之后不需要对调
@@ -244,7 +236,7 @@ AES使用的是Rijndael算法，SPN结构。Rijndael算法与DES的主要区别�
 
 #### 1. 加解密
 
-<img src="C:\Users\a\Desktop\对称密码\AES流程图.png" style="zoom: 80%;" >
+<img src="https://img2022.cnblogs.com/blog/2038987/202211/2038987-20221111214102108-1038216855.png" style="zoom: 80%;" >
 
 **轮密钥加：** 明文矩阵P，子密钥矩阵K，轮密钥加的结果就是两个矩阵对应元素异或
 
@@ -252,7 +244,7 @@ AES使用的是Rijndael算法，SPN结构。Rijndael算法与DES的主要区别�
 
 **行置换：** 目的是为了达到雪崩效应，一点微小变化也会导致输出有大改变，逻辑是第一行不变，第二行左移1，第三行左移2，第四行左移3
 
-**列混淆：**将给定矩阵和P在GF($2^8$)做乘法。
+**列混淆：** 将给定矩阵和P在GF($2^8$)做乘法。
 
 #### 2. python实践
 
@@ -272,7 +264,7 @@ AES使用的是Rijndael算法，SPN结构。Rijndael算法与DES的主要区别�
 
 在python用的是pycryptodome库中Crypto.Util.Padding这个模块里的pad和unpad
 
-- `Crypto.Util.Padding.pad(FOUR_AND_FOUR,block_size,style='pkcs7')` 负责进行数据填充，其中`FOUR_AND_FOUR` 表示待填充的数据；`block_size` 表示用于填充的分组长度；`style` 表示填充算法，一般默认为pkcs7，其他填充算法参考 https://en.wikipedia.org/wiki/Padding_(cryptography)；以上皆为输入参数，输出是填充后的数据，数据类型为byte
+- `Crypto.Util.Padding.pad(FOUR_AND_FOUR,block_size,style='pkcs7')` 负责进行数据填充，其中`FOUR_AND_FOUR` 表示待填充的数据；`block_size` 表示用于填充的分组长度；`style` 表示填充算法，一般默认为pkcs7，其他填充算法参考 https://en.wikipedia.org/wiki/Padding_(cryptography)； 以上皆为输入参数，输出是填充后的数据，数据类型为byte
 - `Crypto.Util.Padding.unpad(FOUR_AND_FOUR,block_size,style='pkcs7')` 负责进行填充后的数据解析，得到原始数据，输出为移除填充后的原始数据，数据类型仍为byte
   
 
@@ -350,9 +342,9 @@ for i in range(20):
 
 #### 2. 线性反馈移位寄存器（LFSR）[^4]
 
-![image-20240729112905235](C:\Users\a\AppData\Roaming\Typora\typora-user-images\image-20240729112905235.png)
+![img](https://pic3.zhimg.com/80/v2-d9a85f243f27fd9205ae3ead4ab073b2_720w.webp)
 
-<img src="C:\Users\a\Desktop\对称密码\IMG_20240724_161712.jpg" style="zoom: 33%;" >
+<img src="https://s21.ax1x.com/2024/08/12/pApD4kn.md.jpg" style="zoom:50%;">
 
 **python实现**
 
@@ -368,7 +360,7 @@ for i in range(16):
 
 讲义写的一般，请大家多担待
 
-作业在http://ctf.miaoaixuan.cn/，希望能帮大家加深对AES、DES、LCG的理解
+作业在http://ctf.miaoaixuan.cn/ ,希望能帮大家加深对AES、DES、LCG的理解
 
 ---
 
