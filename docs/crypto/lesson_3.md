@@ -142,13 +142,15 @@ $$5\times 7=(1+x^2)\times (1+x+x^2)
     (3) IV移位寄存器左移 j 位，即IV所在的位移寄存器内容左移 j 位，因此IV移位寄存器最右j位为不可探测数据，用密文C填充最右 j 位
 
 
-    (4) 重复以上步骤
+```python
+(4) 重复以上步骤
 
-    **完整加密过程：**
+**完整加密过程：**
 
-    <img src="https://ctf-wiki.org/crypto/blockcipher/mode/figure/cfb_encryption.png" >
+<img src="https://ctf-wiki.org/crypto/blockcipher/mode/figure/cfb_encryption.png" >
 
-    解密过程与加密过程非常相似，不过多赘述
+解密过程与加密过程非常相似，不过多赘述
+```
 
 4. **OFB**
 
