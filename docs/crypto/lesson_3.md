@@ -67,7 +67,7 @@ tips：域所包含的元素个数称为域的阶或基
 
 模2乘法是指在乘法竖式运算中需要做加法的地方都使用**异或运算**
 
-下图红框中，$1\oplus 0\oplus 1=0$，没有进位：
+下图红框中，$1\oplus 0\oplus 1=0$ ，没有进位：
 
 <img src="https://i-blog.csdnimg.cn/blog_migrate/06e1455058d12c70a6bc22b0fbe46c3d.png" style="zoom: 67%;" >
 
