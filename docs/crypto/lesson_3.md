@@ -359,7 +359,7 @@ for i in range(16):
 
 ---
 
-讲义写的一般，请大家多担待
+讲义写的一般，请大家多担待，一些公式显示问题，复制到自己的markdown文件就能看了
 
 作业在http://ctf.miaoaixuan.cn/ ,希望能帮大家加深对AES、DES、LCG的理解
 
