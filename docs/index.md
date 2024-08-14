@@ -185,7 +185,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-.m
 
 #### 课程讲义 & 课后作业
 
-[pwn 动态链接](/pwn/lesson-3)
+[Pwn3 动态链接](/pwn/lesson-3)
 
 -----
 ### 8 月 13 日：对称密码
