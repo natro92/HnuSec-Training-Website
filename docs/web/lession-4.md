@@ -1,14 +1,11 @@
 # 数据库
-数据库（database）是用来组织、存储和管理数据的仓库。
-当今世界是一个充满着数据的互联网世界，为了方便管理互联网世界中的数据，就有了数据库管理系统的概念。用户可以对数据库中的数据进行新增、查询、更新、删除等操作。
+数据库（database）是用来组织、存储和管理数据的仓库。<br />当今世界是一个充满着数据的互联网世界，为了方便管理互联网世界中的数据，就有了数据库管理系统的概念。用户可以对数据库中的数据进行新增、查询、更新、删除等操作。
 # SQL
- SQL（Structured Query Language，结构化查询语言）是一种用于管理和操作关系型数据库的标准化编程语言。 
-基于SQL语言的数据库：MySQL、SQL Server、Access、Oracle、Sybase、DB2等
+ SQL（Structured Query Language，结构化查询语言）是一种用于管理和操作关系型数据库的标准化编程语言。 <br />基于SQL语言的数据库：MySQL、SQL Server、Access、Oracle、Sybase、DB2等
 # MySQL
  MySQL 是最流行的数据库管理系统，在 WEB 应用方面最好的数据库管理应用软件之一
 # SQL注入原理
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/34908308/1723633959509-226680b9-3059-4f45-896e-ce5648e3aeb8.jpeg)
- 当web应用向后台数据库传递SQL语句进行数据库操作时，如果对用户输入的参数没有经过严格的过滤处理，那么攻击者就可以构造特殊的SQL语句，直接输入数据库引擎执行，获取或修改数据库中的数据。  
+![](https://cdn.nlark.com/yuque/0/2024/jpeg/34908308/1723633959509-226680b9-3059-4f45-896e-ce5648e3aeb8.jpeg)<br /> 当web应用向后台数据库传递SQL语句进行数据库操作时，如果对用户输入的参数没有经过严格的过滤处理，那么攻击者就可以构造特殊的SQL语句，直接输入数据库引擎执行，获取或修改数据库中的数据。  
 # 前置语法知识
 ## 注释符
 ```
@@ -20,8 +17,7 @@
 */
 ```
 ## SELECT
-SELECT 语句用于从数据库中选取数据。
-结果被存储在一个结果表中，称为结果集。
+SELECT 语句用于从数据库中选取数据。<br />结果被存储在一个结果表中，称为结果集。
 ```
 -- 选择所有列的所有行
 SELECT * FROM users;
@@ -87,6 +83,7 @@ id=-1' union select 1,2,group_concat(password) from users-- s
 ```
 # 作业
 BUUCTF：
-[极客大挑战 2019]EasySQL
-BUU SQL COURSE 1
-[极客大挑战 2019]LoveSQL
+
+1. [极客大挑战 2019]EasySQL
+2. BUU SQL COURSE 1
+3. [极客大挑战 2019]LoveSQL
