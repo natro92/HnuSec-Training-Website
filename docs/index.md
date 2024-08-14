@@ -204,6 +204,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson_
 #### 课前准备
 
 1.下载安装mysql（phpstudy集成的或单独安装都行）
+
 2.学会启动和连接mysql
 
 #### 课程讲义 & 课后作业
