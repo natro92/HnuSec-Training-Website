@@ -199,3 +199,13 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.
 https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson_3.md
 
 -----
+### 8 月 14 日：SQL注入基础
+
+#### 课前准备
+
+1.下载安装mysql（phpstudy集成的或单独安装都行）
+2.学会启动和连接mysql
+
+#### 课程讲义 & 课后作业
+
+[Web4 SQL注入基础](https://hnusec-training.natro92.fun/web/lesson-4/)
