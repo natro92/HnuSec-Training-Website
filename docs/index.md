@@ -108,7 +108,7 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 #### 课程讲义 & 课后作业
 
-[Web第二节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-2)
+[Web第二节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-3)
 作业在最后
 
 -----
@@ -154,7 +154,7 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 #### 课程讲义 & 课后作业
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.md
+[Misc2 常见隐写](/misc/lesson-2/)
 
 -----
 -----
@@ -185,7 +185,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.
 
 #### 课程讲义 & 课后作业
 
-[pwn 动态链接](/pwn/lesson-3)
+[Pwn3 动态链接](/pwn/lesson-3)
 
 -----
 ### 8 月 13 日：对称密码
@@ -196,7 +196,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-2.
 
 #### 课程讲义 & 课后作业
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson_3.md
+[Crypto3 对称密码](https://hnusec-training.natro92.fun/crypto/lesson-3/)
 
 -----
 ### 8 月 14 日：SQL注入基础
