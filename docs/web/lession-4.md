@@ -87,3 +87,7 @@ BUUCTF：
 1. [极客大挑战 2019]EasySQL
 2. BUU SQL COURSE 1
 3. [极客大挑战 2019]LoveSQL
+
+没思路可以参考网上的wp，做了写wp
+
+PDF格式发送到邮箱2457129747@qq.com(8.17号前)
