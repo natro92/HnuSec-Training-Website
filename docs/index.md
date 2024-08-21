@@ -188,3 +188,12 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-8.
 [pwn 动态链接](/pwn/lesson-3)
 
 -----
+
+### 8 月 12 日：动态链接
+
+
+#### 课程讲义 & 课后作业
+
+[pwn 动态链接](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson-3-source)
+
+-----
