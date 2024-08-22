@@ -188,6 +188,10 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 [Pwn3 动态链接](/pwn/lesson-3)
 
 -----
+### 8月12日
+内容:SMC，花指令，还有前面动态链接的一点小补充（也许无关紧要，但是好奇可以看看
+[链接](https://github.com/natro92/HnuSec-Training-Website/tree/main/docs/reverse/lesson-3-source)
+-----
 ### 8 月 13 日：对称密码
 
 #### 课前准备
