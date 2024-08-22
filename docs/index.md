@@ -144,6 +144,17 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 -----
 
+### 8 月 8 日：数论基础rsa入门
+
+#### 课前准备
+
+1，掌握python
+
+#### 课程讲义 & 课后作业
+
+[Crypto第二节课讲义&作业](https://github.com/natro92/HnuSec-Training-Website/tree/main/docs/crypto)
+
+-----
 ### 8 月 9 日：常见隐写
 
 #### 课前准备
