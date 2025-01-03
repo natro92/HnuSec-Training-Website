@@ -1,5 +1,5 @@
 # Basics
-site_name: HnuSec 暑期培训 2024
+site_name: HnuSec 2025 Win. ❄️
 repo_url: https://github.com/natro92/HnuSec-Training-Website
 repo_name: HnuSec-Training-Website
 
@@ -100,3 +100,8 @@ nav:
     - 课前准备: reverse/preparation.md
   - Misc:
     - 课前准备: misc/preparation.md
+  - Archives:
+    - 2024_Summer: archives/2024-Sum/index.md
+  - Others:
+    - 关于我们: others/about.md
+    - Q&A: others/Q&A.md
