@@ -46,33 +46,25 @@
 
 学习题目列表
 
+[BUUCTF在线评测 (buuoj.cn)](https://buuoj.cn/challenges#[极客大挑战 2019]BabySQL)
+
 基础
 
 1. [babysql](https://buuoj.cn/challenges#[极客大挑战 2019]BabySQL)
 
-2. [SWPUCTF 2021 新生赛]finalrce
+2. [SWPUCTF 2021 新生赛finalrce](https://www.nssctf.cn/problem/438)
 
-https://www.nssctf.cn/problem/438
+3. [Babyrce](https://www.nssctf.cn/problem/42578)
 
-3. Babyrce
-
-https://www.nssctf.cn/problem/42578
-
-4. [ACTF2020 新生赛]Exec
-
-https://buuoj.cn/challenges#[ACTF2020%20%E6%96%B0%E7%94%9F%E8%B5%9B]Exec
+4. [ACTF2020 新生赛 Exec](https://buuoj.cn/challenges#[ACTF2020%20%E6%96%B0%E7%94%9F%E8%B5%9B]Exec)
 
 进阶
 
-1. 稍微难点的sql](https://www.nssctf.cn/problem/387)
+1. [稍微难点的sql](https://www.nssctf.cn/problem/387)
 
-2. [GXYCTF2019]禁止套娃
+2. [GXYCTF2019禁止套娃](https://buuoj.cn/challenges#[GXYCTF2019]%E7%A6%81%E6%AD%A2%E5%A5%97%E5%A8%83)
 
-https://buuoj.cn/challenges#[GXYCTF2019]%E7%A6%81%E6%AD%A2%E5%A5%97%E5%A8%83
-
-3. [鹏城杯 2022]简单包含
-
-https://www.nssctf.cn/problem/2422
+3. [鹏城杯 2022简单包含](https://www.nssctf.cn/problem/2422)
 
 挑战自我
 
