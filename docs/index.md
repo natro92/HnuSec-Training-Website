@@ -70,7 +70,7 @@ https://buuoj.cn/challenges#[ACTF2020%20%E6%96%B0%E7%94%9F%E8%B5%9B]Exec
 
 https://buuoj.cn/challenges#[GXYCTF2019]%E7%A6%81%E6%AD%A2%E5%A5%97%E5%A8%83
 
-3.[鹏城杯 2022]简单包含
+3. [鹏城杯 2022]简单包含
 
 https://www.nssctf.cn/problem/2422
 
