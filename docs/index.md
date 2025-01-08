@@ -41,8 +41,24 @@
 -----
 
 #### 在1月13日之前你需要准备的内容
+- DEV：
+
+```
+课前准备
+
+1. python：安装python环境（建议3.9及以上）https://www.python.org/downloads/
+
+web基础
+
+1. 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
+
+2. 数据库（sql）
+
+3. 安装mysql、创建用户、分配权限（课程演示使用windows）
+```
 
 - Web：
+
 ```
 PHP语言基础
 
@@ -83,7 +99,25 @@ PHP语言基础
 
 - Pwn：
 
-- Crypto：数论（可以参考：公钥密码学的数学基础）、python、sagemath。可以简单的了解一下现代密码的体系结构，如对称密码体系、公钥密码体系。一些简单的古典密码：凯撒密码、维吉尼亚密码等（可以参考这篇文章：[CTF—古典密码（凯撒密码、维吉尼亚密码、培根密码等）](https://blog.csdn.net/weixin_52620919/article/details/119249518)）刷题网站：buuctf、nssctf以及[cryptohack](https://cryptohack.org/courses/)等
+```
+基础语言知识
+
+1. 汇编、c/c++，python
+
+基础工具
+1. ida
+
+环境配置
+
+1. 安装VMware,并配置好pwn所需环境的虚拟机
+
+2. 安装IDA
+```
+
+- Crypto：
+```
+数论（可以参考：公钥密码学的数学基础）、python、sagemath。可以简单的了解一下现代密码的体系结构，如对称密码体系、公钥密码体系。一些简单的古典密码：凯撒密码、维吉尼亚密码等（可以参考这篇文章：[CTF—古典密码（凯撒密码、维吉尼亚密码、培根密码等）](https://blog.csdn.net/weixin_52620919/article/details/119249518)）刷题网站：buuctf、nssctf以及[cryptohack](https://cryptohack.org/courses/)等
+```
 
 - Reverse：
 
