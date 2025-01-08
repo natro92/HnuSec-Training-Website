@@ -46,9 +46,9 @@
 
 PHP语言基础
 
-1. [php基础1](/file/PHP基础1)
+1. [php基础1](/file/PHP1)
 
-2. [php基础2](/file/PHP基础2) 
+2. [php基础2](/file/PHP2) 
 
 基础
 
