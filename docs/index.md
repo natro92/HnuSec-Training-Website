@@ -58,6 +58,8 @@
 
 4. [ACTF2020 新生赛 Exec](https://buuoj.cn/challenges#[ACTF2020%20%E6%96%B0%E7%94%9F%E8%B5%9B]Exec)
 
+5. [真入门题目](https://www.nssctf.cn/problem/2641)
+
 进阶
 
 1. [稍微难点的sql](https://www.nssctf.cn/problem/387)
@@ -66,9 +68,14 @@
 
 3. [鹏城杯 2022简单包含](https://www.nssctf.cn/problem/2422)
 
+4. [md5简单题目](43.134.9.57:9292)
+
+5. [进阶md5](https://www.nssctf.cn/problem/2638) 
 挑战自我
 
 1. [更难一点的极客大挑战 2019HardSQL ](https://buuoj.cn/challenges#[极客大挑战 2019]HardSQL)
+
+2. [比较复杂一点的题目，关于php](https://www.nssctf.cn/problem/1988)
 
 
 
