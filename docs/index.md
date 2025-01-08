@@ -44,10 +44,6 @@
 
 - Web：
 
-学习题目列表
-
-[BUUCTF在线评测 (buuoj.cn)](https://buuoj.cn/challenges#[极客大挑战 2019]BabySQL)
-
 基础
 
 1. [babysql](https://buuoj.cn/challenges#[极客大挑战 2019]BabySQL)
