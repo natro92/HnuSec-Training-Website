@@ -46,9 +46,9 @@
 
 PHP语言基础
 
-1. [php基础1](/file/PHP1.pdf)
+1. [php基础1](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP1.pdf)
 
-2. [php基础2](/file/PHP2.pdf) 
+2. [php基础2](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP2.pdf) 
 
 基础
 
