@@ -43,7 +43,7 @@
 #### 在1月13日之前你需要准备的内容
 
 - Web：
-
+```
 PHP语言基础
 
 1. [php基础1](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP1.pdf)
@@ -79,8 +79,7 @@ PHP语言基础
 1. [更难一点的极客大挑战 2019HardSQL ](https://buuoj.cn/challenges#[极客大挑战 2019]HardSQL)
 
 2. [比较复杂一点的题目，关于php](https://www.nssctf.cn/problem/1988)
-
-
+```
 
 - Pwn：
 
