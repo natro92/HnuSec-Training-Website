@@ -122,7 +122,44 @@ PHP语言基础
 
 - Reverse：
 
-- Misc：你可能需要学会基本的逆向手段，python等高级语言的程序编写
+- Misc：
+
+```
+基础知识准备:
+
+1. 基本的web、re手段
+
+2.python等高级语言的程序编写
+
+3.可以看看web、re方向的课
+
+程序及环境准备:
+
+1. WireShark
+
+2. IDA Pro
+
+3. python环境https://www.python.org/downloads/、Volatility
+
+4. 安装VMware，装一个基础的kali或ubantu
+
+课前作业：
+
+1. 学习并写完题目后，编写学习笔记和解题Wp（需含图片），按照要求提交PR至 https://github.com/natro92/2025WinTraining 处。
+
+入门：
+
+1. 菜刀666
+
+进阶：
+
+1. guess
+
+挑战自我：
+
+1. 后续布置
+
+```
 
 #### 💻 1月13日
 
