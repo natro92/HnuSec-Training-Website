@@ -41,6 +41,8 @@
 -----
 
 #### 在1月13日之前你需要准备的内容
+
+##### 所有的内容要求pr至 https://github.com/natro92/2025WinTraining 处
 - DEV：
 
 ```
