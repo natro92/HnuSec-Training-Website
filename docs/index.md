@@ -1,77 +1,58 @@
-# HnuSec 暑期培训 2024
+# HnuSec 2025 Win. ❄️冬季培训
 
-## 🏅团队介绍
+## ❄️ 2025 冬季培训
 
-HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全学院（密码学院），由海南大学网络空间安全协会的优秀会员们组建的网络安全团队，于2018年12月正式成立，是HDCTF网络安全技能挑战赛的举办者，现由曹春杰院长、周晓谊副院长、徐紫枫系主任、王隆娟老师指导。
-
-实验室现活跃成员20余人，为海南大学本科生、研究生，涉猎Web渗透、漏洞研究、逆向分析、密码算法等多个领域；
-历届实验室成员毕业后除考研、保研外，均有在快手、美团、百度等甲方大厂，更有在北京绿盟、杭州安恒、上海奇安信、深圳深信服等国内知名网络安全企业任职。
-
-团队成员活跃于国内各项大型CTF竞赛及网络攻防演练活动，取得了优异的成绩。
-
-团队荣誉查看战队官网
-
-<https://hnusec.github.io/#/>
-
-## 📏2024 暑期培训
-
-本次招新面向海南大学23届全体新生，23届以外的学生也可以参与培训课程，并且在培训之后几天内，并提供基础考核学习成果，优异者通过考核同样可以进入实验室。
+本次招新主要面向海南大学24级全体学生，24级以外的海南大学学生也可以参与前置培训课程。培训结束后，我们将择期进行一次基础考核。其中成绩优异者即可加入HnuSec-Star队，并根据后续表现正式加入HnuSec。本次招新前置培训除了CTF相关的WEB、PWN、REV、CRY、MISC五个方向之外，我们还计划开展开发相关的DEV课程。欢迎感兴趣的同学学习。
 
 **考核与培训内容并非强关联，更多考验课后学习补充能力及知识拓展能力。**
 
-本次招新为期两周，具体时间如下
+[Q&A](./others/Q&A.md) 这个页面也许可以回答你的问题。
 
-2024/8/1 - 2024/8/14 （暂定）
+### 📒 如何参加本次培训？
 
-考核时间安排如下
+如果你是海南大学学生，
 
-2024/8/16 暂定 考核方式暂定为 Jeopardy-style CTFs 。
+- 方法一：请发送邮件至 [robot@natro92.fun](mailto:robot@natro92.fun)，邮件名称为：`姓名-学号-年级 参加HnuSec冬季培训` 并在内容附上一张海南大学考勤系统的 “我的” 页面截图、一张QQ主页截图（展示QQ号）。验证通过后会有同学加你进群。
 
------
+- 方法二：添加下方协会群（787466604）后，向群主发送一张海南大学考勤系统的 “我的” 页面截图，审核通过后群主拉进群。
 
-这里是 2024 HnuSec暑期培训的课程主页。我们将在此集中发布所有课程的课前准备材料、课程讲义、课后作业等各种内容。
+上述材料仅作验证使用，验证之后我们不会保存。另外你可以先加入我们的网络空间安全协会群，群号：787466604 ，有关CTF的其他校内活动也会在群里通知。
 
-🎬 **培训前各个方向的准备**：
+### 🎬 课程准备
 
-- 💻**WEB**：[WEB 课前准备](/web/preparation)
+ **培训前各个方向的准备**
+
+- 💻**WEB**：
+    - [WEB 课前准备](/web/preparation)
+    - [WEB 方向指北](/web/guidance)
+    - [WEB 课前预热](/web/lesson)
 - 🕹️**Pwn**：[Pwn 课前准备](/pwn/preparation)
 - 🔑**Crypto**：[Crypto 课前准备](/crypto/preparation)
 - 👾**Reverse**：[Reverse 课前准备](/reverse/preparation)
+- 🧩**MISC**：[MISC 课前准备](/misc/preparation)
+- 🤖**DEV**: 这部分资料正在补充。
 
-### 🕦课程时间安排及讲解内容
+如果看完上面这些，还可以看看 [2024暑期培训归档](./archives/2024-Sum/index.md) 这里面有上次的培训内容，以作参考。
 
-如果未提前申明，则时间定为每晚 19：00 开始。
+### 📅 课程安排及讲解内容
 
-| 日期 | 课程安排 | 内容大纲 | 讲师 |
-| --- | --- | --- | --- |
-| 8月1日 | WEB第一节 | Http基础及BurpSuite基本使用 | 王致轩 |
-| 8月2日 | PWN/RE第一节 | 汇编基础和ida工具基本使用 | 陈骏帆 |
-| 8月3日 | WEB第二节 | 初识RCE(远程命令执行) | 兰唐嘉 |
-| 8月4日 | MISC第一节 | misc介绍及基础 | 汪明轩 |
-| 8月5日 | CRY第一节 | CTF密码方向简介及古典密码 | 薛明诚 |
-| 8月6日 | PWN第二节 | 系统调用和shellcode | 李沛繁 |
-| 8月7日 | RE第二节 | 动态调试 | 殷礼迪 |
-| 8月8日 | CRY第二节 | 数论基础及RSA入门 | 刘春磊 |
-| 8月9日 | MISC第二节 | 常见隐写 | 时渝焱 |
-| 8月10日 | WEB第三节 | php反序列化 | 张蓝月 |
-| 8月11日 | PWN第三节 | 动态链接和ret2libc | 陈颂智 |
-| 8月12日 | RE第三节 | 内容深入 | 殷礼迪 |
-| 8月13日 | CRY第三节 | 对称密码入门 | 李涵宇 |
-| 8月14日 | WEB第四节 | sql注入基础 | 徐一洋 |
+培训课程暂定于2025年1月13日-2025年1月26日，具体安排及开课时间还在紧锣密鼓筹备中，课程开始前会按时公布，且如未特殊通知则预计将于每日晚七点准时开始。
 
 -----
 
-### 💻 8 月 1 日：Http/BurpSuite
+#### 在1月13日之前你需要准备的内容
 
-[@𝚘𝚛𝚡𝚒𝚊𝚒𝚗.](http://orxiain.life/)
+##### 所有的内容要求pr至 https://github.com/natro92/2025WinTraining 处
+- DEV：
 
-#### 课前准备
+```
+课前准备
 
-1. 下载好Burp Suite（社区版或pro均可）。
-2. 准备好富文本笔记软件（语雀、Obsidian、Typora等），支撑后续学习。
+1. python：安装python环境（建议3.9及以上）https://www.python.org/downloads/
 
-#### 课程讲义 & 课后作业
+web基础
 
+<<<<<<< HEAD
 [Web第一节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-1)
 作业在最后
 
@@ -80,18 +61,126 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 
 ### 🕹️/👾 8 月 2 日：汇编&IDA
+=======
+1. 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
+>>>>>>> upstream/main
 
-#### 课前准备
+2. 数据库（sql）
 
-1. 下载好IDA Pro。
-2. 会编写简单的C语言程序，准备好gcc工具。
+3. 安装mysql、创建用户、分配权限（课程演示使用windows）
+```
 
-#### 课程讲义 & 课后作业
+- Web：
 
-待课后补充。
+```
+PHP语言基础
+
+1. [php基础1](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP1.pdf)
+
+2. [php基础2](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP2.pdf) 
+
+基础
+
+1. [babysql](https://buuoj.cn/challenges#[极客大挑战 2019]BabySQL)
+
+2. [SWPUCTF 2021 新生赛finalrce](https://www.nssctf.cn/problem/438)
+
+3. [Babyrce](https://www.nssctf.cn/problem/42578)
+
+4. [ACTF2020 新生赛 Exec](https://buuoj.cn/challenges#[ACTF2020%20%E6%96%B0%E7%94%9F%E8%B5%9B]Exec)
+
+5. [真入门题目](https://www.nssctf.cn/problem/2641)
+
+进阶
+
+1. [稍微难点的sql](https://www.nssctf.cn/problem/387)
+
+2. [GXYCTF2019禁止套娃](https://buuoj.cn/challenges#[GXYCTF2019]%E7%A6%81%E6%AD%A2%E5%A5%97%E5%A8%83)
+
+3. [鹏城杯 2022简单包含](https://www.nssctf.cn/problem/2422)
+
+4. [md5简单题目](http://43.134.9.57:9292)
+
+5. [进阶md5](https://www.nssctf.cn/problem/2638) 
+
+挑战自我
+
+1. [更难一点的极客大挑战 2019HardSQL ](https://buuoj.cn/challenges#[极客大挑战 2019]HardSQL)
+
+2. [比较复杂一点的题目，关于php](https://www.nssctf.cn/problem/1988)
+```
+
+- Pwn：
+
+```
+基础语言知识
+
+1. 汇编、c/c++，python
+
+基础工具
+
+1. ida
+
+环境配置
+
+1. 安装VMware,并配置好pwn所需环境的虚拟机
+
+2. 安装IDA
+```
+
+- Crypto：
+```
+数论（可以参考：公钥密码学的数学基础）、python、sagemath。可以简单的了解一下现代密码的体系结构，如对称密码体系、公钥密码体系。一些简单的古典密码：凯撒密码、维吉尼亚密码等（可以参考这篇文章：[CTF—古典密码（凯撒密码、维吉尼亚密码、培根密码等）](https://blog.csdn.net/weixin_52620919/article/details/119249518)）刷题网站：buuctf、nssctf以及[cryptohack](https://cryptohack.org/courses/)等
+```
+
+- Reverse：
+
+- Misc：
+
+```
+基础知识准备:
+
+1. 基本的web、re手段
+
+2.python等高级语言的程序编写
+
+3.可以看看web、re方向的课
+
+程序及环境准备:
+
+1. WireShark
+
+2. IDA Pro
+
+3. python环境https://www.python.org/downloads/、Volatility
+
+4. 安装VMware，装一个基础的kali或ubantu
+
+课前作业：
+
+1. 学习并写完题目后，编写学习笔记和解题Wp（需含图片），按照要求提交PR至 https://github.com/natro92/2025WinTraining 处。
+
+入门：
+
+1. 菜刀666：https://buuoj.cn/challenges#%E8%8F%9C%E5%88%80666
+
+进阶：
+
+1. guess：https://www.nssctf.cn/problem/5728
+
+挑战自我：
+
+1. 后续布置
+
+```
+
+#### 💻 1月13日
+
+这部分还在紧锣密鼓地安排中，课程开始前会公布。
 
 -----
 
+<<<<<<< HEAD
 ### 💻 8 月 3 日：初识RCE
 
 [@Ewoji](http://ewojii.com/)
@@ -108,3 +197,16 @@ HnuSec - 海南大学网安实验室 是隶属于海南大学网络空间安全�
 
 [Web第二节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-3)
 作业在最后
+=======
+## 📃 结课考核
+
+这部分还在紧锣密鼓地安排中，课程开始前会公布。
+
+## 其他
+
+- [关于我们](./others/about.md)
+
+- [Q&A](./others/Q&A.md)
+
+- [心流](https://natro92.fun)
+>>>>>>> upstream/main

@@ -186,10 +186,8 @@ CTFweb指南[MoeCTF_2023/Challenges/Web/Web入门指北/web入门指北.md at ma
 7. 其它题，可以自己找点来练
 
 
-在ddl前，作业（PDF）与之后web方向的所有作业合并提交到 http://ctf.miaoaixuan.cn/ 的web讲课作业提交处
-
-另外不同课的作业请用**h1标题**来区分
+在ddl前，作业（PDF）提交到 http://ctf.miaoaixuan.cn/ 的web作业提交处（只交本次作业）
 
 有问题在答疑群里问
 
-**ddl:** 暂定，之后通知，推荐先在两周时间内完成本次作业
+**ddl:** 8月14日提交
