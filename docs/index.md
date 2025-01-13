@@ -238,7 +238,7 @@ password:设定的密码
 
 ##### 课程内容
 
-**详情见：https://rcnq8t428wlu.feishu.cn/wiki/AcWxwKPumiAsw1k5Tyjcjh1ln9c?from=from_copylink**
+详情见：网站web模块第一节课RCE	
 
 - linux基础和命令
 - PHP危险函数-回显型-无回显型
