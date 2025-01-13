@@ -51,7 +51,22 @@
 
 web基础
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+[Web第一节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-1)
+作业在最后
+
+---
+
+
+
+### 🕹️/👾 8 月 2 日：汇编&IDA
+=======
+1. 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
+>>>>>>> upstream/main
+=======
 - 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
+>>>>>>> b2ecdd30d416dd80f9072fc463ef4b7afb38337a
 
 数据库（sql）
 
@@ -79,6 +94,8 @@ PHP语言基础
 
 5. [真入门题目](https://www.nssctf.cn/problem/2641)
 
+6. [纯净版SSTI](https://buuoj.cn/challenges#[%E7%AC%AC%E4%B8%89%E7%AB%A0%20web%E8%BF%9B%E9%98%B6]SSTI)
+
 进阶
 
 1. [稍微难点的sql](https://www.nssctf.cn/problem/387)
@@ -91,11 +108,15 @@ PHP语言基础
 
 5. [进阶md5](https://www.nssctf.cn/problem/2638) 
 
+6. [有waf版SSTI](https://buuoj.cn/challenges#[NewStarCTF%20%E5%85%AC%E5%BC%80%E8%B5%9B%E8%B5%9B%E9%81%93]BabySSTI_Two)
+
 挑战自我
 
 1. [更难一点的极客大挑战 2019HardSQL ](https://buuoj.cn/challenges#[极客大挑战 2019]HardSQL)
 
 2. [比较复杂一点的题目，关于php](https://www.nssctf.cn/problem/1988)
+
+3. [一题多解的SSTI拓展思路](https://www.nssctf.cn/problem/5755)
 ```
 
 - Pwn：
@@ -270,8 +291,6 @@ https://www.nssctf.cn/problem
 
 ## 其他
 
-- [关于我们](./others/about.md)
-
-- [Q&A](./others/Q&A.md)
-
-- [心流](https://natro92.fun)
+- [关于我们](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/others/about.md)
+- [Q&A](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/others/Q&A.md)
+- [心流](https://natro92.fun/)
