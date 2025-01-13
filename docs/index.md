@@ -295,6 +295,8 @@ https://www.nssctf.cn/problem
 #### 课程内容
 详情见Crypto模块lesson-1
 
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-1.md
+
 - Crypto方向简单介绍
 - 常见古典密码
 - 初等数论
