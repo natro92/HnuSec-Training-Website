@@ -220,8 +220,49 @@ password:设定的密码
 ##### 课程作业
 
 - 小作业见PPT
+
 - 大作业/考核待定
+
 - ddl/提交方式待定
+
+  
+
+#### 💻 1月14日 WEB方向第一节课-RCE
+
+##### 课前准备
+
+1. 笔记软件，VScode等IDE
+2. 学习和了解基本Linux命令，准备好一个linux环境
+3. 学习基础的PHP语法和PHP环境
+4. 了解Base64、url编码、HEX编码
+
+##### 课程内容
+
+**详情见：https://rcnq8t428wlu.feishu.cn/wiki/AcWxwKPumiAsw1k5Tyjcjh1ln9c?from=from_copylink**
+
+- linux基础和命令
+- PHP危险函数-回显型-无回显型
+- Bypass绕过技巧：空格绕过、编码绕过、变量拼接等
+- 一句话木马、简单脚本等内容
+- 综合题目学习分析
+
+##### 课程作业
+
+1. Ctfhub-RCE模块----命令注入
+
+地址：https://www.ctfhub.com/#/skilltree
+
+2. 完成RCE-labs[0-8]题（写wp和学习笔记）
+
+https://www.nssctf.cn/problem
+
+3. 学习Linux基本命令和操作，自己搭建一个Linux环境（Vmware或者wsl都可以）记录并写下笔记
+
+4. 学习PHP基本语法
+
+5. 学有余力可以继续学习其他内容和知识，一样的要求记录笔记提交
+
+
 
 ## 📃 结课考核
 
