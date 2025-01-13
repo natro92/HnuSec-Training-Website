@@ -1,0 +1,28 @@
+*{
+	text-align:center;
+	font-weight:bold;
+	animation:fade 2s ease-out;
+}
+a{
+	text-decoration:none;
+	color:#0066ff;
+}
+hr{
+	border:1px dashed #0066ff;
+}
+img{
+	border-radius:15px;
+	box-shadow:0px 0px 15px #909090;
+}
+a:hover{
+	color:#00aaff;
+}
+@keyframes fade{
+	0%{
+		opacity:0%;
+		transform:translateY(-10%);
+	}
+	100%{
+		opacity:100%;
+	}
+}
