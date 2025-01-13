@@ -48,15 +48,15 @@
 ```
 课前准备
 
-1. python：安装python环境（建议3.9及以上）https://www.python.org/downloads/
+- python：安装python环境（建议3.9及以上）https://www.python.org/downloads/
 
 web基础
 
-1. 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
+- 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
 
-2. 数据库（sql）
+数据库（sql）
 
-3. 安装mysql、创建用户、分配权限（课程演示使用windows）
+- 安装mysql、创建用户、分配权限（课程演示使用windows）
 ```
 
 - Web：
