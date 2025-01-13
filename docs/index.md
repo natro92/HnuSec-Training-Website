@@ -12,9 +12,7 @@
 
 如果你是海南大学学生，
 
-- 方法一：请发送邮件至 [robot@natro92.fun](mailto:robot@natro92.fun)，邮件名称为：`姓名-学号-年级 参加HnuSec冬季培训` 并在内容附上一张海南大学考勤系统的 “我的” 页面截图、一张QQ主页截图（展示QQ号）。验证通过后会有同学加你进群。
-
-- 方法二：添加下方协会群（787466604）后，向群主发送一张海南大学考勤系统的 “我的” 页面截图，审核通过后群主拉进群。
+- 添加下方协会群（787466604）后，向群主发送一张海南大学考勤系统的 “我的” 页面截图，审核通过后群主拉进群。
 
 上述材料仅作验证使用，验证之后我们不会保存。另外你可以先加入我们的网络空间安全协会群，群号：787466604 ，有关CTF的其他校内活动也会在群里通知。
 
@@ -23,9 +21,9 @@
  **培训前各个方向的准备**
 
 - 💻**WEB**：
-    - [WEB 课前准备](/web/preparation)
-    - [WEB 方向指北](/web/guidance)
-    - [WEB 课前预热](/web/lesson)
+  - [WEB 课前准备](/web/preparation)
+  - [WEB 方向指北](/web/guidance)
+  - [WEB 课前预热](/web/lesson)
 - 🕹️**Pwn**：[Pwn 课前准备](/pwn/preparation)
 - 🔑**Crypto**：[Crypto 课前准备](/crypto/preparation)
 - 👾**Reverse**：[Reverse 课前准备](/reverse/preparation)
@@ -42,21 +40,22 @@
 
 #### 在1月13日之前你需要准备的内容
 
-##### 所有的内容要求pr至 https://github.com/natro92/2025WinTraining 处
+##### 所有的内容要求pr至 <https://github.com/natro92/2025WinTraining> 处
+
 - DEV：
 
 ```
 课前准备
 
-1. python：安装python环境（建议3.9及以上）https://www.python.org/downloads/
+- python：安装python环境（建议3.9及以上）https://www.python.org/downloads/
 
 web基础
 
-1. 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
+- 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
 
-2. 数据库（sql）
+数据库（sql）
 
-3. 安装mysql、创建用户、分配权限（课程演示使用windows）
+- 安装mysql、创建用户、分配权限（课程演示使用windows）
 ```
 
 - Web：
@@ -118,6 +117,7 @@ PHP语言基础
 ```
 
 - Crypto：
+
 ```
 数论（可以参考：公钥密码学的数学基础）、python、sagemath。可以简单的了解一下现代密码的体系结构，如对称密码体系、公钥密码体系。一些简单的古典密码：凯撒密码、维吉尼亚密码等（可以参考这篇文章：[CTF—古典密码（凯撒密码、维吉尼亚密码、培根密码等）](https://blog.csdn.net/weixin_52620919/article/details/119249518)）刷题网站：buuctf、nssctf以及[cryptohack](https://cryptohack.org/courses/)等
 ```
@@ -163,11 +163,65 @@ PHP语言基础
 
 ```
 
-#### 💻 1月13日
+#### 课程安排
 
-这部分还在紧锣密鼓地安排中，课程开始前会公布。
+| **日期** | **课程安排** | **内容大纲** | **讲师** |
+| --- | --- | --- | --- |
+| 1.13 | DEV第一节 | 各个方向都能听的基础课，建议都来听。（python/web/数据库） | CFIT  |
+| 1.14 | WEB第一节 | RCE | bx33661  |
+| 1.15 | Cry第一节 | 古典+数论 | wyyaxqy  |
+| 1.16 | Re/pwn第一节 | 汇编基础，IDA以及基本工具的使用 | iamorange  |
+| 1.17 | Misc第一节 | 各种隐写 | amino  |
+| 1.18 | WEB第二节 | php常见漏洞 | unjoke  |
+| 1.19 | Cry第二节 | 对称密码DES | 万事  |
+| 1.20 | Re第一节 | 安卓逆向 | re-shiu  |
+| 1.21 | re第二节 | 花指令与SMC | flag{SuperTag}  |
+| 1.22 | WEB第三节 | Python相关SSTI知识 | Ewoji  |
+| 1.23 | Cry第三节 | 公钥密码RSA | Eleven |
+| 1.24 | pwn第二节 | 栈溢出基础 | AndreiLavig  |
+| 1.25 | pwn第三节 | 基础栈溢出 | AndreiLavig  |
+| 1.26 | WEB第四节 | SQL注入 | orxiain.  |
 
------
+#### 🤖 1月13日 Dev开发第一节
+
+##### 课前准备
+
+数据库(mysql) for Windows：
+下面为非GUI安装方法。
+在官网下载[mysql8.0](https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.40-winx64.zip)
+解压到文件夹，进入bin目录（可设定环境变量，自行查询）
+在目录下打开cmd，执行如下命令：
+
+```
+mysqld --initialize
+mysqld --console --skip-grant-tables --shared-memory
+```
+
+不关闭原来的界面，同目录下打开新的cmd命令
+在bin目录下直接执行mysql进入界面。
+在mysql>后执行如下代码：
+
+```
+mysql>flush privileges;
+mysql>alter user 'root'@'localhost' identified by '设定的密码';#密码可自行决定
+```
+
+重新登录，使用
+
+```
+mysql -u root -p
+password:设定的密码
+```
+
+##### 课程内容
+
+- 参见[ppt](https://raw.githubusercontent.com/natro92/HnuSec-Training-Website/refs/heads/main/docs/dev/dev%E7%AC%AC%E4%B8%80%E8%8A%82.pptx)。
+
+##### 课程作业
+
+- 小作业见PPT
+- 大作业/考核待定
+- ddl/提交方式待定
 
 ## 📃 结课考核
 
