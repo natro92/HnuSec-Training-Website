@@ -305,6 +305,27 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-
 见课程详情（请做好相关笔记）
 
 
+#### 🤖 1月16日 Pwn方向第一节-二进制基础与工具使用
+
+##### 课前准备
+1. 了解掌握汇编，python基础语法
+2. 深入了解掌握c语言
+3. 了解linux，掌握一些linux常见命令
+4. 搭建一个pwn环境，可以自行搜索教程
+
+
+#### 课程内容
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.md
+
+- 二进制基础
+- 内存保护措施
+- PWN Tools
+
+#### 课程作业
+通过网盘分享的文件：作业
+链接: https://pan.baidu.com/s/1R9xdiEsuzruK6-IlLtaXJQ?pwd=walt 提取码: walt
+写完pr自己的wp
 
 
 ## 📃 结课考核
