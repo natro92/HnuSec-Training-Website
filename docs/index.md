@@ -135,6 +135,11 @@ PHP语言基础
 1. 安装VMware,并配置好pwn所需环境的虚拟机
 
 2. 安装IDA
+
+课前作业：
+1.https://www.nssctf.cn/problem/2928
+2.https://www.nssctf.cn/problem/4479
+学习并写完题目后，编写学习笔记和解题Wp（需含图片），按照要求提交PR至 https://github.com/natro92/2025WinTraining 处。
 ```
 
 - Crypto：
