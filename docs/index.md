@@ -191,7 +191,7 @@ PHP语言基础
 | 1.13 | DEV第一节 | 各个方向都能听的基础课，建议都来听。（python/web/数据库） | CFIT  |
 | 1.14 | WEB第一节 | RCE | bx33661  |
 | 1.15 | Cry第一节 | 古典+数论 | wyyaxqy  |
-| 1.16 | Re/pwn第一节 | 二进制基础与工具使用 | iamorange  |
+| 1.16 | pwn第一节 | 二进制基础与工具使用 | iamorange  |
 | 1.17 | Misc第一节 | 各种隐写 | amino  |
 | 1.18 | WEB第二节 | php常见漏洞 | unjoke  |
 | 1.19 | Cry第二节 | 对称密码DES | 万事  |
