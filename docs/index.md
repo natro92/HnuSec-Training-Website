@@ -314,7 +314,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-
 见课程详情（请做好相关笔记）
 
 
-#### 🤖 1月16日 Pwn方向第一节-二进制基础与工具使用
+#### 🤖 1月16日 Pwn方向第一节课-二进制基础与工具使用
 
 ##### 课前准备
 1. 了解掌握汇编，python基础语法
