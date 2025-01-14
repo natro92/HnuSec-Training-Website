@@ -145,7 +145,11 @@ PHP语言基础
 - Crypto：
 
 ```
-数论（可以参考：公钥密码学的数学基础）、python、sagemath。可以简单的了解一下现代密码的体系结构，如对称密码体系、公钥密码体系。一些简单的古典密码：凯撒密码、维吉尼亚密码等（可以参考这篇文章：[CTF—古典密码（凯撒密码、维吉尼亚密码、培根密码等）](https://blog.csdn.net/weixin_52620919/article/details/119249518)）刷题网站：buuctf、nssctf以及[cryptohack](https://cryptohack.org/courses/)等
+数论（可以参考：公钥密码学的数学基础）、python、sagemath。
+可以简单的了解一下现代密码的体系结构，如对称密码体系、公钥密码体系。
+一些简单的古典密码：凯撒密码、维吉尼亚密码等
+（可以参考这篇文章：[CTF—古典密码（凯撒密码、维吉尼亚密码、培根密码等）](https://blog.csdn.net/weixin_52620919/article/details/119249518)）
+刷题网站：buuctf、nssctf以及[cryptohack](https://cryptohack.org/courses/)等
 ```
 
 - Reverse：
