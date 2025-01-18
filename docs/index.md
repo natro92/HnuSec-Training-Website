@@ -357,10 +357,10 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.m
 地址：[讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E.md)
 
 2. 完成下面所有的题目，要写wp
-   https://www.nssctf.cn/problem/162
-   https://www.nssctf.cn/problem/4607
-   https://www.nssctf.cn/problem/731
-   https://www.nssctf.cn/problem/335
+   https://www.nssctf.cn/problem/162\
+   https://www.nssctf.cn/problem/4607\
+   https://www.nssctf.cn/problem/731\
+   https://www.nssctf.cn/problem/335\
 
 ## 📃 结课考核
 
