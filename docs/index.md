@@ -336,6 +336,31 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.m
 
 写完pr自己的wp
 
+#### 💻 1月14日 WEB方向第二节课-PHP语言的常见漏洞
+
+##### 课前准备
+
+1. 笔记软件，VScode等IDE
+2. 学习和了解基本Linux命令，准备好一个linux环境
+3. 熟悉的PHP语法和PHP环境
+
+##### 课程内容
+
+- PHP语言性质
+- 文件包含
+- 反序列化
+
+##### 课程作业
+
+1. 讲义内所有的课后要求（做好学习笔记，不要全抄我讲义，弄好了pr上来）
+
+地址：[讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E.md)
+
+2. 完成下面所有的题目，要写wp
+   https://www.nssctf.cn/problem/162
+   https://www.nssctf.cn/problem/4607
+   https://www.nssctf.cn/problem/731
+   https://www.nssctf.cn/problem/335
 
 ## 📃 结课考核
 
