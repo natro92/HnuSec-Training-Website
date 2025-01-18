@@ -1,0 +1,1809 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>PHP语言的漏洞 - HnuSec 2025 Win. ❄️</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="HnuSec 2025 Win. ❄️" class="md-header__button md-logo" aria-label="HnuSec 2025 Win. ❄️" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HnuSec 2025 Win. ❄️
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PHP语言的漏洞
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/natro92/HnuSec-Training-Website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HnuSec-Training-Website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../preparation/" class="md-tabs__link">
+          
+  
+    
+  
+  Web
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pwn/preparation/" class="md-tabs__link">
+          
+  
+    
+  
+  Pwn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../crypto/preparation/" class="md-tabs__link">
+          
+  
+    
+  
+  Crypto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reverse/preparation/" class="md-tabs__link">
+          
+  
+    
+  
+  Reverse
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../misc/preparation/" class="md-tabs__link">
+          
+  
+    
+  
+  Misc
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archives/2024-Sum/" class="md-tabs__link">
+          
+  
+    
+  
+  Archives
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../others/about/" class="md-tabs__link">
+          
+  
+    
+  
+  Others
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HnuSec 2025 Win. ❄️" class="md-nav__button md-logo" aria-label="HnuSec 2025 Win. ❄️" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HnuSec 2025 Win. ❄️
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/natro92/HnuSec-Training-Website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HnuSec-Training-Website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            首页
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课前准备
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    方向指北
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课前预热
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pwn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pwn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pwn/preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课前准备
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Crypto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Crypto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../crypto/preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课前准备
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reverse
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reverse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reverse/preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课前准备
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Misc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/preparation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课前准备
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../archives/2024-Sum/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Archives
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Archives
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于我们
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/Q%26A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Q&A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="Ntja6">PHP语言的特性</h1>
+<h2 id="axDA3">1.正则函数</h2>
+<h3 id="ijaP5">数组绕过</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">if(preg_match(&quot;/[0-9]/&quot;, $unjoke)){</span>
+<span class="x">  die(&quot;you are joker&quot;);</span>
+<span class="x">}</span>
+<span class="x">else(intval($unjoke)){</span>
+<span class="x">  echo $flag;</span>
+<span class="x">}</span>
+
+<span class="x">//intval：用于获取变量的整数值;通过使用指定的进制 base 转换（默认是十进制），返回变量 var 的 integer数值</span>
+</code></pre></div></td></tr></table></div>
+<p>这行代码要求<code>$num</code>不能是一个数字但是<code>intval($num)</code>又要求你的变量是数字，这个时候你问<code>gpt</code>他就会告诉你这是矛盾的</p>
+<p>这个时候就要引入一下<strong>php函数</strong>的数组绕过了</p>
+<p><strong>原理：</strong><strong><font style="color:rgb(34, 34, 34);">preg_match第二个参数subject要求是</font></strong><strong><font style="color:#DF2A3F;">字符串</font></strong><strong><font style="color:rgb(34, 34, 34);">，如果传入数组时会返回false,则不会进入if语句</font></strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">payload：unjoke[]=1 </span>
+</code></pre></div></td></tr></table></div>
+<h3 id="dcLYf">%0a换行符绕过</h3>
+<p>先来看一个正则表达式：<code>preg_match('/^unjoke$/')</code></p>
+<p>学习过正则的肯定知道这个是匹配一个<code>unjoke</code>字符串，看如下例子</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;you&#39;</span><span class="p">];</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s1">&#39;/^unjoke$/&#39;</span><span class="p">,</span> <span class="nv">$cmd</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nv">$cmd</span> <span class="o">!==</span> <span class="s1">&#39;unjoke&#39;</span><span class="p">){</span>
+  <span class="k">echo</span> <span class="s1">&#39;yes, you are good!&#39;</span>
+  <span class="c1">#eval(&#39;&#39;)</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这个时候要求你传入进来的是<code>unjoke</code>字符串但是又不能被正则匹配，还是一个矛盾式，这个时候就可以用换行符绕过</p>
+<p><strong>原理：空模式下的正则不会匹配第二行</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">payload:you=unjoke%0a</span>
+
+<span class="x">joke</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="gLVkw">PCRE回溯次数限制</h3>
+<p>这个单独留作业，自己了解一下</p>
+<h2 id="DT93g">2.intval函数</h2>
+<p><font style="color:rgb(34, 34, 34);">这个前面讲过一点了，就重复一下吧</font></p>
+<p><font style="color:rgb(34, 34, 34);">定义:用于获取变量的整数值;通过使用指定的进制 base 转换（默认是十进制），</font><font style="color:#DF2A3F;">返回变量</font><code>&lt;font style="color:#DF2A3F;"&gt;var&lt;/font&gt;</code><font style="color:#DF2A3F;">的</font><code>&lt;font style="color:#DF2A3F;"&gt;integer&lt;/font&gt;</code><font style="color:#DF2A3F;">数值</font><font style="color:rgb(34, 34, 34);">。</font><code>&lt;font style="color:rgb(34, 34, 34);"&gt;intval()&lt;/font&gt;</code><font style="color:rgb(34, 34, 34);">不能用于</font><code>&lt;font style="color:rgb(34, 34, 34);"&gt;object&lt;/font&gt;</code><font style="color:rgb(34, 34, 34);">。</font></p>
+<p><strong><font style="color:rgb(34, 34, 34);">基本语法</font></strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">int intval ( mixed $value [, int $base = 10 ] )</span>
+
+<span class="x">参数说明：</span>
+
+<span class="x">$value：要转换成整数的变量。</span>
+<span class="x">$base（可选）：转换所使用的进制，默认是 10（十进制）。</span>
+<span class="x">返回值：</span>
+
+<span class="x">成功时，返回 $value 的整数值。</span>
+<span class="x">失败时，返回 0。</span>
+<span class="x">空数组返回 0，非空数组返回 1。</span>
+
+<span class="x">$a = &#39;12&#39;;</span>
+<span class="x">$a = 12;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="ctVSi">进制转换绕过</h3>
+<p>要先了解官方文档中注意的内容</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/42549390/1722759234677-14987bb1-b61b-4ddb-8e78-4be2a31ee405.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_838%2Climit_0" /></p>
+<p><strong>第一种情况</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">if($num === &quot;1234&quot;){</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">if(intval($num,0)===1234){</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }</span>
+<span class="x">else{</span>
+<span class="x">        echo intval($num,0);</span>
+<span class="x">    }</span>
+</code></pre></div></td></tr></table></div>
+<p>注意第一个<code>if</code>是字符串的比较，所以可以利用进制转化进行绕过</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">0b?? : 二进制</span>
+<span class="x">0??? : 八进制</span>
+<span class="x">0x?? : 十六进制</span>
+</code></pre></div></td></tr></table></div>
+<p>payload：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">num = 0x4D2（十六进制）</span>
+
+<span class="x">$num = &#39;0x4D2&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>第二种情况</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">if($num==1234){</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(preg_match(&quot;/[a-z]|[A-Z]/i&quot;, $num)){</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(intval($num,0)==1234){</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }</span>
+</code></pre></div></td></tr></table></div>
+<p>这个例子利用正则把字母<code>ban</code>掉了，这个时候就要用到八进制了</p>
+<p>payload：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">num = 02322</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="UdoWu">字母绕过</h3>
+<p>看一下<code>intval函数</code>的一个性质</p>
+<ul>
+<li>转换字符串时, 会从字符串的开始进行转换,直到遇到一个非数字的字符,如果字符串的第一个字符不是整数,则返回0</li>
+</ul>
+<p>那么如下情况你就可以使用这个性质，进行绕过</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">if($num == 1234){</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(intval($num,0)==1234){</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }</span>
+</code></pre></div></td></tr></table></div>
+<p>这个时候你就可以传入</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">num = 1234a</span>
+
+<span class="x">$num = &#39;1234a1234&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="RyzeI">小数点绕过</h3>
+<p>当题目<code>ban掉了字母和0</code>，这个时候你就需要小数点绕过了</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">if($num===&quot;114514&quot;){</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(preg_match(&quot;/[a-z]|[A-Z]/i&quot;, $num)){  //禁用字母</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(!strpos($num, &quot;0&quot;)){        //禁止0开头</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(intval($num,0)===114514){</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }</span>
+</code></pre></div></td></tr></table></div>
+<p>这个时候你就可以传入</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">num = 114514.114514</span>
+</code></pre></div></td></tr></table></div>
+<p>intval函数会帮你把它转换成整形，以此达到绕过的目的</p>
+<h3 id="XnRAA">数组绕过</h3>
+<p>当<code>intval</code>转换数组时，只会关心数组有没有内容，而不会在乎数组里面是什么</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/42549390/1711499971009-94b24246-aa99-4457-95ed-53cc2fdae163.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
+<h2 id="kczG2">3.MD5函数绕过</h2>
+<h3 id="st0u8">md5函数</h3>
+<p>在PHP中，<code>md5()</code>函数用于计算字符串的MD5哈希值。</p>
+<p><strong>语法：</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">md5(string $str, bool $raw_output = false): string</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>str</code>：必需。要计算的字符串。</li>
+<li><code>raw_output</code>：可选。如果为<code>true</code>，返回原始的16字符二进制格式；如果为<code>false</code>（默认），返回32字符的十六进制数。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<span class="nv">$hash</span> <span class="o">=</span> <span class="nb">md5</span><span class="p">(</span><span class="nv">$str</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$hash</span><span class="p">;</span> <span class="c1">// 输出：fc3ff98e8c6a0d3087d515c0473f8677</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="cUhFB">假设题目是<font style="color:#DF2A3F;">$md5==md5($md5)</font></h3>
+<p><font style="color:#000000;">0e开头的数且md5加密后还是0e，</font><code>&lt;font style="color:#000000;"&gt;md5=0e215962017&lt;/font&gt;</code></p>
+<h3 id="clv4O"><font style="color:#000000;">假设是弱比较</font><font style="color:#DF2A3F;">md5($a)==md5($b)</font></h3>
+<p><font style="color:#DF2A3F;">== 判断</font>，php中==左右两个变量的类型若<font style="color:#DF2A3F;">不相等</font>，则会<font style="color:#DF2A3F;">转换</font>成相等的类型后再进行判断。</p>
+<p>PHP在处理哈希字符串的时候，它把每一个以0E开头并且后面字符均为纯数字的哈希值都解析为0</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">//md5加密后以0E开头，且后面均为纯数字</span>
+<span class="x">QNKCDZO</span>
+<span class="x">240610708</span>
+<span class="x">s878926199a</span>
+<span class="x">s155964671a</span>
+
+<span class="x">//md5加密后变成万能密码</span>
+<span class="x">ffifdyop</span>
+
+<span class="x">//sha1加密后以0E开头，且后面均为纯数字</span>
+<span class="x">aaroZmOk</span>
+<span class="x">aaK1STfY</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="mSHaR">若使用的是**<font style="color:rgba(0, 0, 0, 0.85);">强类型</font>**</h3>
+<p><strong><font style="color:rgba(0, 0, 0, 0.85);">md5强类型绕过</font></strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">(string)$_POST[&#39;a1&#39;]!==(string)$_POST[&#39;a2&#39;] &amp;&amp; md5($_POST[&#39;a1&#39;])===md5($_POST[&#39;a2&#39;])</span>
+</code></pre></div></td></tr></table></div>
+<p>则需要左右两个变量类型相等且值相等才会返回true，这时候就需要选择md5后散列值完全相等的一对字符串传入了</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">array1=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%00%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1U%5D%83%60%FB_%07%FE%A2</span>
+<span class="x">array2=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%02%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1%D5%5D%83%60%FB_%07%FE%A2</span>
+</code></pre></div></td></tr></table></div>
+<p>fastcoll</p>
+<h3 id="si9ym">数组绕过强比较</h3>
+<p><strong><font style="color:rgb(34, 34, 34);">原理:MD5无法处理数组，如果传入数组则返回NULL，两个NULL是相等的。</font></strong></p>
+<p><font style="color:rgb(34, 34, 34);">看如下例子</font></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">if ($_GET[&#39;unjoke_a&#39;] != $_GET[&#39;unjoke_b&#39;]){</span>
+<span class="x">    if (md5($_GET[&#39;unjoke_a&#39;]) === md5($_GET[&#39;unjoke_b&#39;])){</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }</span>
+<span class="x">else{</span>
+<span class="x">    print &#39;Wrong.&#39;;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div></td></tr></table></div>
+<p>payload如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://url?unjoke_a[]=1&amp;unjoke_b[]=2
+</code></pre></div></td></tr></table></div>
+<h2 id="q29HV">4.字符串解析特性</h2>
+<p><font style="color:rgb(34, 34, 34);">PHP语言会将所有参数转换为有效的变量名，就是在解析字符串时：</font></p>
+<blockquote>
+<p><font style="color:rgb(34, 34, 34);">1）删除空白符</font></p>
+<p><font style="color:rgb(34, 34, 34);">2）将某些字符([,+,.)等等转换为下划线（包括空格）</font>
+</p>
+</blockquote>
+<p>这个时候又可以整出一些考点了，就比如</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">GET或POST方式传进去的变量名,会自动将(空格) + . [   </span>
+<span class="x">这四个个字符任何一个都行，都可以被处理成_</span>
+</code></pre></div></td></tr></table></div>
+<p>用之前结束的newsatr的部分waf来举例子</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">$_GET[&#39;NewStar_CTF.2024&#39;] !== &#39;Welcome&#39; &amp;&amp; preg_match(&#39;/^Welcome$/&#39;, $_GET[&#39;NewStar_CTF.2024&#39;])</span>
+</code></pre></div></td></tr></table></div>
+<p>这个你要是直接传入<code>NewStar_CTF.2024=Welcome%0a</code>就会被解析成<code>NewStar_CTF_2024=Welcome%0a</code></p>
+<p>在<code>PHP_7</code>中，可以使用<code>[</code>字符的非正确替换漏洞。当传入的参数名中出现<code>[</code>且之后没有<code>]</code>时，PHP 会将<code>[</code> 替换为<code>_</code>，但此之后就不会继续替换后面的特殊字符了，因此<code>GET</code>传参<code>NewStar[CTF.2024=Welcome%0a</code> </p>
+<h2 id="wWngw">5.其他函数</h2>
+<p>还有一些其他函数的绕过这里留作业，自己了解一下</p>
+<ul>
+<li><font style="color:rgb(35, 38, 59);">is_numeric()函数</font></li>
+<li><font style="color:rgb(35, 38, 59);">strcmp()函数</font></li>
+<li><font style="color:rgb(35, 38, 59);">sha1()函数</font></li>
+<li><font style="color:rgb(35, 38, 59);">extract()函数</font></li>
+<li><font style="color:rgb(35, 38, 59);">in_array()函数</font></li>
+<li><font style="color:rgb(35, 38, 59);">parse_str()变量覆盖</font></li>
+</ul>
+<p>参考文章<a href="https://www.cnblogs.com/dtwin/p/17796132.html">ctf中常见php漏洞 - dtwin - 博客园</a></p>
+<h1 id="UFCVk">文件包含</h1>
+<h2 id="pagLg">1.文件包含漏洞含义以及成因</h2>
+<p>服务器执行<code>PHP文件</code>时，可以通过文件包含函数加载另一个文件中的<code>PHP代码</code>，并且当<code>PHP</code>来执行，这会为开发者节省大量的时间。这意味着你可以创建供所有网页引用的标准页眉或菜单文件。当页眉需要更新时，你只更新一个包含文件就可以了，或者当你向网站添加一张新页面时，仅仅需要修改一下菜单文件（而不是更新所有网页中的链接）</p>
+<p><strong>利用条件：</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">（1）include()等函数通过动态变量的方式引入包含文件。</span>
+
+<span class="x">（2）用户能够控制该动态变量。</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>文件包含函数：</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">1.include()：在执行期间包含并运行指定文件的内容。如果文件不存在或包含错误，include()会生成警告（E_WARNING），但脚本会继续执行。</span>
+
+<span class="x">2.include_once()：与include()类似，但如果文件已被包含，则不会再次包含，避免函数重定义或变量重复赋值的问题。</span>
+
+<span class="x">3.require()：与include()功能相似，但在文件不存在或包含错误时，会生成致命错误（E_COMPILE_ERROR），并停止脚本执行。</span>
+
+<span class="x">4.require_once()：与require()类似，但如果文件已被包含，则不会再次包含。</span>
+
+<span class="x">5.file_get_contents()：读取文件的内容并将其作为字符串返回。</span>
+
+<span class="x">6.readfile()：读取文件并直接输出其内容。</span>
+
+<span class="x">7.fopen()：打开文件或 URL，返回文件指针资源，可用于读取或写入操作。</span>
+
+<span class="x">8.highlight_file()：用于对指定文件的代码进行语法高亮显示。 它会根据PHP内置的语法高亮器定义的颜色，将文件内容以高亮格式输出或返回。</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="RNpL8">2.读取敏感文件</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+    <span class="k">include</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;unjokefile&#39;</span><span class="p">]);</span> 
+<span class="cp">?&gt;</span>
+
+<span class="x">//传入?unjokefile=/etc/passwd</span>
+</code></pre></div></td></tr></table></div>
+<p>不存在<code>waf</code>的情况下随便读取，给一个常见的敏感文件表格</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">目录</th>
+<th style="text-align: center;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">/etc/passwd</td>
+<td style="text-align: center;">Linux系统账号信息</td>
+</tr>
+<tr>
+<td style="text-align: center;">/etc/httpd/conf/httpd.conf</td>
+<td style="text-align: center;">Apache配置信息</td>
+</tr>
+<tr>
+<td style="text-align: center;">/etc/my.conf</td>
+<td style="text-align: center;">MySQL配置信息</td>
+</tr>
+<tr>
+<td style="text-align: center;">/usr/etc/php.ini</td>
+<td style="text-align: center;">PHP配置信息</td>
+</tr>
+</tbody>
+</table>
+<h2 id="HFEY9">3.利用封装伪协议读取源码</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">?unjokefile=php://filter/read=convert.base64-encode/resource=flag.php</span>
+</code></pre></div></td></tr></table></div>
+<p>我这里就只是告诉你们这些个利用手段，其余的<code>伪协议</code>还得你们自己学一学</p>
+<h2 id="aBKhW"><font style="color:rgba(0, 0, 0, 0.8);">4.包含日志文件Getshell</font></h2>
+<p><strong>条件：</strong>知道日志文件<code>access.log</code>的存放位置 ，<code>Apache</code>默认位置：<code>/var/log/httpd/access_log</code>，<code>Apache2</code>是<code>/var/log/apache2/access.log</code>，<code>nginx</code>默认位置：<code>&lt;font style="color:rgb(0, 0, 0);background-color:rgb(250, 250, 250);"&gt;/var/log/nginx/access.log&lt;/font&gt;</code></p>
+<p><strong>利用方法：</strong></p>
+<p>就是改请求包的对应部分进行<code>getshell</code>，用<code>hackbar</code>和<code>burpsuite</code>都行，就比如下图</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/42549390/1727235536506-cbb41b3d-76c7-4c38-a0f5-ed33ab438406.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
+<h2 id="PBHyb">5.参考文章</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">https://www.cnblogs.com/Zeker62/p/15322771.html#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9A%84%E5%AE%9A%E4%B9%89</span>
+<span class="x">https://wiki.wgpsec.org/knowledge/web/fileincludes.html#%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8</span>
+</code></pre></div></td></tr></table></div>
+<h1 id="AJxph">PHP反序列化</h1>
+<h2 id="HYcX5">1.序列化之后的格式</h2>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/42549390/1721225397121-9ecdb1dd-649b-4c5f-8eae-314c8ef9b434.png" /></p>
+<p>注意的是<code>private和protected成员</code>的序列化会有所不同如下例子</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">test</span><span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$pub</span> <span class="o">=</span> <span class="s1">&#39;benben&#39;</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$b</span> <span class="o">=</span> <span class="s1">&#39;asd&#39;</span><span class="p">;</span>
+    <span class="k">function</span> <span class="nf">jineng</span><span class="p">(){</span>
+        <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pub</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">test</span><span class="p">();</span>
+<span class="k">echo</span> <span class="nb">serialize</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/42549390/1721225796276-85440083-bd1c-4dc0-a9a5-4faff49dd3a1.png" /></p>
+<p>里面的空字符url编码是%00</p>
+<h3 id="Spvn1">各种类型的标识</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>a - array
+b - boolean
+d - double
+i - integer
+o - common object
+r - reference
+s - string
+S - 转义后的内容（识别16进制的转义字符串，但是转义字符串表示不带x，如\6c）
+C - custom object
+O - class
+N - null
+R - pointer reference
+U - unicode string
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+ <span class="k">class</span> <span class="nc">Person</span> <span class="p">{</span>
+     <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+     <span class="k">public</span> <span class="nv">$age</span><span class="p">;</span>
+     <span class="k">public</span> <span class="nv">$gender</span><span class="p">;</span>
+     <span class="k">protected</span> <span class="nv">$salary</span><span class="p">;</span>
+     <span class="k">private</span> <span class="nv">$address</span><span class="p">;</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$age</span><span class="p">,</span> <span class="nv">$gender</span><span class="p">,</span> <span class="nv">$salary</span><span class="p">,</span> <span class="nv">$address</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span> <span class="o">=</span> <span class="nv">$age</span><span class="p">;</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">gender</span> <span class="o">=</span> <span class="nv">$gender</span><span class="p">;</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">salary</span> <span class="o">=</span> <span class="nv">$salary</span><span class="p">;</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">address</span> <span class="o">=</span> <span class="nv">$address</span><span class="p">;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="nv">$unjoke</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;unjoke&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">,</span> <span class="s1">&#39;man&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;china&#39;</span><span class="p">);</span>
+
+ <span class="k">echo</span> <span class="nb">serialize</span><span class="p">(</span><span class="nv">$unjoke</span><span class="p">);</span>
+ <span class="k">echo</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+ <span class="nb">var_dump</span><span class="p">(</span><span class="nb">serialize</span><span class="p">(</span><span class="nv">$unjoke</span><span class="p">));</span>
+ <span class="k">echo</span> <span class="s2">&quot;</span><span class="se">\000</span><span class="s2">&quot;</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+ <span class="k">echo</span> <span class="nb">urlencode</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\000</span><span class="s2">&quot;</span><span class="p">);</span>
+ <span class="k">echo</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+ <span class="k">echo</span> <span class="nb">base64_encode</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\000</span><span class="s2">&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="ftUJU">2.常见魔术方法</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">__destruct()， 对象销毁的时候调用</span>
+<span class="x">__toString()， 类被当成字符串时的回应方法</span>
+<span class="x">__construct()，当对象创建(new)时会自动调用，注意在unserialize()时并不会自动调用</span>
+<span class="x">__sleep()，serialize()时会先被调用，__sleep()先执行再序列化</span>
+<span class="x">__call()，在对象中调用一个不可访问方法时调用</span>
+<span class="x">__callStatic()，用静态方式中调用一个不可访问方法时调用</span>
+<span class="x">__get()，调用一个不存在的成员变量触发</span>
+<span class="x">__set()，设置一个不存在的或者不可访问的类的成员变量时调用</span>
+<span class="x">__isset()，当对不可访问属性调用isset()或empty()时调用</span>
+<span class="x">__unset()，当对不可访问属性调用unset()时被调用。</span>
+<span class="x">__wakeup()，执行unserialize()时，先会调用这个函数</span>
+<span class="x">__invoke()，调用函数的方式调用一个对象时的回应方法</span>
+<span class="x">__set_state()，调用var_export()导出类时，此静态方法会被调用。</span>
+<span class="x">__clone()，当对象复制完成时调用</span>
+<span class="x">__autoload()，尝试加载未定义的类</span>
+<span class="x">__debugInfo()，当调用 var_dump() 输出一个对象时</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="MeHjO">1.__call( )</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">class google</span>
+<span class="x">{</span>
+<span class="x">    public function search()</span>
+<span class="x">    {</span>
+<span class="x">    }</span>
+<span class="x">    public function __call($method, $parameters)</span>
+<span class="x">    {</span>
+<span class="x">       var_dump($parameters);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+
+<span class="x">$google = new google();</span>
+<span class="x">$keyword = array(&quot;poc&quot;=&gt;&quot;a&quot;);</span>
+<span class="x">$google-&gt;search($keyword);</span>
+<span class="x">$google-&gt;operate($keyword);</span>
+<span class="x">?&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>结果：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/42549390/1723303913123-9b8c7bf0-e872-4549-8f12-ffa6d0be2001.png" /></p>
+<h3 id="MOtd4">2.__get( )</h3>
+<p>把不存在的成员属性的名称赋值给参数</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">test</span><span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$aa</span><span class="p">;</span>
+    <span class="k">function</span> <span class="fm">__get</span><span class="p">(</span><span class="nv">$a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="nv">$a</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">test</span><span class="p">();</span>
+<span class="nv">$b</span><span class="o">-&gt;</span><span class="na">p</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+<span class="x">结果就是输出</span>
+<span class="x">p</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="PnHe4">3.__set( )</h3>
+<p>把调用的属性名称赋值给第一个参数，属性的值赋值给第二个参数</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">NotExists</span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__set</span><span class="p">(</span><span class="nv">$b</span><span class="p">,</span><span class="nv">$c</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="nv">$b</span> <span class="o">.</span> <span class="s1">&#39;-----&#39;</span> <span class="o">.</span> <span class="nv">$c</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$ne</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NotExists</span><span class="p">();</span>
+<span class="nv">$ne</span><span class="o">-&gt;</span><span class="na">libai</span> <span class="o">=</span> <span class="s1">&#39;xiaoba&#39;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+<span class="x">输出结果为：</span>
+<span class="x">libai-----xiaoba</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="yv9wG">3.自主学习部分</h2>
+<blockquote>
+<p>字符串逃逸</p>
+<p>phar反序列化
+</p>
+</blockquote>
+<p>题目：<a href="http://localhost/classshow/1.php">http://localhost/classshow/1.php</a></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年1月18日</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="贡献者">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:157440411+unjoke@users.noreply.github.com">unjoke</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+<h2 id="__comments">评论</h2>
+<!-- Insert generated snippet here -->
+<script src="https://giscus.app/client.js" data-repo="natro92/HnuSec-Training-Website" data-repo-id="R_kgDOMV0NrA"
+  data-category="Announcements" data-category-id="DIC_kwDOMV0NrM4CgxEg" data-mapping="pathname" data-strict="0"
+  data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme"
+  data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]")
+
+  /* Set palette on initial load */
+  var palette = __md_get("__palette")
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark" : "light"
+    giscus.setAttribute("data-theme", theme)
+  }
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]")
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame")
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        )
+      }
+    })
+  })
+</script>
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
