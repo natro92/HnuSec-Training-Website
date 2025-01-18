@@ -371,7 +371,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.m
 
 #### 课程内容
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.md
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-2.md
 
 - 数学基础
 - 分组模式
