@@ -362,6 +362,27 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.m
    - https://www.nssctf.cn/problem/731
    - https://www.nssctf.cn/problem/335
 
+#### 🤖 1月19日 Crypto方向第二节课-对称密码
+
+##### 课前准备
+
+1. 了解群环域
+2. 了解一些对称密码分类及基础概念
+
+#### 课程内容
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-2.md
+
+- 数学基础
+- 分组模式
+- AES和DES
+
+#### 课程作业
+
+链接: https://pan.baidu.com/s/1vA3mIsqlJA16KZCYhrwz-g 提取码: kc6u
+
+希望理解后写出wp，而非照搬脚本
+
 ## 📃 结课考核
 
 这部分还在紧锣密鼓地安排中，课程开始前会公布。
