@@ -369,7 +369,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.m
 1. 了解群环域
 2. 了解一些对称密码分类及基础概念
 
-#### 课程内容
+##### 课程内容
 
 https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-2.md
 
@@ -377,11 +377,29 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-
 - 分组模式
 - AES和DES
 
-#### 课程作业
+##### 课程作业
 
 链接: https://pan.baidu.com/s/1vA3mIsqlJA16KZCYhrwz-g 提取码: kc6u
 
 希望理解后写出wp，而非照搬脚本
+
+#### 1月21日 Reverse方向第二节课-花指令与SMC
+
+##### 课前准备
+
+1. 了解基础汇编指令
+2. IDA基础使用
+
+##### 课程内容
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.md
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.pptx
+
+##### 课程作业
+
+1. 在题库网站找一个或多个花指令的题，解决它，写出wp
+2. 花指令笔记
 
 ## 📃 结课考核
 
