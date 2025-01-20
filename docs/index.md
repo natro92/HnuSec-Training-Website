@@ -51,23 +51,7 @@
 
 web基础
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[Web第一节课讲义 & 作业](https://hnusec-training.natro92.fun/web/lesson-1)
-作业在最后
-
----
-
-
-
-### 🕹️/👾 8 月 2 日：汇编&IDA
-=======
 1. 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
->>>>>>> upstream/main
-=======
-- 安装apifox等api请求环境/可以打开开发者工具的现代浏览器(chrome/edge等)
->>>>>>> b2ecdd30d416dd80f9072fc463ef4b7afb38337a
-
 数据库（sql）
 
 - 安装mysql、创建用户、分配权限（课程演示使用windows）
@@ -245,7 +229,8 @@ password:设定的密码
 
 ##### 课程内容
 
-- 参见[ppt](https://raw.githubusercontent.com/natro92/HnuSec-Training-Website/refs/heads/main/docs/dev/dev%E7%AC%AC%E4%B8%80%E8%8A%82.pptx)。
+- 参见:
+[ppt](https://raw.githubusercontent.com/natro92/HnuSec-Training-Website/refs/heads/main/docs/dev/dev%E7%AC%AC%E4%B8%80%E8%8A%82.pptx)。
 
 ##### 课程作业
 
@@ -254,8 +239,6 @@ password:设定的密码
 - 大作业/考核待定
 
 - ddl/提交方式待定
-
-  
 
 #### 💻 1月14日 WEB方向第一节课-RCE
 
@@ -268,7 +251,7 @@ password:设定的密码
 
 ##### 课程内容
 
-详情见：网站web模块第一节课RCE	
+详情见：网站web模块第一节课RCE
 
 - linux基础和命令
 - PHP危险函数-回显型-无回显型
@@ -280,11 +263,11 @@ password:设定的密码
 
 1. Ctfhub-RCE模块----命令注入
 
-地址：https://www.ctfhub.com/#/skilltree
+    - [Ctfhub](https://www.ctfhub.com/#/skilltree)
 
 2. 完成RCE-labs[0-8]题（写wp和学习笔记）
 
-https://www.nssctf.cn/problem
+    - [NSS](https://www.nssctf.cn/problem)
 
 3. 学习Linux基本命令和操作，自己搭建一个Linux环境（Vmware或者wsl都可以）记录并写下笔记
 
@@ -292,47 +275,49 @@ https://www.nssctf.cn/problem
 
 5. 学有余力可以继续学习其他内容和知识，一样的要求记录笔记提交
 
-
-####  💻 1月15日Crypto方向第一节课-古典加初等数论
+#### 💻 1月15日Crypto方向第一节课-古典加初等数论
 
 ##### 课前准备
+
 1. 了解python的基本用法
 2. 网上自行学习下载sagemath并安装gmpy2和Crypto库
 3. 准备好《密码学数学基础》一书
 4. 了解一些古典密码
 
 #### 课程内容
+
 详情见Crypto模块lesson-1
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-1.md
+- [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-1.md)
 
 - Crypto方向简单介绍
 - 常见古典密码
 - 初等数论
 
 #### 课程作业
-见课程详情（请做好相关笔记）
 
+见课程详情（请做好相关笔记）
 
 #### 🤖 1月16日 Pwn方向第一节课-二进制基础与工具使用
 
 ##### 课前准备
+
 1. 了解掌握汇编，python基础语法
 2. 深入了解掌握c语言
 3. 了解linux，掌握一些linux常见命令
 4. 搭建一个pwn环境，可以自行搜索教程
 
-
 #### 课程内容
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.md
+- [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.md)
 
 - 二进制基础
 - 内存保护措施
 - PWN Tools
 
 #### 课程作业
-链接: https://pan.baidu.com/s/1oYzuJHFLuqA5UBfvY9uEow?pwd=walt 提取码: walt
+
+链接: <https://pan.baidu.com/s/1oYzuJHFLuqA5UBfvY9uEow?pwd=walt> 提取码: walt
 
 写完pr自己的wp
 
@@ -354,13 +339,13 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.m
 
 1. 讲义内所有的课后要求（做好学习笔记，不要全抄我讲义，弄好了pr上来）
 
-地址：[讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E.md)
+    - [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E.md)
 
 2. 完成下面所有的题目，要写wp
-   - https://www.nssctf.cn/problem/162
-   - https://www.nssctf.cn/problem/4607
-   - https://www.nssctf.cn/problem/731
-   - https://www.nssctf.cn/problem/335
+   - [题目一](https://www.nssctf.cn/problem/162)
+   - [题目二](https://www.nssctf.cn/problem/4607)
+   - [题目三](https://www.nssctf.cn/problem/731)
+   - [题目四](https://www.nssctf.cn/problem/335)
 
 #### 🤖 1月19日 Crypto方向第二节课-对称密码
 
@@ -371,7 +356,7 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.m
 
 ##### 课程内容
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-2.md
+<https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-2.md>
 
 - 数学基础
 - 分组模式
@@ -379,23 +364,23 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-
 
 ##### 课程作业
 
-链接: https://pan.baidu.com/s/1vA3mIsqlJA16KZCYhrwz-g 提取码: kc6u
+链接: <https://pan.baidu.com/s/1vA3mIsqlJA16KZCYhrwz-g> 提取码: kc6u
 
 希望理解后写出wp，而非照搬脚本
 
-#### 1月20日 Reverse方向第二节课
+#### 👾1月20日 Reverse方向第二节课
 
 ##### 课程内容
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/android_reverse.pptx
+[PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/android_reverse.pptx)
 
 ##### 课程作业
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java1.txt
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java2.txt
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java3.txt
+- [Java1](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java1.txt)
+- [Java2](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java2.txt)
+- [Java3](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java3.txt)
 
-#### 1月21日 Reverse方向第三节课-花指令与SMC
+#### 👾1月21日 Reverse方向第三节课-花指令与SMC
 
 ##### 课前准备
 
@@ -404,15 +389,52 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson
 
 ##### 课程内容
 
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.md
-https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.pptx
+- [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.md)
+- [PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.pptx)
 
 ##### 课程作业
 
 1. 在题库网站找一个或多个花指令的题，解决它，写出wp
 2. 花指令笔记
 
+#### 🤖DLC DEV 知识扩充
+
+##### 课程内容
+
+- [PDF](./dev/Git.pdf)
+
+##### 课程作业
+
+这部分内容有部分是参考的SAST2023的 [linux-git](https://github.com/sast-summer-training-2023/sast2023-linux-git) 部分，个人认为非常好，感兴趣的同学可以把相关知识学习下。
+
+而你需要完成的是拉取下面的docker服务，并且完成其中的内容。并编写WP并提交到：[2025WinTraining](https://github.com/natro92/2025WinTraining)
+
+```
+docker pull jkjkmxmx/sast2023-linux-git
+docker run --privileged -d -p 10000:22 -p 10001:80 -p 10002:3306 -p 10003:10001 -p 10004:10002 -h sast2023 --name sast2023 jkjkmxmx/sast2023-linux-git
+ssh -p 10000 train@localhost
+```
+
+以下是要求：
+
+- Linux：该区在 “train” 的家目录 (即 /home/train) 下的 “puzzles” 目录中进行。在这个目录中的每一个子目录 (如 “envir”)
+就代表一个谜题，**一个谜题恰对应一个 “flag”**。
+每个谜题下一定存在一个与目录名同名的可执行文件 (可以有多种形式：二进制文件，Shell 脚本等；以 “envir” 为
+例，即为 envir/envir)，运行该文件并按照它的引导一步步获取 “flag”。
+- Git区：该区在 “train” 的家目录下的 “git” 目录中进行。本区包含 6 个 flag，简要介绍如下：
+  - Branches：看看这个仓库里有哪些分支？
+  - Message：提交信息不止只有标题哦，还有正文！
+  - History：数据被覆盖了！看看怎么跳回之前的版本？
+  - Reflog：该谜题在 “reflog” 分支下进行。 观察提交信息：“add correct Taylor formula”，这说明之前有可能加入了错误的公式。但是它不在版本树里，这说明很可能被 git reset 过。那该如何恢复这样的 “误操作” 呢？
+  - Werewolf：该谜题在 “werewolf” 分支下进行。state 文件下看起来有很多 “flag”，但是这些基本都是假的。“预言家” 告诉你：最终版本的所有 “flag” 中，唯一一个由 “狼人” (werewolf) 提供且没有被后面平民 (villager) 覆盖的 “flag” 才是真正的 “flag”。
+
 ## 📃 结课考核
+
+### DEV
+
+这部分还在紧锣密鼓地安排中，课程开始前会公布。
+
+### CTF
 
 这部分还在紧锣密鼓地安排中，课程开始前会公布。
 
