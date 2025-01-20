@@ -383,7 +383,19 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-
 
 希望理解后写出wp，而非照搬脚本
 
-#### 1月21日 Reverse方向第二节课-花指令与SMC
+#### 1月20日 Reverse方向第二节课
+
+##### 课程内容
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/android_reverse.pptx
+
+##### 课程作业
+
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java1.txt
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java2.txt
+https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java3.txt
+
+#### 1月21日 Reverse方向第三节课-花指令与SMC
 
 ##### 课前准备
 
@@ -393,7 +405,6 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-
 ##### 课程内容
 
 https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.md
-
 https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.pptx
 
 ##### 课程作业

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class _test {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int max=0;
+        int i=0;
+        while(sc.hasNext()){
+            int cmp=sc.nextInt();
+            if(i==0){
+                max=cmp;
+                i++;
+            }
+            if(cmp>max){
+                max=cmp;
+            }
+            if(cmp==0){
+                i=0;
+                System.out.println(max);
+                continue;
+            }
+        }
+    }
+}
