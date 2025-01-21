@@ -452,9 +452,9 @@ ssh -p 10000 train@localhost
 
   - 两道题目，要写WP
 
-[BUUCTF在线评测](https://buuoj.cn/challenges#[NewStarCTF 2023 公开赛道]flask disk)
+[NewStarCTF 2023 公开赛道](https://buuoj.cn/challenges#flask%20disk)
 
-[[安洵杯 2020\]Normal SSTI | NSSCTF](https://www.nssctf.cn/problem/910)
+[安洵杯 2020\]Normal SSTI | NSSCTF](https://www.nssctf.cn/problem/910)
 
   - 自己总结一套WAF绕过方式记下笔记
   -  学有余力的同学可以自己使用Flask开发个小网站，提供一些有用的服务
