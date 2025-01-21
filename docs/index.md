@@ -321,7 +321,7 @@ password:设定的密码
 
 写完pr自己的wp
 
-#### 💻 1月14日 WEB方向第二节课-PHP语言的常见漏洞
+#### 💻 1月18日 WEB方向第二节课-PHP语言的常见漏洞
 
 ##### 课前准备
 
@@ -418,15 +418,49 @@ ssh -p 10000 train@localhost
 以下是要求：
 
 - Linux：该区在 “train” 的家目录 (即 /home/train) 下的 “puzzles” 目录中进行。在这个目录中的每一个子目录 (如 “envir”)
-就代表一个谜题，**一个谜题恰对应一个 “flag”**。
-每个谜题下一定存在一个与目录名同名的可执行文件 (可以有多种形式：二进制文件，Shell 脚本等；以 “envir” 为
-例，即为 envir/envir)，运行该文件并按照它的引导一步步获取 “flag”。
+  就代表一个谜题，**一个谜题恰对应一个 “flag”**。
+  每个谜题下一定存在一个与目录名同名的可执行文件 (可以有多种形式：二进制文件，Shell 脚本等；以 “envir” 为
+  例，即为 envir/envir)，运行该文件并按照它的引导一步步获取 “flag”。
+
 - Git区：该区在 “train” 的家目录下的 “git” 目录中进行。本区包含 6 个 flag，简要介绍如下：
   - Branches：看看这个仓库里有哪些分支？
   - Message：提交信息不止只有标题哦，还有正文！
   - History：数据被覆盖了！看看怎么跳回之前的版本？
   - Reflog：该谜题在 “reflog” 分支下进行。 观察提交信息：“add correct Taylor formula”，这说明之前有可能加入了错误的公式。但是它不在版本树里，这说明很可能被 git reset 过。那该如何恢复这样的 “误操作” 呢？
   - Werewolf：该谜题在 “werewolf” 分支下进行。state 文件下看起来有很多 “flag”，但是这些基本都是假的。“预言家” 告诉你：最终版本的所有 “flag” 中，唯一一个由 “狼人” (werewolf) 提供且没有被后面平民 (villager) 覆盖的 “flag” 才是真正的 “flag”。
+  
+  #### 💻1月22日 Web方向第三节课-SSTI与Python沙箱逃逸
+  
+  ##### 课前准备
+  
+  1. 安装好Flask模块
+  1. 了解并且区分元组，列表，字典，模块，类，类继承，函数，全局变量，局部变量，域，切片等相关概念
+  1. 熟悉python遍历可迭代对象的方式和一些常用函数的用法
+  1. 了解并会写基本的HTML
+  
+  ##### 课程内容
+  
+  详情见：网站web模块第三节课SSTI与Python沙箱逃逸
+  
+  - Flask基础
+  - Python危险函数
+  - SSTI的成因
+  - SSTI的函数逃逸和继承链逃逸
+  - WAF绕过
+  
+  ##### 课程作业
+  
+  1. 三道题目
+  
+  [纯净版SSTI](https://buuoj.cn/challenges#[%E7%AC%AC%E4%B8%89%E7%AB%A0%20web%E8%BF%9B%E9%98%B6]SSTI)
+  
+  [有waf版SSTI](https://buuoj.cn/challenges#[NewStarCTF%20%E5%85%AC%E5%BC%80%E8%B5%9B%E8%B5%9B%E9%81%93]BabySSTI_Two)
+  
+  [一题多解的SSTI拓展思路](https://www.nssctf.cn/problem/5755)
+  
+    2.自己总结一套WAF绕过方式记下笔记
+  
+    3.学有余力的同学可以自己使用Flask开发个小网站，提供一些有用的服务
 
 ## 📃 结课考核
 
