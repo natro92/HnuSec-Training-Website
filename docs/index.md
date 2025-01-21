@@ -429,16 +429,16 @@ ssh -p 10000 train@localhost
   - Reflog：该谜题在 “reflog” 分支下进行。 观察提交信息：“add correct Taylor formula”，这说明之前有可能加入了错误的公式。但是它不在版本树里，这说明很可能被 git reset 过。那该如何恢复这样的 “误操作” 呢？
   - Werewolf：该谜题在 “werewolf” 分支下进行。state 文件下看起来有很多 “flag”，但是这些基本都是假的。“预言家” 告诉你：最终版本的所有 “flag” 中，唯一一个由 “狼人” (werewolf) 提供且没有被后面平民 (villager) 覆盖的 “flag” 才是真正的 “flag”。
   
-  #### 💻1月22日 Web方向第三节课-SSTI与Python沙箱逃逸
+#### 💻1月22日 Web方向第三节课-SSTI与Python沙箱逃逸
   
-  ##### 课前准备
+##### 课前准备
   
   - 安装好Flask模块
   - 了解并且区分元组，列表，字典，模块，类，类继承，函数，全局变量，局部变量，域，切片等相关概念
   - 熟悉python遍历可迭代对象的方式和一些常用函数的用法
   - 了解并会写基本的HTML
   
-  ##### 课程内容
+##### 课程内容
   
   详情见：网站web模块第三节课SSTI与Python沙箱逃逸
   
@@ -448,7 +448,7 @@ ssh -p 10000 train@localhost
   - SSTI的函数逃逸和继承链逃逸
   - WAF绕过
   
-  ##### 课程作业
+##### 课程作业
   
   - 三道题目
   
