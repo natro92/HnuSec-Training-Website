@@ -409,8 +409,10 @@ https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson
 
 ##### 课程作业
 
-1. 在题库网站找一个或多个花指令的题，解决它，写出wp
+1. 完成以下作业，给出wp
+   
 2. 花指令笔记
+3. 思考题（不做强制要求）：直播中讲到，对于可执行文件exe而言，PE文件可选头中AddressOfEntryPoint字段是程序的起始地址，那么这个起始地址是否就是程序中main函数的地址？
 
 ## 📃 结课考核
 
