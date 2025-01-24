@@ -321,6 +321,16 @@ password:设定的密码
 
 写完pr自己的wp
 
+#### 🤖 1月17日 MISC方向第一节课-各种隐写
+
+##### 课前准备
+
+[MISC 课前准备](https://hnusec-training.natro92.fun/misc/preparation)
+
+##### 课程内容
+
+[讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-1.md)
+
 #### 💻 1月18日 WEB方向第二节课-PHP语言的常见漏洞
 
 ##### 课前准备
