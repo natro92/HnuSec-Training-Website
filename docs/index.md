@@ -288,7 +288,7 @@ password:设定的密码
 
 详情见Crypto模块lesson-1
 
-- [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-1.md)
+- [讲义](./crypto/lesson-1.md)
 
 - Crypto方向简单介绍
 - 常见古典密码
@@ -309,7 +309,7 @@ password:设定的密码
 
 #### 课程内容
 
-- [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson-1.md)
+- [讲义](./pwn/lesson-1.md)
 
 - 二进制基础
 - 内存保护措施
@@ -329,7 +329,7 @@ password:设定的密码
 
 ##### 课程内容
 
-[讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/misc/lesson-1.md)
+[讲义](./misc/lesson-1.md)
 
 #### 💻 1月18日 WEB方向第二节课-PHP语言的常见漏洞
 
@@ -349,7 +349,7 @@ password:设定的密码
 
 1. 讲义内所有的课后要求（做好学习笔记，不要全抄我讲义，弄好了pr上来）
 
-    - [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E.md)
+    - [讲义](./web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E.md)
 
 2. 完成下面所有的题目，要写wp
    - [题目一](https://www.nssctf.cn/problem/162)
@@ -366,7 +366,7 @@ password:设定的密码
 
 ##### 课程内容
 
-<https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/crypto/lesson-2.md>
+[课程讲义](./crypto/lesson-2.md)
 
 - 数学基础
 - 分组模式
@@ -399,8 +399,8 @@ password:设定的密码
 
 ##### 课程内容
 
-- [讲义](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.md)
-- [PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson2/lesson2.pptx)
+- [讲义](./reverse/lesson2/lesson2.md)
+- [PPT](./reverse/lesson2/lesson2.pptx)
 
 ##### 课程作业
 
