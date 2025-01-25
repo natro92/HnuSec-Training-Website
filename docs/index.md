@@ -21,13 +21,13 @@
  **培训前各个方向的准备**
 
 - 💻**WEB**：
-  - [WEB 课前准备](/web/preparation)
-  - [WEB 方向指北](/web/guidance)
-  - [WEB 课前预热](/web/lesson)
-- 🕹️**Pwn**：[Pwn 课前准备](/pwn/preparation)
-- 🔑**Crypto**：[Crypto 课前准备](/crypto/preparation)
-- 👾**Reverse**：[Reverse 课前准备](/reverse/preparation)
-- 🧩**MISC**：[MISC 课前准备](/misc/preparation)
+  - [WEB 课前准备](,/web/preparation)
+  - [WEB 方向指北](,/web/guidance)
+  - [WEB 课前预热](,/web/lesson)
+- 🕹️**Pwn**：[Pwn 课前准备](,/pwn/preparation)
+- 🔑**Crypto**：[Crypto 课前准备](,/crypto/preparation)
+- 👾**Reverse**：[Reverse 课前准备](,/reverse/preparation)
+- 🧩**MISC**：[MISC 课前准备](,/misc/preparation)
 - 🤖**DEV**: 这部分资料正在补充。
 
 如果看完上面这些，还可以看看 [2024暑期培训归档](./archives/2024-Sum/index.md) 这里面有上次的培训内容，以作参考。
