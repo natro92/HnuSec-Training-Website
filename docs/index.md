@@ -471,6 +471,26 @@ ssh -p 10000 train@localhost
   - 自己总结一套WAF绕过方式记下笔记
   -  学有余力的同学可以自己使用Flask开发个小网站，提供一些有用的服务
 
+#### 💀1月24日 PWN方向第二节课
+##### 课程内容：
+   - pwntools使用
+   - 函数调用栈
+   - 栈溢出漏洞基础
+   - ret2text
+   - ret2shellcode
+   - 题目讲解
+- [PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson2_lesson3/pwn.pptx)
+##### 课程作业:
+   - 同第一节课的作业，已经讲解过的也要写WP并提交
+   - 复习讲过的内容，并到做题平台寻找相应类型的题目训练，要求在精不在多，力求举一反三，总结做题方法
+#### 💀1月25日 PWN方向第三节课
+##### 课程内容：
+   - ret2syscall
+   - ret2libc
+   - 题目讲解
+- [PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson2_lesson3/pwn.pptx)
+##### 课程作业：
+   - 同第二节课的作业
 ## 📃 结课考核
 
 ### DEV
