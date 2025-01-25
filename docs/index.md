@@ -475,7 +475,7 @@ ssh -p 10000 train@localhost
 
 ### DEV
 
-[考核要求文档链接](./docs/dev/%E8%AF%BE%E7%A8%8B%E8%80%83%E6%A0%B8%E6%96%87%E6%A1%A3.md)
+[考核要求文档链接](/dev/%E8%AF%BE%E7%A8%8B%E8%80%83%E6%A0%B8%E6%96%87%E6%A1%A3.md)
 
 ### CTF
 
