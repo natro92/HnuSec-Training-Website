@@ -1,0 +1,43 @@
+abstract class Animal{
+    protected int legs;
+    protected Animal(int legs){
+        this.legs=legs;
+    }
+    abstract void eat();
+    public void walk(){
+        System.out.println(legs+"条腿走路");
+    }
+}
+interface Pet{
+    String getName();
+    void setName(String name);
+    void play();
+}
+class Fish extends Animal implements Pet{
+    private String name;
+    public Fish() {
+        super(0);
+    }
+    public void walk(){
+        System.out.println("无腿，不能走路");
+    }
+    @Override
+    void eat() {
+ 
+    }
+ 
+    @Override
+    public String getName() {
+        return name;
+    }
+ 
+    @Override
+    public void setName(String name) {
+        this.name=name;
+    }
+ 
+    @Override
+    public void play() {
+ 
+    }
+}

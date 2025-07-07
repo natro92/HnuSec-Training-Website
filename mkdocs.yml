@@ -1,7 +1,11 @@
 # Basics
-site_name: HnuSec 2025 Win. ❄️
+site_name: HnuSec 2025 Summer ☀️ 夏季培训
+site_description: 海南大学网络空间安全协会2025年夏季CTF培训
+site_author: HnuSec Team
+site_url: https://hnusec-training.natro92.fun
 repo_url: https://github.com/natro92/HnuSec-Training-Website
 repo_name: HnuSec-Training-Website
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -14,28 +18,56 @@ theme:
     - navigation.top
     - navigation.tabs
     - navigation.indexes
+    - navigation.expand
+    - navigation.sections
+    - navigation.prune
   palette:
     - scheme: default
-      primary: white
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/weather-night
-        name: Switch to dark mode
+        name: 切换到深色模式
     - scheme: slate
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: Switch to light mode
+        name: 切换到浅色模式
+  font:
+    text: Roboto
+    code: Roboto Mono
+  footer:
+    copyright: Copyright &copy; 2025 HnuSec Team
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/natro92/HnuSec-Training-Website
+    - icon: fontawesome/brands/qq
+      link: https://qm.qq.com/cgi-bin/qm/qr?k=xxx&jump_from=webapi&authKey=xxx
+    - icon: fontawesome/solid/graduation-cap
+      link: https://www.hnusec.com
+  version:
+    provider: mike
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
 
 extra_javascript:
   - 'https://cdn.jsdelivr.net/npm/mathjax@2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
 plugins:
-  - search
+  - search:
+      lang: zh
   - git-revision-date-localized:
       fallback_to_build_date: true
       locale: zh
   - git-authors:
       show_contribution: true
       show_line_count: true
+  - minify:
+      minify_html: true
 
 validation:
   absolute_links: ignore
@@ -67,11 +99,9 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
   - meta
   - pymdownx.highlight:
       linenums: true
@@ -88,20 +118,27 @@ markdown_extensions:
 nav:
   - 首页:
     - index.md
-  - Web:
+  - 💻 Web方向:
     - 课前准备: web/preparation.md
     - 方向指北: web/guidance.md
     - 课前预热: web/lesson.md
-  - Pwn:
+    - PHP语言漏洞: web/PHP语言的漏洞.md
+  - 🕹️ Pwn方向:
     - 课前准备: pwn/preparation.md
-  - Crypto:
+    - 第一节课讲义: pwn/lesson-1.md
+  - 🔑 Crypto方向:
     - 课前准备: crypto/preparation.md
-  - Reverse:
+    - 第一节课讲义: crypto/lesson-1.md
+    - 第二节课讲义: crypto/lesson-2.md
+  - 👾 Reverse方向:
     - 课前准备: reverse/preparation.md
-  - Misc:
+    - 第二节课讲义: reverse/lesson2/lesson2.md
+  - 🧩 Misc方向:
     - 课前准备: misc/preparation.md
-  - Archives:
-    - 2024_Summer: archives/2024-Sum/index.md
-  - Others:
+    - 第一节课讲义: misc/lesson-1.md
+  - 📚 培训归档:
+    - 2025冬季培训: archives/2025-winter/index.md
+    - 2024夏季培训: archives/2024-Sum/index.md
+  - 📖 其他资料:
     - 关于我们: others/about.md
     - Q&A: others/Q&A.md
