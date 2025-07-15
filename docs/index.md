@@ -38,7 +38,7 @@
 
 #### 在7月21日之前你需要准备的内容
 
-##### 所有的内容要求pr至 <https://github.com/natro92/2025SumTraining> 处
+##### 所有的内容要求不要求提交，但是希望大家还是可以自律，自觉完成，如果在学习过程中有任何问题，都可以在答疑群中直接问，或者私聊管理员或群主
 
 
 
@@ -108,7 +108,6 @@ PHP语言基础
 课前作业：
 1.https://www.nssctf.cn/problem/2928
 2.https://www.nssctf.cn/problem/4479
-学习并写完题目后，编写学习笔记和解题Wp（需含图片），按照要求提交PR至 https://github.com/natro92/2025SumTraining 处。
 ```
 
 - Crypto：
@@ -166,20 +165,20 @@ PHP语言基础
 
 | **日期** | **课程安排** | **内容大纲** | **讲师** |
 | --- | --- | --- | --- |
-| 7.21 | WEB第一节 | RCE | bx33661  |
-| 7.22 | Cry第一节 | 古典+数论 | m1n9  |
-| 7.23 | pwn第一节 | 栈相关 | crazycat  |
+| 7.21 | WEB第一节 | 常见语言命令执行 | unjoke  |
+| 7.22 | Cry第一节 | 密码基础 | m1n9  |
+| 7.23 | pwn第一节 | 栈相关 | iam0range  |
 | 7.24 | Misc第一节 | 各种隐写 | Lu0m0  |
-| 7.25 | Re第一节 | 安卓逆向 | 漫宿骄盛 |
-| 7.26 | WEB第二节 | php常见漏洞 | unjoke  |
-| 7.27 | Cry第二节 | 对称密码DES | monday  |
-| 7.28 | Re第二节 | 花指令与SMC | 漫宿骄盛  |
-| 7.29 | WEB第三节 | Python相关SSTI知识 | Ewoji  |
-| 7.30 | Cry第三节 | 公钥密码RSA | Eleven |
-| 7.31 | pwn第二节 | shellcode | iam0range |
-| 8.1  | pwn第三节 | 格式化字符串 | AndreiLavig  |
-| 8.2 | WEB第四节 | SQL注入 | orxiain.  |
-| 8.3 | Misc第二节 | SQL注入 | L1nkStar.  |
+| 7.25 | Re第一节 | 基础+壳 | 漫宿骄盛 |
+| 7.26 | WEB第二节 | php常见漏洞 | banta  |
+| 7.27 | Cry第二节 | 公钥密码RSA | monday  |
+| 7.28 | Re第二节 | 常见加密 | 漫宿骄盛  |
+| 7.29 | WEB第三节 | sql注入 | chrizsty  |
+| 7.30 | Cry第三节 | 对称密码 | Q1uJu |
+| 7.31 | pwn第二节 | shellcode | crazycat |
+| 8.1 | Misc第二节 | SQL注入 | L1nkStar.  |
+| 8.2 | WEB第四节 | python漏洞 | bx33661  |
+| 8.3  | pwn第三节 | 格式化字符串 | AndreiLavig  |
 
 #### 💻 7月14日 WEB方向第一节课-RCE
 
