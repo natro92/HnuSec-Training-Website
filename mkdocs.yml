@@ -46,6 +46,8 @@ extra:
       link: https://github.com/natro92/HnuSec-Training-Website
     - icon: fontawesome/brands/qq
       link: https://qm.qq.com/cgi-bin/qm/qr?k=xxx&jump_from=webapi&authKey=xxx
+    - icon: fontawesome/regular/envelope
+      link: mailto:HnuSec@163.com
     - icon: fontawesome/solid/graduation-cap
       link: https://www.hnusec.com
   version:
@@ -119,21 +121,29 @@ nav:
   - 首页:
     - index.md
   - 💻 Web方向:
+    - 课前准备: web/preparation.md
+    - 方向指北: web/guidance.md
+    - 课前预热: web/lesson.md
     - PHP语言漏洞: web/PHP语言的漏洞.md
     - 第三节课讲义: web/lesson-3.md
   - 🕹️ Pwn方向:
+    - 课前准备: pwn/preparation.md
     - 第一节课讲义: pwn/lesson-1.md
+    - 课程资料: pwn/lesson2_lesson3/README.md
   - 🔑 Crypto方向:
+    - 课前准备: crypto/preparation.md
     - 第一节课讲义: crypto/lesson-1.md
     - 第二节课讲义: crypto/lesson-2.md
   - 👾 Reverse方向:
+    - 课前准备: reverse/preparation.md
     - 第二节课讲义: reverse/lesson2/lesson2.md
   - 🧩 Misc方向:
     - 课前准备: misc/preparation.md
     - 第一节课讲义: misc/lesson-1.md
+  - 📁 文件资源:
+    - 资源说明: file/README.md
   - 📚 培训归档:
     - 2025冬季培训: archives/2025-winter/index.md
     - 2024夏季培训: archives/2024-Sum/index.md
-  - 📖 其他资料:
-    - 关于我们: others/about.md
-    - Q&A: others/Q&A.md
+  - 👥 关于我们: others/about.md
+  - ❓ Q&A: others/Q&A.md

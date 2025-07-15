@@ -73,6 +73,12 @@ HnuSec-Training-Website/
 
 欢迎提交Issue和Pull Request来改进项目！
 
+## 📧 联系我们
+
+如有任何问题或建议，请通过以下方式联系我们：
+- 邮箱：HnuSec@163.com
+- GitHub：[HnuSec-Training-Website](https://github.com/natro92/HnuSec-Training-Website)
+
 ## 📄 许可证
 
 本项目采用 MIT 许可证。
