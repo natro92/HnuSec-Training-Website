@@ -1,11 +1,15 @@
 # HnuSec 2025 Summer ☀️ 夏季培训
 ## ☀️ 2025 夏季培训
 
+
 本次招新主要面向海南大学24级、25级全体学生，以外的海南大学学生也可以参与前置培训课程。培训结束后，我们将择期进行一次基础考核。其中成绩优异者即可加入HnuSec-Star队，并根据后续表现正式加入HnuSec。本次招新前置培训包括CTF相关的WEB、PWN、REV、CRY、MISC五个方向。欢迎感兴趣的同学学习。
+
 
 **考核与培训内容并非强关联，更多考验课后学习补充能力及知识拓展能力。**
 
 [Q&A](./others/Q&A.md) 这个页面也许可以回答你的问题。
+
+
 
 ### 📒 如何参加本次培训？
 
@@ -345,7 +349,7 @@ PHP语言基础
 ##### 课程作业
 
 1. 完成以下作业，给出wp
-  https://pan.baidu.com/s/14IqLftbQeZ7nfXG6hEmNgA?pwd=Orzy 提取码: Orzy 
+    https://pan.baidu.com/s/14IqLftbQeZ7nfXG6hEmNgA?pwd=Orzy 提取码: Orzy 
 2. 花指令笔记
 3. 思考题（不做强制要求）：直播中讲到，对于可执行文件exe而言，PE文件可选头中AddressOfEntryPoint字段是程序的起始地址，那么这个起始地址是否就是程序中main函数的地址？
 
