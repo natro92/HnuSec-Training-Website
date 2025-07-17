@@ -41,7 +41,7 @@
 
 - Web：
 
-
+```
 ##### PHP语言基础pdf
 
 1. [php基础1](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP1.pdf)
@@ -83,6 +83,7 @@
 2. [比较复杂一点的题目，关于php](https://www.nssctf.cn/problem/1988)
 
 3. [一题多解的SSTI拓展思路](https://www.nssctf.cn/problem/5755)
+```
 
 
 - Pwn：
@@ -173,7 +174,7 @@
 | 7.29 | WEB第三节 | sql注入 | chrizsty  |
 | 7.30 | Cry第三节 | 对称密码 | Q1uJu |
 | 7.31 | pwn第二节 | shellcode | crazycat |
-| 8.1 | Misc第二节 | SQL注入 | L1nkStar.  |
+| 8.1 | Misc第二节 | 流量分析 | L1nkStar.  |
 | 8.2 | WEB第四节 | python漏洞 | bx33661  |
 | 8.3  | pwn第三节 | 格式化字符串 | AndreiLavig  |
 
@@ -253,147 +254,8 @@
 
 链接: <https://pan.baidu.com/s/1oYzuJHFLuqA5UBfvY9uEow?pwd=walt> 提取码: walt
 
-写完pr自己的wp
 
-#### 🤖 7月24日 MISC方向第一节课-各种隐写
 
-##### 课前准备
-
-[MISC 课前准备](https://hnusec-training.natro92.fun/misc/preparation)
-
-##### 课程内容
-
-[讲义](./misc/lesson-1.md)
-
-#### 💻 7月25日 RE方向第一节课-基础+壳 
-
-##### 课前准备
-
-1. 笔记软件，VScode等IDE
-2. 学习和了解基本Linux命令，准备好一个linux环境
-3. 熟悉的PHP语法和PHP环境
-
-##### 课程内容
-
-- PHP语言性质
-- 文件包含
-- 反序列化
-
-##### 课程作业
-
-1. 讲义内所有的课后要求（做好学习笔记，不要全抄我讲义，弄好了pr上来）
-
-    - [讲义](./web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E.md)
-
-2. 完成下面所有的题目，要写wp
-   - [题目一](https://www.nssctf.cn/problem/162)
-   - [题目二](https://www.nssctf.cn/problem/4607)
-   - [题目三](https://www.nssctf.cn/problem/731)
-   - [题目四](https://www.nssctf.cn/problem/335)
-
-#### 🤖 7月19日 Crypto方向第二节课-对称密码
-
-##### 课前准备
-
-1. 了解群环域
-2. 了解一些对称密码分类及基础概念
-
-##### 课程内容
-
-[课程讲义](./crypto/lesson-2.md)
-
-- 数学基础
-- 分组模式
-- AES和DES
-
-##### 课程作业
-
-链接: <https://pan.baidu.com/s/1vA3mIsqlJA16KZCYhrwz-g> 提取码: kc6u
-
-希望理解后写出wp，而非照搬脚本
-
-#### 👾7月20日 Reverse方向第二节课
-
-##### 课程内容
-
-[PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/android_reverse.pptx)
-
-##### 课程作业
-
-- [Java1](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java1.txt)
-- [Java2](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java2.txt)
-- [Java3](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/reverse/lesson1/%E4%BD%9C%E4%B8%9A/java3.txt)
-
-#### 👾7月21日 Reverse方向第三节课-花指令与SMC
-
-##### 课前准备
-
-1. 了解基础汇编指令
-2. IDA基础使用
-
-##### 课程内容
-
-- [讲义](./reverse/lesson2/lesson2.md)
-- [PPT](./reverse/lesson2/lesson2.pptx)
-
-##### 课程作业
-
-1. 完成以下作业，给出wp
-  https://pan.baidu.com/s/14IqLftbQeZ7nfXG6hEmNgA?pwd=Orzy 提取码: Orzy 
-2. 花指令笔记
-3. 思考题（不做强制要求）：直播中讲到，对于可执行文件exe而言，PE文件可选头中AddressOfEntryPoint字段是程序的起始地址，那么这个起始地址是否就是程序中main函数的地址？
-
-#### 💻7月22日 Web方向第三节课-SSTI与Python沙箱逃逸
-
-##### 课前准备
-
-  - 安装好Flask模块
-  - 了解并且区分元组，列表，字典，模块，类，类继承，函数，全局变量，局部变量，域，切片等相关概念
-  - 熟悉python遍历可迭代对象的方式和一些常用函数的用法
-  - 了解并会写基本的HTML
-
-##### 课程内容
-
-  详情见：网站web模块第三节课SSTI与Python沙箱逃逸
-
-  - Flask基础
-  - Python危险函数
-  - SSTI的成因
-  - SSTI的函数逃逸和继承链逃逸
-  - WAF绕过
-
-##### 课程作业
-
-  - 两道题目，要写WP
-
-[NewStarCTF 2023 公开赛道](https://buuoj.cn/challenges#flask%20disk)
-
-[安洵杯 2020\]Normal SSTI | NSSCTF](https://www.nssctf.cn/problem/910)
-
-  - 自己总结一套WAF绕过方式记下笔记
-  -  学有余力的同学可以自己使用Flask开发个小网站，提供一些有用的服务
-
-#### 💀7月24日 PWN方向第二节课
-##### 课程内容：
-   - pwntools使用
-   - 函数调用栈
-   - 栈溢出漏洞基础
-   - ret2text
-   - ret2shellcode
-   - 题目讲解
-- [PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson2_lesson3/pwn.pptx)
-##### 课程作业:
-   - 同第一节课的作业，已经讲解过的也要写WP并提交
-   - 复习讲过的内容，并到做题平台寻找相应类型的题目训练，要求在精不在多，力求举一反三，总结做题方法
-#### 💀7月25日 PWN方向第三节课
-##### 课程内容：
-   - ret2syscall
-   - ret2libc
-   - 题目讲解
-- [PPT](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/pwn/lesson2_lesson3/pwn.pptx)
-##### 课程作业：
-   - 同第二节课的作业
-## 📃 结课考核
 
 
 
