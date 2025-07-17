@@ -43,13 +43,13 @@
 - Web：
 
 ```
-##### PHP语言基础pdf
+PHP语言基础pdf
 
 1. [php基础1](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP1.pdf)
 
 2. [php基础2](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP2.pdf) 
 
-##### 基础
+基础
 
 1. [babysql](https://buuoj.cn/challenges#[极客大挑战2019]BabySQL)
 
@@ -63,7 +63,7 @@
 
 6. [纯净版SSTI](https://buuoj.cn/challenges#[%E7%AC%AC%E4%B8%89%E7%AB%A0%20web%E8%BF%9B%E9%98%B6]SSTI)
 
-##### 进阶
+进阶
 
 1. [稍微难点的sql](https://www.nssctf.cn/problem/387)
 
@@ -77,7 +77,7 @@
 
 6. [有waf版SSTI](https://buuoj.cn/challenges#[NewStarCTF%20%E5%85%AC%E5%BC%80%E8%B5%9B%E8%B5%9B%E9%81%93]BabySSTI_Two)
 
-##### 挑战自我
+挑战自我
 
 1. [更难一点的极客大挑战 2019HardSQL ](https://buuoj.cn/challenges#[极客大挑战2019]HardSQL)
 
@@ -120,6 +120,26 @@
 ```
 
 - Reverse：
+
+```
+基础程序语言
+汇编，c,  python,  java  
+工具
+1.IDA pro 8.3
+2.Detect It Easy
+3.jadx
+4.upx
+5.pycdc
+6.010EditorPortable
+7.pyinstxtractor
+环境配置
+1.VMware,准备一个linux环境
+2.python3.8~3.12的各各大版本
+资源网站：
+吾爱破解/看雪论坛
+刷题网站
+https://www.nssctf.cn/    ##https://ctf.bugku.com ##https://adworld.xctf.org.cn/
+```
 
 - Misc：
 
