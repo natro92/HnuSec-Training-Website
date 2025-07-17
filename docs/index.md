@@ -50,7 +50,7 @@
 
 ##### 基础
 
-1. [babysql](https://buuoj.cn/challenges#[极客大挑战 2019]BabySQL)
+1. [babysql](https://buuoj.cn/challenges#[极客大挑战2019]BabySQL)
 
 2. [SWPUCTF 2021 新生赛finalrce](https://www.nssctf.cn/problem/438)
 
@@ -78,7 +78,7 @@
 
 ##### 挑战自我
 
-1. [更难一点的极客大挑战 2019HardSQL ](https://buuoj.cn/challenges#[极客大挑战 2019]HardSQL)
+1. [更难一点的极客大挑战 2019HardSQL ](https://buuoj.cn/challenges#[极客大挑战2019]HardSQL)
 
 2. [比较复杂一点的题目，关于php](https://www.nssctf.cn/problem/1988)
 
