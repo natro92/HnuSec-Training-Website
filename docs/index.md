@@ -18,7 +18,7 @@
 
  **培训前各个方向的准备**
 
-- 💻**WEB**：[WEB 课前准备](./file)
+- 💻**WEB**：[WEB 课前准备](https://github.com/natro92/HnuSec-Training-Website/blob/main/docs/file/PHP1.pdf)
 - 🕹️**Pwn**：[Pwn 课前准备](./pwn/preparation.md)
 - 🔑**Crypto**：[Crypto 课前准备](./crypto/preparation.md)
 - 👾**Reverse**：[Reverse 课前准备](./reverse/preparation.md)
