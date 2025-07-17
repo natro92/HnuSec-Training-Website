@@ -122,23 +122,35 @@ PHP语言基础pdf
 - Reverse：
 
 ```
+
 基础程序语言
+
 汇编，c,  python,  java  
+
 工具
-1.IDA pro 8.3
-2.Detect It Easy
-3.jadx
-4.upx
-5.pycdc
-6.010EditorPortable
-7.pyinstxtractor
+
+  1.IDA pro 8.3
+  2.Detect It Easy
+  3.jadx
+  4.upx
+  5.pycdc
+  6.010EditorPortable
+  7.pyinstxtractor
+
 环境配置
-1.VMware,准备一个linux环境
-2.python3.8~3.12的各各大版本
+
+  1.VMware,准备一个linux环境
+  2.python3.8~3.12的各各大版本
+
 资源网站：
+
 吾爱破解/看雪论坛
+
 刷题网站
-https://www.nssctf.cn/    ##https://ctf.bugku.com ##https://adworld.xctf.org.cn/
+
+https://www.nssctf.cn/
+https://ctf.bugku.com
+https://adworld.xctf.org.cn/
 ```
 
 - Misc：
