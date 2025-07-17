@@ -18,10 +18,7 @@
 
  **培训前各个方向的准备**
 
-- 💻**WEB**：
-  - [WEB 课前准备](./web/preparation.md)
-  - [WEB 方向指北](./web/guidance.md)
-  - [WEB 课前预热](./web/lesson.md)
+- 💻**WEB**：[WEB 课前准备](./file)
 - 🕹️**Pwn**：[Pwn 课前准备](./pwn/preparation.md)
 - 🔑**Crypto**：[Crypto 课前准备](./crypto/preparation.md)
 - 👾**Reverse**：[Reverse 课前准备](./reverse/preparation.md)
