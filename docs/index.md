@@ -199,7 +199,7 @@ https://adworld.xctf.org.cn/
 | 7.21 | WEB第一节 | PHP基础&命令执行 | unjoke  |
 | 7.22 | Cry第一节 | 密码基础 | m1n9  |
 | 7.23 | pwn第一节 | 栈相关 | iam0range  |
-| 7.24 | Misc第一节 | 各种隐写 | Lu0m0  |
+| 7.24 | Misc第一节 | 各种隐写及流量分析 | Lu0m0  |
 | 7.25 | Re第一节 | 基础+壳 | 漫宿骄盛 |
 | 7.26 | WEB第二节 | php常见漏洞 | banta  |
 | 7.27 | Cry第二节 | 公钥密码RSA | monday  |
@@ -207,7 +207,7 @@ https://adworld.xctf.org.cn/
 | 7.29 | WEB第三节 | sql注入 | chrizsty  |
 | 7.30 | Cry第三节 | 对称密码 | Q1uJu |
 | 7.31 | pwn第二节 | shellcode | crazycat |
-| 8.1 | Misc第二节 | 流量分析 | L1nkStar.  |
+| 8.1 | Misc第二节 | 内存及其他取证 | Lu0m0  |
 | 8.2 | WEB第四节 | python漏洞 | bx33661  |
 | 8.3  | pwn第三节 | 格式化字符串 | AndreiLavig  |
 
