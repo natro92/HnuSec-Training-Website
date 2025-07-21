@@ -287,7 +287,25 @@ https://adworld.xctf.org.cn/
 
 链接: <https://pan.baidu.com/s/1oYzuJHFLuqA5UBfvY9uEow?pwd=walt> 提取码: walt
 
+#### 🤖 7月24日 Misc方向第一节课--各种隐写
 
+##### 课前准备
+
+1. 010编辑器、笔记软件
+2. 了解python基本语法
+3. 了解一下常见隐写手段
+4. 学习linux的常见指令
+
+##### 课程内容
+
+- [讲义](https://hnusec-training.natro92.fun/misc/lesson-1/)
+- Misc方向简单介绍
+- 各种编码
+- Zip、音频、图像、文本等隐写知识点
+
+作业：
+
+可以把BUUCTF平台Misc部分1-16刷一刷[BUUCTF在线评测](https://buuoj.cn/challenges)
 
 
 
