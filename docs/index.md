@@ -250,7 +250,6 @@ https://adworld.xctf.org.cn/
 1. 了解python的基本用法
 2. 网上自行学习下载sagemath并安装gmpy2和Crypto库
 3. 准备好《密码学数学基础》一书
-4. 了解一些古典密码
 
 ##### 课程内容
 
@@ -259,12 +258,15 @@ https://adworld.xctf.org.cn/
 - [讲义](./crypto/lesson-1.md)
 
 - Crypto方向简单介绍
-- 常见古典密码
-- 初等数论
+- 初等数论及RSA概念
+- DES.AES简介
+- 流密码lcg简要
 
 ##### 课程作业
 
-见课程详情（请做好相关笔记）
+python实现基础的RSA,DES,AES加解密(ECB模式),尽力写，实在完成不了可以交部分。
+
+手算伽罗华域GF(2$^8$)中的0x57$*$0x83,提交照片
 
 #### 🤖 7月23日 Pwn方向第一节课-栈相关
 
