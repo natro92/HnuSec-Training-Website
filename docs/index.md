@@ -199,7 +199,7 @@ https://adworld.xctf.org.cn/
 | 7.21 | WEB第一节 | PHP基础&命令执行 | unjoke  |
 | 7.22 | Cry第一节 | 密码基础 | m1n9  |
 | 7.23 | pwn第一节 | 栈相关 | iam0range  |
-| 7.24 | Misc第一节 | 各种隐写 | Lu0m0  |
+| 7.24 | Misc第一节 | 各种隐写及流量分析 | Lu0m0  |
 | 7.25 | Re第一节 | 基础+壳 | 漫宿骄盛 |
 | 7.26 | WEB第二节 | php常见漏洞 | banta  |
 | 7.27 | Cry第二节 | 公钥密码RSA | monday  |
@@ -207,7 +207,7 @@ https://adworld.xctf.org.cn/
 | 7.29 | WEB第三节 | sql注入 | chrizsty  |
 | 7.30 | Cry第三节 | 对称密码 | Q1uJu |
 | 7.31 | pwn第二节 | shellcode | crazycat |
-| 8.1 | Misc第二节 | 流量分析 | L1nkStar.  |
+| 8.1 | Misc第二节 | 内存及其他取证 | Lu0m0  |
 | 8.2 | WEB第四节 | python漏洞 | bx33661  |
 | 8.3  | pwn第三节 | 格式化字符串 | AndreiLavig  |
 
@@ -250,7 +250,6 @@ https://adworld.xctf.org.cn/
 1. 了解python的基本用法
 2. 网上自行学习下载sagemath并安装gmpy2和Crypto库
 3. 准备好《密码学数学基础》一书
-4. 了解一些古典密码
 
 ##### 课程内容
 
@@ -259,12 +258,15 @@ https://adworld.xctf.org.cn/
 - [讲义](./crypto/lesson-1.md)
 
 - Crypto方向简单介绍
-- 常见古典密码
-- 初等数论
+- 初等数论及RSA概念
+- DES.AES简介
+- 流密码lcg简要
 
 ##### 课程作业
 
-见课程详情（请做好相关笔记）
+python实现基础的RSA,DES,AES加解密(ECB模式),尽力写，实在完成不了可以交部分。
+
+手算伽罗华域GF(2$^8$)中的0x57$*$0x83,提交照片
 
 #### 🤖 7月23日 Pwn方向第一节课-栈相关
 
