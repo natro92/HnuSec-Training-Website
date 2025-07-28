@@ -121,6 +121,7 @@ nav:
   - 💻 Web方向:
     - PHP语言漏洞: web/PHP语言的漏洞.md
     - 第三节课讲义: web/lesson-3.md
+    - Python安全: web/Python安全-CTF培训.md
   - 🕹️ Pwn方向:
     - 第一节课讲义: pwn/lesson-1.md
     - 第一节课讲义: pwn/lesson-2.md
