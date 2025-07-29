@@ -343,6 +343,26 @@ base64:https://ctf.xidian.edu.cn/training/14?challenge=562&tab=terminal
 安卓：https://ctf.xidian.edu.cn/training/14?challenge=563
 tea:https://www.nssctf.cn/problem/3327
 
+#### 🐘 8月3日 Pwn方向第三节课-格式化字符串漏洞
+
+##### 课前准备
+
+1. 基础知识的巩固
+2. 深入了解掌握c语言中printf函数的用法
+3. GDB动态调试初步
+   
+
+##### 课程内容
+
+- [讲义](./pwn/lesson-3.md)
+
+- 格式化字符串漏洞
+
+
+##### 课程作业
+- [链接](https://www.nssctf.cn/problem/2932)
+- [链接](https://buuoj.cn/challenges#wdb_2018_2nd_easyfmt)
+- 
 
 ### CTF
 
