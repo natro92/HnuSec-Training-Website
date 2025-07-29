@@ -1,0 +1,438 @@
+<!doctype html><html lang=zh class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=海南大学网络空间安全协会2025年夏季CTF培训><meta name=author content="HnuSec Team"><link href=https://hnusec-training.natro92.fun/crypto/lesson-2/ rel=canonical><link href=../lesson-1/ rel=prev><link href=../../reverse/lesson2/lesson2/ rel=next><link rel=icon href=../../assets/images/favicon.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.16"><title>第二节课讲义 - HnuSec 2025 Summer ☀️ 夏季培训</title><link rel=stylesheet href=../../assets/stylesheets/main.7e37652d.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><script id=__analytics>function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script><script>"undefined"!=typeof __md_analytics&&__md_analytics()</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#rsa class=md-skip> 跳转至 </a> </div> <div data-md-component=announce> </div> <div data-md-color-scheme=default data-md-component=outdated hidden> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=页眉> <a href=../.. title="HnuSec 2025 Summer ☀️ 夏季培训" class="md-header__button md-logo" aria-label="HnuSec 2025 Summer ☀️ 夏季培训" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> HnuSec 2025 Summer ☀️ 夏季培训 </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> 第二节课讲义 </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label=切换到深色模式 type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title=切换到深色模式 for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=indigo data-md-color-accent=indigo aria-label=切换到浅色模式 type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title=切换到浅色模式 for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=搜索 placeholder=搜索 autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=查找> <button type=reset class="md-search__icon md-icon" title=清空当前内容 aria-label=清空当前内容 tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> 正在初始化搜索引擎 </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/natro92/HnuSec-Training-Website title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill=currentColor d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg> </div> <div class=md-source__repository> HnuSec-Training-Website </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=标签 data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> 首页 </a> </li> <li class=md-tabs__item> <a href=../../web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E/ class=md-tabs__link> 💻 Web方向 </a> </li> <li class=md-tabs__item> <a href=../../pwn/lesson-1/ class=md-tabs__link> 🕹️ Pwn方向 </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=../lesson-1/ class=md-tabs__link> 🔑 Crypto方向 </a> </li> <li class=md-tabs__item> <a href=../../reverse/lesson2/lesson2/ class=md-tabs__link> 👾 Reverse方向 </a> </li> <li class=md-tabs__item> <a href=../../misc/preparation/ class=md-tabs__link> 🧩 Misc方向 </a> </li> <li class=md-tabs__item> <a href=../../archives/2025-winter/ class=md-tabs__link> 📚 培训归档 </a> </li> <li class=md-tabs__item> <a href=../../others/about/ class=md-tabs__link> 📖 其他资料 </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=导航栏 data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="HnuSec 2025 Summer ☀️ 夏季培训" class="md-nav__button md-logo" aria-label="HnuSec 2025 Summer ☀️ 夏季培训" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg> </a> HnuSec 2025 Summer ☀️ 夏季培训 </label> <div class=md-nav__source> <a href=https://github.com/natro92/HnuSec-Training-Website title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill=currentColor d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg> </div> <div class=md-source__repository> HnuSec-Training-Website </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../.. class=md-nav__link> <span class=md-ellipsis> 首页 </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../web/PHP%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%8F%E6%B4%9E/ class=md-nav__link> <span class=md-ellipsis> 💻 Web方向 </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../pwn/lesson-1/ class=md-nav__link> <span class=md-ellipsis> 🕹️ Pwn方向 </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4 checked> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex> <span class=md-ellipsis> 🔑 Crypto方向 </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=true> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> 🔑 Crypto方向 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../lesson-1/ class=md-nav__link> <span class=md-ellipsis> 第一节课讲义 </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> 第二节课讲义 </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> 第二节课讲义 </span> </a> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#_1 class=md-nav__link> <span class=md-ellipsis> 加密流程 </span> </a> </li> <li class=md-nav__item> <a href=#n class=md-nav__link> <span class=md-ellipsis> 分解n </span> </a> </li> <li class=md-nav__item> <a href=#_2 class=md-nav__link> <span class=md-ellipsis> 共模攻击 </span> </a> </li> <li class=md-nav__item> <a href=#_3 class=md-nav__link> <span class=md-ellipsis> 更多攻击方法 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../reverse/lesson2/lesson2/ class=md-nav__link> <span class=md-ellipsis> 👾 Reverse方向 </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../misc/preparation/ class=md-nav__link> <span class=md-ellipsis> 🧩 Misc方向 </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../archives/2025-winter/ class=md-nav__link> <span class=md-ellipsis> 📚 培训归档 </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../others/about/ class=md-nav__link> <span class=md-ellipsis> 📖 其他资料 </span> <span class="md-nav__icon md-icon"></span> </a> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#_1 class=md-nav__link> <span class=md-ellipsis> 加密流程 </span> </a> </li> <li class=md-nav__item> <a href=#n class=md-nav__link> <span class=md-ellipsis> 分解n </span> </a> </li> <li class=md-nav__item> <a href=#_2 class=md-nav__link> <span class=md-ellipsis> 共模攻击 </span> </a> </li> <li class=md-nav__item> <a href=#_3 class=md-nav__link> <span class=md-ellipsis> 更多攻击方法 </span> </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=rsa>RSA<a class=headerlink href=#rsa title="Permanent link">&para;</a></h1> <p>RSA是1977年由罗纳德·李维斯特（Ron Rivest）, 阿迪·萨莫尔（Adi Shamir）和 伦纳德·阿德曼（Leonard Adleman）一起提出的. 当时他们三人都在麻省理工学院工作. RSA就是他们三人姓氏开头字母拼在一起组成的</p> <h2 id=_1>加密流程<a class=headerlink href=#_1 title="Permanent link">&para;</a></h2> <ol> <li><strong>选择一对不相等且足够大的质数p，q</strong></li> <li><strong>计算p、q的乘积，记为n</strong></li> </ol> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/e5a529fef8607457c49fdecb4b3b440c.svg></p> <ol> <li><strong>计算n的欧拉函数</strong></li> </ol> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/dfd0f49a9b809c6b7efd41ae9260b228.svg></p> <ol> <li><strong>选择一个与</strong><img alt=image src=https://cdn.nlark.com/yuque/__latex/3c641ea0af3dc7f6dd368c5d7ed75ce0.svg><strong>互素的数e</strong></li> </ol> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/4d509950f8872a6831f602e128d9ba8f.svg>，<img alt=image src=https://cdn.nlark.com/yuque/__latex/e2b5312d4a2c98168072ce1c06df33bb.svg>，一般常见的e为65537</p> <ol> <li><strong>计算e关于</strong><img alt=image src=https://cdn.nlark.com/yuque/__latex/3c641ea0af3dc7f6dd368c5d7ed75ce0.svg><strong>的逆元d</strong></li> </ol> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/d65a3d3ff7295a0ca217df2ffeb8bbbb.svg></p> <ol> <li><strong>将（e，n）作为公钥公开，用于加密；将（d，n）作为私钥保存，用于解密</strong></li> <li><strong>具体加密过程</strong></li> </ol> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/a314fbeb27835bd6db8cf5b5fa4554c6.svg></p> <ol> <li><strong>具体解密过程</strong></li> </ol> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/eb38c443db6fbe3ee8f00729519c2c34.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/0844417b6f1888326f9ad6fccc5b692c.svg></p> <h2 id=n>分解n<a class=headerlink href=#n title="Permanent link">&para;</a></h2> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code><span class=n>e</span> <span class=o>=</span> <span class=mi>65537</span>
+<span class=n>n</span> <span class=o>=</span> <span class=mi>87924348264132406875276140514499937145050893665602592992418171647042491658461</span>
+<span class=n>c</span> <span class=o>=</span> <span class=mi>87677652386897749300638591365341016390128692783949277305987828177045932576708</span>
+</code></pre></div></td></tr></table></div> <p>分解n</p> <p><a href=http://www.factordb.com/ >http://www.factordb.com/</a></p> <p>yafu</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>gmpy2</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+
+<span class=n>p</span> <span class=o>=</span> <span class=mi>275127860351348928173285174381581152299</span>
+
+<span class=n>q</span> <span class=o>=</span> <span class=mi>319576316814478949870590164193048041239</span>
+
+<span class=n>e</span> <span class=o>=</span> <span class=mi>65537</span>
+<span class=n>c</span> <span class=o>=</span> <span class=mi>87677652386897749300638591365341016390128692783949277305987828177045932576708</span>
+
+<span class=n>n</span> <span class=o>=</span> <span class=n>p</span><span class=o>*</span><span class=n>q</span>
+<span class=n>phi</span> <span class=o>=</span> <span class=p>(</span><span class=n>p</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=p>(</span><span class=n>q</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span>
+<span class=n>d</span> <span class=o>=</span> <span class=n>invert</span><span class=p>(</span><span class=n>e</span><span class=p>,</span> <span class=n>phi</span><span class=p>)</span>
+<span class=n>m</span> <span class=o>=</span> <span class=nb>pow</span><span class=p>(</span><span class=n>c</span><span class=p>,</span> <span class=n>d</span><span class=p>,</span> <span class=n>n</span><span class=p>)</span>
+
+
+<span class=nb>print</span><span class=p>(</span><span class=n>long_to_bytes</span><span class=p>(</span><span class=n>m</span><span class=p>))</span>
+<span class=c1># bytes_to_long()</span>
+<span class=c1># LitCTF{factordb!!!}</span>
+</code></pre></div></td></tr></table></div> <h2 id=_2>共模攻击<a class=headerlink href=#_2 title="Permanent link">&para;</a></h2> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+
+<span class=n>p</span> <span class=o>=</span> <span class=n>getPrime</span><span class=p>(</span><span class=mi>512</span><span class=p>)</span>
+<span class=n>q</span> <span class=o>=</span> <span class=n>getPrime</span><span class=p>(</span><span class=mi>512</span><span class=p>)</span>
+
+<span class=n>n</span> <span class=o>=</span> <span class=mi>120294155186626082670474649118722298040433501930335450479777638508444129059776534554344361441717048531505985491664356283524886091709370969857047470362547600390987665105196367975719516115980157839088766927450099353377496192206005171597109864609567336679138620134544004766539483664270351472198486955623315909571</span>
+<span class=n>e1</span> <span class=o>=</span> <span class=mi>38317</span>
+<span class=n>e2</span> <span class=o>=</span> <span class=mi>63409</span>
+
+<span class=n>c1</span> <span class=o>=</span> <span class=mi>42703138696187395030337205860503270214353151588149506110731264952595193757235229215067638858431493587093612397165407221394174690263691095324298012134779703041752810028935711214038835584823385108771901216441784673199846041109074467177891680923593206326788523158180637665813642688824593788192044139055552031622</span>
+<span class=n>c2</span> <span class=o>=</span> <span class=mi>50460092786111470408945316270086812807230253234809303694007902628924057713984397041141665125615735752600114964852157684904429928771531639899496987905067366415806771003121954852465731110629459725994454904159277228514337278105207721011579794604761255522391446534458815389983562890631994726687526070228315925638</span>
+</code></pre></div></td></tr></table></div> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/fe0379630c449475c3cecab7d14e36cf.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/c13c4c090ca8652de738dfda2fe82d46.svg></p> <p>其中<img alt=image src=https://cdn.nlark.com/yuque/__latex/21548f3a841fd6a7387b9f40af0ced7c.svg></p> <p><img alt src=https://cdn.nlark.com/yuque/0/2025/png/42554774/1753276641176-413631e4-3ca7-45a5-b7b6-59e1d032b795.png></p> <p>通过<strong>扩展欧几里得算法</strong>我们可以知道，一定存在一组数<img alt=image src=https://cdn.nlark.com/yuque/__latex/0f714cb2eb24e09ad67263b514b2f3ef.svg>，使得<img alt=image src=https://cdn.nlark.com/yuque/__latex/70d098024e72b668832d8691a630482c.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/3d66748054e01479b66543e5c0b708ca.svg></p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>gmpy2</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+
+
+<span class=n>n</span> <span class=o>=</span> <span class=mi>120294155186626082670474649118722298040433501930335450479777638508444129059776534554344361441717048531505985491664356283524886091709370969857047470362547600390987665105196367975719516115980157839088766927450099353377496192206005171597109864609567336679138620134544004766539483664270351472198486955623315909571</span>
+<span class=n>e1</span> <span class=o>=</span> <span class=mi>38317</span>
+<span class=n>e2</span> <span class=o>=</span> <span class=mi>63409</span>
+
+<span class=n>c1</span> <span class=o>=</span> <span class=mi>42703138696187395030337205860503270214353151588149506110731264952595193757235229215067638858431493587093612397165407221394174690263691095324298012134779703041752810028935711214038835584823385108771901216441784673199846041109074467177891680923593206326788523158180637665813642688824593788192044139055552031622</span>
+<span class=n>c2</span> <span class=o>=</span> <span class=mi>50460092786111470408945316270086812807230253234809303694007902628924057713984397041141665125615735752600114964852157684904429928771531639899496987905067366415806771003121954852465731110629459725994454904159277228514337278105207721011579794604761255522391446534458815389983562890631994726687526070228315925638</span>
+
+<span class=n>_</span><span class=p>,</span> <span class=n>s1</span><span class=p>,</span> <span class=n>s2</span> <span class=o>=</span> <span class=n>gcdext</span><span class=p>(</span><span class=n>e1</span><span class=p>,</span> <span class=n>e2</span><span class=p>)</span>
+<span class=n>m</span> <span class=o>=</span> <span class=nb>pow</span><span class=p>(</span><span class=n>c1</span><span class=p>,</span> <span class=n>s1</span><span class=p>,</span> <span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=nb>pow</span><span class=p>(</span><span class=n>c2</span><span class=p>,</span> <span class=n>s2</span><span class=p>,</span> <span class=n>n</span><span class=p>)</span> <span class=o>%</span> <span class=n>n</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>long_to_bytes</span><span class=p>(</span><span class=n>m</span><span class=p>))</span>
+
+<span class=c1># NSSCTF{same_module_attack!}</span>
+</code></pre></div></td></tr></table></div> <h2 id=_3>更多攻击方法<a class=headerlink href=#_3 title="Permanent link">&para;</a></h2> <p><a href=https://lazzzaro.github.io/2020/05/06/crypto-RSA/ >https://lazzzaro.github.io/2020/05/06/crypto-RSA/</a></p> <p><a href="https://blog.csdn.net/wuyunfeng233/article/details/142326133?ops_request_misc=&request_id=&biz_id=102&utm_term=rsa%E5%B8%B8%E8%A7%81%E6%94%BB%E5%87%BB%E6%96%B9%E6%B3%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-142326133.142^v102^pc_search_result_base7&spm=1018.2226.3001.4187">重生之我是密码学高手|RSA的12种常见的攻击方式_广播攻击rsa-CSDN博客</a></p> <p><a href="https://blog.csdn.net/m0_52842062/article/details/119537547?ops_request_misc=&request_id=&biz_id=102&utm_term=rsa%E5%B8%B8%E8%A7%81%E6%94%BB%E5%87%BB%E6%96%B9%E6%B3%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-119537547.142^v102^pc_search_result_base7&spm=1018.2226.3001.4187">RSA攻击方法总结笔记_rsa低指数攻击-CSDN博客</a></p> <h1 id=_4>格<a class=headerlink href=#_4 title="Permanent link">&para;</a></h1> <h2 id=_5>前置知识<a class=headerlink href=#_5 title="Permanent link">&para;</a></h2> <h3 id=_6>向量和向量空间<a class=headerlink href=#_6 title="Permanent link">&para;</a></h3> <p>以二维向量空间举例，我们可以任意取一个点A，连接原点O和A点，这就构成成了一个向量。我们也可以用A点的坐标来表示这个向量,就像这样<strong>v=</strong>(x,y)</p> <p>向量满足加减、数乘和点积运算，下面举例说明（加粗表示向量）</p> <p><strong>v</strong>=(a , b)，<strong>w</strong>=(c , d)</p> <p><strong>v</strong> + <strong>w</strong> = （a + c，b + d） （减法同理）</p> <p>c * <strong>w </strong>= （c * a， c * b ） （数乘）</p> <p><strong>v</strong> * <strong>w</strong> = a * c + b * d （点积）</p> <p>多维是同理的</p> <p>然后向量还分行向量和列向量，可以简单理解为行向量就是在纸上横着写的向量（确信），列向量就是在纸上竖着写的向量（确信）</p> <h3 id=_7>向量大小和基<a class=headerlink href=#_7 title="Permanent link">&para;</a></h3> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/dc2ddc860454bd21f61bb02671b391ae.svg>用来表示向量的长度，其大小是<img alt=image src=https://cdn.nlark.com/yuque/__latex/0e564ff79d4c4b25b7c219e315308f60.svg>(高中应该就有这个知识点的)</p> <p>这里还有一些关于线性独立的知识点，比如向量空间里有一组向量<img alt=image src=https://cdn.nlark.com/yuque/__latex/0480d9f663a9cd686bae9ee284ce1bbb.svg></p> <p>满足方程<img alt=image src=https://cdn.nlark.com/yuque/__latex/180076bf18106d83a7c4f7eb3880cfe2.svg></p> <p>当<img alt=image src=https://cdn.nlark.com/yuque/__latex/d4a7e7b7fad3da69225d0da9f5431227.svg>全为零时等式才成立，那么这k个向量就是<strong>线性无</strong>关的，反之线性相关</p> <p>而向量空间的基底会要求是一组线性无关的向量，当我们有了这一组向量基，我们就可以<strong>用这个基底来表示这个向量空间中的任意向量</strong></p> <p>拿二维空间举例</p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/901cc1a236fc895a51570f31fe9d7ae7.svg> <img alt=image src=https://cdn.nlark.com/yuque/__latex/84a62d36315b7bc9766e77f05a3868c6.svg>就是一组线性无关的基底，这两个向量就可以表示整个二维平面</p> <p>其实了解一下矩阵会更有帮助，但是我就不介绍了（有试着想写一下，但是发现讲不清楚，还是留给大家的线代老师吧）</p> <p><a href="https://www.bilibili.com/video/BV1aW411Q7x1/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=a01a62f772bf2e577e11004dfef0bde1">线代课程</a>（放一个宋浩老师线代课的链接吧）</p> <h2 id=_8>格定义<a class=headerlink href=#_8 title="Permanent link">&para;</a></h2> <blockquote> <p>推荐文章</p> <p><a href=https://tover.xyz/p/LLL-attack-equation/ >格攻击之小未知数方程求解入门——原理与例子 | Tover's Blog</a> </p> </blockquote> <p>这里先放一个课本上的定义</p> <p><img alt src=https://cdn.nlark.com/yuque/0/2024/jpeg/42554774/1731031878819-11983b36-e144-4468-acf9-e5961f9a255a.jpeg></p> <p>可能看起来比较难懂，但是我们还是从上面那个二维平面出发，我们已经知道了我们可以用一组基底来表示整个二维平面（基底不唯一），我们是通过把这两个向量乘以不同的系数后相加得到的，那么想象一下，我们如果令系数只为整数会怎么样呢？</p> <p>这个时候，我们通过这个基底，就只能得到空间里的一些点，那么这个就是一个整数格</p> <p><img alt src=https://cdn.nlark.com/yuque/0/2024/png/42554774/1731033008919-7ec8338d-05df-4c71-8650-b0c08eb23041.png></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/16943adb004e81c79aff2d9f0a03ebfb.svg>，其中a、b取任意实数</p> <p>靠a、b取整数，则可以得到格</p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/325a9260492930e0332262866dc5985f.svg><img alt=image src=https://cdn.nlark.com/yuque/__latex/2473b60f1288d05f3ec8b6eb30bb9ada.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/27bf0b26953c595fb13949eb4d965aa0.svg></p> <p>把矩阵当作B，向量设为x，就可以写成<img alt=image src=https://cdn.nlark.com/yuque/__latex/d7ac7aef1c24440fe71b14c430d239b3.svg></p> <p>我们把基底写成一个矩阵，那么就可以得到上面定义里的写法，同时这个矩阵的<strong>行列式</strong>的值，叫做这个<strong>基本域的容积</strong></p> <p>同时如果我们扩展到n维向量空间，就是定义里的表示</p> <h2 id=_9>格常见问题<a class=headerlink href=#_9 title="Permanent link">&para;</a></h2> <p>通过上面我们简单了解了一下格是什么，长什么样，那么就要考虑能拿它干什么</p> <p>这就得提一下格上的两个常见问题，一个是最短向量问题（SVP），另一个是最近向量问题（CVP）</p> <p>SVP是指我们要在格L上找到一个最短的非零向量<img alt=image src=https://cdn.nlark.com/yuque/__latex/a770a282bbfa0ae1ec474b7ed311656d.svg>，使得<img alt=image src=https://cdn.nlark.com/yuque/__latex/dc2ddc860454bd21f61bb02671b391ae.svg>最小</p> <h3 id=lll>LLL格基规约<a class=headerlink href=#lll title="Permanent link">&para;</a></h3> <p>这里的运用就是根据关系找到一个基底的矩阵，矩阵中所有数是已知的，然后我们要求解的向量（要求解的未知数构成的向量）是一些数作用在这个矩阵后得到，这个向量就在格上，然后我们期望这个向量是最短向量，以此来求解未知数，下面放一个代码</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span></pre></div></td><td class=code><div><pre><span></span><code># sage
+from gmpy2 import *
+from Crypto.Util.number import *
+#from tqdm import *
+
+a = 134812492661960841508904741709490501744478747431860442812349873283670029478557996515894514952323891966807395438595833662645026902457124893765483848187664404810892289353889878515048084718565523356944401254704006179297186883488636493997227870769852726117603572452948662628907410024781493099700499334357552050587
+b = 1522865915656883867403482317171460381324798227298365523650851184567802496240011768078593938858595296724393891397782658816647243489780661999411811900439319821784266117539188498407648397194849631941074737391852399318951669593881907935220986282638388656503090963153968254244131928887025800088609341714974103921219202972691321661198135553928411002184780139571149772037283749086504201758438589417378336940732926352806256093865255824803202598635567105242590697162972609
+
+
+mat = [[b,0],[a,1]]
+M = Matrix(ZZ,mat)
+qq,pp= M.LLL()[0]   # 最短向量
+
+print(pp)
+print(qq)
+</code></pre></div></td></tr></table></div> <p>要运用LLL算法是有条件的，就是我们要通过这个算法来求最短向量，那么我们要求的向量起码得是最短向量，这就得看一下上面的最短向量存在定理，我们要求解的向量长度满足条件后才是最短向量，才可以用LLL算法，然后格的维数也不能太高，不然准确度不高，耗时也会长。</p> <h2 id=ntru>题目(NTRU)<a class=headerlink href=#ntru title="Permanent link">&para;</a></h2> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>secret</span><span class=w> </span><span class=kn>import</span> <span class=n>flag</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+
+<span class=n>q</span> <span class=o>=</span> <span class=n>getPrime</span><span class=p>(</span><span class=mi>2048</span><span class=p>)</span>
+
+<span class=n>f</span> <span class=o>=</span> <span class=n>getPrime</span><span class=p>(</span><span class=mi>1024</span><span class=p>)</span>
+<span class=n>g</span> <span class=o>=</span> <span class=n>getPrime</span><span class=p>(</span><span class=mi>768</span><span class=p>)</span>
+
+<span class=n>h</span> <span class=o>=</span> <span class=p>(</span><span class=n>inverse</span><span class=p>(</span><span class=n>f</span><span class=p>,</span> <span class=n>q</span><span class=p>)</span> <span class=o>*</span> <span class=n>g</span><span class=p>)</span> <span class=o>%</span> <span class=n>q</span>
+
+<span class=n>m</span> <span class=o>=</span> <span class=n>bytes_to_long</span><span class=p>(</span><span class=n>flag</span><span class=p>)</span>
+
+<span class=n>e</span> <span class=o>=</span> <span class=p>(</span><span class=n>getPrime</span><span class=p>(</span><span class=mi>32</span><span class=p>)</span> <span class=o>*</span> <span class=n>h</span> <span class=o>+</span> <span class=n>m</span><span class=p>)</span> <span class=o>%</span> <span class=n>q</span>
+
+<span class=nb>print</span><span class=p>((</span><span class=n>h</span><span class=p>,</span> <span class=n>q</span><span class=p>))</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>e</span><span class=p>)</span>
+
+<span class=c1># (8916452722821418463248726825721257021744194286874706915832444631771596616116491775091473142798867278598586482678387668986764461265131119164500473719939894343163496325556340181429675937641495981353857724627081847304246987074303722642172988864138967404024201246050387152854001746763104417773214408906879366958729744259612777257542351501592019483745621824894790096639205771421560295175633152877667720038396154571697861326821483170835238092879747297506606983322890706220824261581533324824858599082611886026668788577757970984892292609271082176311433507931993672945925883985629311514143607457603297458439759594085898425992, 31985842636498685945330905726539498901443694955736332073639744466389039373143618920511122288844282849407290205804991634167816417468703459229138891348115191921395278336695684210437130681337971686008048054340499654721317721241239990701099685207253476642931586563363638141636011941268962999641130263828151538489139254625099330199557503153680089387538863574480134898211311252227463870838947777479309928195791241005127445821671684607237706849308372923372795573732000365072815112119533702614620325238183899266147682193892866330678076925199674554569018103164228278742151778832319406135513140669049734660019551179692615505961)</span>
+<span class=c1># 20041713613876382007969284056698149007154248857420752520496829246324512197188211029665990713599667984019715503486507126224558092176392282486689347953069815123212779090783909545244160318938357529307482025697769394114967028564546355310883670462197528011181768588878447856875173263800885048676190978206851268887445527785387532167370943745180538168965461612097037041570912365648125449804109299630958840398397721916860876687808474004391843869813396858468730877627733234832744328768443830669469345926766882446378765847334421595034470639171397587395341977453536859946410431252287203312913117023084978959318406160721042580688</span>
+</code></pre></div></td></tr></table></div> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/008bbfd9d6339ca1c1c8734c75138e73.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/3d158f86ba38df5e604dac427eaf4781.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/09fe210c9939456e80b98ceaf1dce969.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/51d41268f57cfd0990590fff831d9d27.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/8cac6cc7d268e1269536ab77c185fae7.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/748760b3eecaf5bb87058a1d89ab4a4e.svg></p> <p>求解思路，所以要求f和g</p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/008bbfd9d6339ca1c1c8734c75138e73.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/ca95afca67723f67f8f6e440e4b11dd5.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/1bc419a1b72fa170accf8fb1bb6affb7.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/de1a9b18c9f40533122fccb4d123672e.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/5e8dfa6be7c60bef8597c8d8a759162d.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/11127c59d40e14f1be0497eeaa900c61.svg></p> <p><img alt src=https://cdn.nlark.com/yuque/0/2025/png/42554774/1753438740433-651baa1c-241e-4cdd-96a2-806425b136dc.png></p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>random</span><span class=w> </span><span class=kn>import</span> <span class=n>randint</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>gmpy2</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>import</span><span class=w> </span><span class=nn>math</span>
+
+<span class=n>h</span><span class=p>,</span><span class=n>q</span> <span class=o>=</span> <span class=p>(</span><span class=mi>8916452722821418463248726825721257021744194286874706915832444631771596616116491775091473142798867278598586482678387668986764461265131119164500473719939894343163496325556340181429675937641495981353857724627081847304246987074303722642172988864138967404024201246050387152854001746763104417773214408906879366958729744259612777257542351501592019483745621824894790096639205771421560295175633152877667720038396154571697861326821483170835238092879747297506606983322890706220824261581533324824858599082611886026668788577757970984892292609271082176311433507931993672945925883985629311514143607457603297458439759594085898425992</span><span class=p>,</span> <span class=mi>31985842636498685945330905726539498901443694955736332073639744466389039373143618920511122288844282849407290205804991634167816417468703459229138891348115191921395278336695684210437130681337971686008048054340499654721317721241239990701099685207253476642931586563363638141636011941268962999641130263828151538489139254625099330199557503153680089387538863574480134898211311252227463870838947777479309928195791241005127445821671684607237706849308372923372795573732000365072815112119533702614620325238183899266147682193892866330678076925199674554569018103164228278742151778832319406135513140669049734660019551179692615505961</span><span class=p>)</span>
+<span class=n>f</span> <span class=o>=</span> <span class=n>getPrime</span><span class=p>(</span><span class=mi>1024</span><span class=p>)</span>
+<span class=n>g</span> <span class=o>=</span> <span class=n>getPrime</span><span class=p>(</span><span class=mi>768</span><span class=p>)</span>
+
+<span class=n>K</span><span class=o>=</span><span class=mi>2</span><span class=o>**</span><span class=mi>0</span>
+
+<span class=n>e</span><span class=o>=</span><span class=n>math</span><span class=o>.</span><span class=n>e</span>
+<span class=n>pi</span><span class=o>=</span><span class=n>math</span><span class=o>.</span><span class=n>pi</span>
+
+
+<span class=n>n</span> <span class=o>=</span> <span class=mi>2</span>
+<span class=n>det</span> <span class=o>=</span> <span class=n>q</span>
+
+<span class=c1># 行列式的值(赫米特)</span>
+<span class=n>temp1</span><span class=o>=</span><span class=n>gmpy2</span><span class=o>.</span><span class=n>iroot</span><span class=p>(</span><span class=n>n</span><span class=p>,</span><span class=mi>2</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span> <span class=o>*</span> <span class=n>gmpy2</span><span class=o>.</span><span class=n>iroot</span><span class=p>(</span><span class=n>det</span><span class=p>,</span><span class=n>n</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>temp1</span><span class=o>.</span><span class=n>bit_length</span><span class=p>())</span>
+
+<span class=c1># 高斯</span>
+<span class=c1># temp = (n/(2*math.e*math.pi))**(0.5)</span>
+<span class=c1># a= gmpy2.iroot(det,n)[0]</span>
+<span class=c1># temp1=int(temp*a)</span>
+<span class=c1># print(temp1.bit_length())</span>
+
+
+<span class=c1># 向量大小</span>
+<span class=n>temp2</span> <span class=o>=</span> <span class=n>gmpy2</span><span class=o>.</span><span class=n>iroot</span><span class=p>(</span><span class=n>f</span><span class=o>**</span><span class=mi>2</span><span class=o>+</span><span class=n>g</span><span class=o>**</span><span class=mi>2</span><span class=p>,</span><span class=mi>2</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
+<span class=n>temp2</span><span class=o>=</span><span class=nb>int</span><span class=p>(</span><span class=n>temp2</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>temp2</span><span class=o>.</span><span class=n>bit_length</span><span class=p>())</span>
+<span class=k>if</span> <span class=n>temp1</span><span class=o>.</span><span class=n>bit_length</span><span class=p>()</span> <span class=o>&gt;=</span> <span class=n>temp2</span><span class=o>.</span><span class=n>bit_length</span><span class=p>():</span>
+ <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;true&quot;</span><span class=p>)</span>
+<span class=k>else</span><span class=p>:</span>
+ <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;false&quot;</span><span class=p>)</span>
+</code></pre></div></td></tr></table></div> <p>可以得到解题代码为</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>sage.all</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>gmpy2</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+
+<span class=n>h</span><span class=p>,</span><span class=n>p</span><span class=o>=</span><span class=p>(</span><span class=mi>8916452722821418463248726825721257021744194286874706915832444631771596616116491775091473142798867278598586482678387668986764461265131119164500473719939894343163496325556340181429675937641495981353857724627081847304246987074303722642172988864138967404024201246050387152854001746763104417773214408906879366958729744259612777257542351501592019483745621824894790096639205771421560295175633152877667720038396154571697861326821483170835238092879747297506606983322890706220824261581533324824858599082611886026668788577757970984892292609271082176311433507931993672945925883985629311514143607457603297458439759594085898425992</span><span class=p>,</span> <span class=mi>31985842636498685945330905726539498901443694955736332073639744466389039373143618920511122288844282849407290205804991634167816417468703459229138891348115191921395278336695684210437130681337971686008048054340499654721317721241239990701099685207253476642931586563363638141636011941268962999641130263828151538489139254625099330199557503153680089387538863574480134898211311252227463870838947777479309928195791241005127445821671684607237706849308372923372795573732000365072815112119533702614620325238183899266147682193892866330678076925199674554569018103164228278742151778832319406135513140669049734660019551179692615505961</span><span class=p>)</span>
+<span class=n>c</span> <span class=o>=</span><span class=mi>20041713613876382007969284056698149007154248857420752520496829246324512197188211029665990713599667984019715503486507126224558092176392282486689347953069815123212779090783909545244160318938357529307482025697769394114967028564546355310883670462197528011181768588878447856875173263800885048676190978206851268887445527785387532167370943745180538168965461612097037041570912365648125449804109299630958840398397721916860876687808474004391843869813396858468730877627733234832744328768443830669469345926766882446378765847334421595034470639171397587395341977453536859946410431252287203312913117023084978959318406160721042580688</span>
+
+<span class=k>def</span><span class=w> </span><span class=nf>decrypt</span><span class=p>(</span><span class=n>f</span><span class=p>,</span> <span class=n>g</span><span class=p>,</span> <span class=n>c</span><span class=p>):</span>
+    <span class=n>a</span> <span class=o>=</span> <span class=n>c</span> <span class=o>*</span> <span class=n>f</span> <span class=o>%</span> <span class=n>p</span>
+    <span class=k>return</span> <span class=n>a</span> <span class=o>*</span> <span class=nb>pow</span><span class=p>(</span><span class=n>f</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>g</span><span class=p>)</span> <span class=o>%</span> <span class=n>g</span>
+
+<span class=n>M</span> <span class=o>=</span> <span class=n>matrix</span><span class=p>([[</span><span class=mi>1</span><span class=p>,</span> <span class=n>h</span><span class=p>],</span> <span class=p>[</span><span class=mi>0</span><span class=p>,</span> <span class=n>p</span><span class=p>]])</span>
+<span class=n>L</span> <span class=o>=</span> <span class=n>M</span><span class=o>.</span><span class=n>LLL</span><span class=p>()</span>
+<span class=n>shortest_vector</span> <span class=o>=</span> <span class=n>L</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+<span class=k>if</span> <span class=n>shortest_vector</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>:</span>
+    <span class=n>shortest_vector</span> <span class=o>=</span> <span class=o>-</span><span class=n>shortest_vector</span>
+<span class=n>f</span><span class=p>,</span> <span class=n>g</span> <span class=o>=</span> <span class=n>shortest_vector</span>
+<span class=n>m</span> <span class=o>=</span> <span class=n>decrypt</span><span class=p>(</span><span class=n>f</span><span class=p>,</span> <span class=n>g</span><span class=p>,</span> <span class=n>c</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>m</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>long_to_bytes</span><span class=p>(</span><span class=nb>int</span><span class=p>(</span><span class=n>m</span><span class=p>)))</span>
+
+
+<span class=c1># 240545625414656445795697416299836828697587638044418742943136404284040669983557024929358783705357829768985339005</span>
+<span class=c1># flag{Lattice_reduction_magic_on_NTRU#82b08b2d}</span>
+</code></pre></div></td></tr></table></div> <h1 id=coppersmith>coppersmith<a class=headerlink href=#coppersmith title="Permanent link">&para;</a></h1> <h2 id=_10>定理<a class=headerlink href=#_10 title="Permanent link">&para;</a></h2> <p>设N是一个大整数，<img alt=image src=https://cdn.nlark.com/yuque/__latex/77a7678ff8990bc2fb689ce17456e112.svg>是 N 的一个因子，设 <img alt=image src=https://cdn.nlark.com/yuque/__latex/3818937ac554603003e6727783932e9f.svg> 是一个d阶(次数为d)的多项式，令<img alt=image src=https://cdn.nlark.com/yuque/__latex/27cd4a659a47078c4509c4ebae3130cc.svg>，其中<img alt=image src=https://cdn.nlark.com/yuque/__latex/4189974897eb8ca3ffaf44b33f69f4a1.svg>，那么对于给定的<img alt=image src=https://cdn.nlark.com/yuque/__latex/114aa2f44cf57701213e44ab4d347445.svg>，有</p> <ul> <li>在模N意义下，可以快速求出<img alt=image src=https://cdn.nlark.com/yuque/__latex/c3b1dc68366070d78c89795117af75fd.svg>满足<img alt=image src=https://cdn.nlark.com/yuque/__latex/b45c28f6a234e79bcae83a45ff30da10.svg>的全体正整数解（就是求出X以内的根）</li> <li>给定<img alt=image src=https://cdn.nlark.com/yuque/__latex/6100158802e722a88c15efc101fc275b.svg>，可以快速求出模p意义下较小的根（就是求模因子意义下的根，可以解决低位丢失类题目）</li> </ul> <h2 id=_11>原理<a class=headerlink href=#_11 title="Permanent link">&para;</a></h2> <p>有了这个定理，相信大家一定好奇为什么，为什么可以这么做，但是这个原理挺复杂的，下面会简单讲一下我的理解，不一定对，建议直接看截图</p> <p>就是把一个多项式看成一个多维向量，再构造成一个格，之后再运用LLL格基规约找到一个范数最小的向量，然后根据一个引理，就可以找到这个多项式的一个根。</p> <p><img alt src=https://cdn.nlark.com/yuque/0/2025/png/42554774/1738330147438-9ce88761-e403-45ca-9811-bb123b71efc9.png></p> <p><img alt src=https://cdn.nlark.com/yuque/0/2025/png/42554774/1738330127252-455ad20f-96b0-42e7-8691-069701d5bf34.png></p> <h2 id=small_roots>small_roots<a class=headerlink href=#small_roots title="Permanent link">&para;</a></h2> <p>知道这么一个定理后我们期望在代码层面实现它，这就要用到Sagemath里的small_roots这个函数，下面会具体介绍这个函数，首先放一个具体实现</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code><span class=n>R</span><span class=o>.&lt;</span><span class=n>x</span><span class=o>&gt;</span> <span class=o>=</span> <span class=n>PolynomialRing</span><span class=p>(</span><span class=n>Zmod</span><span class=p>(</span><span class=n>n</span><span class=p>),</span> <span class=n>implementation</span><span class=o>=</span><span class=s1>&#39;NTL&#39;</span><span class=p>)</span>
+<span class=n>P</span> <span class=o>=</span> <span class=n>p</span> <span class=o>+</span> <span class=n>x</span>
+<span class=n>low_p</span> <span class=o>=</span> <span class=n>P</span><span class=o>.</span><span class=n>monic</span><span class=p>()</span><span class=o>.</span><span class=n>small_roots</span><span class=p>(</span><span class=n>X</span> <span class=o>=</span> <span class=mi>2</span><span class=o>**</span><span class=mi>340</span><span class=p>,</span> <span class=n>beta</span> <span class=o>=</span> <span class=mf>0.4</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>low_p</span><span class=p>)</span>
+</code></pre></div></td></tr></table></div> <blockquote> <p>PolynomialRing ：构造多项式环</p> <p>Zmod(n) ：模运算</p> <p>implementation='NTL' ：执行 NTL</p> <p>small_roots( X=？ , beta=？ , epsilon=？)：计算多项式的小整数根，返回结果是一个列表</p> <p>X：根的绝对上界，比如说下面那道题目，上界就是2**340</p> <p>beta：coopersmith里的一个参数，给定<img alt=image src=https://cdn.nlark.com/yuque/__latex/6100158802e722a88c15efc101fc275b.svg>，以快速求出模某个p意义下较小的根，其中<img alt=image src=https://cdn.nlark.com/yuque/__latex/69845f2f4b481fd70542f9a94dbfbbbb.svg>，是n的因数，<img alt=image src=https://cdn.nlark.com/yuque/__latex/6100158802e722a88c15efc101fc275b.svg>一般取0.4</p> <p>epsilon：也是coppersmith里的一个参数，程序默认好像是<img alt=image src=https://cdn.nlark.com/yuque/__latex/18183f63e9f26ac5a891ceb08bfae9dc.svg>，平时不太会用到这个参数，需要时加在beta后面就行</p> <p>monic()：用于将多项式的首项系数归一化为1。它接受一个多项式作为参数，然后返回一个新的多项式，其中首项系数已经被归一化为1。这个过程可以简化多项式的表达式，使其更易于计算和分析。 </p> </blockquote> <p>这样简单的使用方法就了解了，可以看看下面的题目，自己运用一下</p> <h2 id=_12>题目<a class=headerlink href=#_12 title="Permanent link">&para;</a></h2> <h3 id=m>m低位丢失<a class=headerlink href=#m title="Permanent link">&para;</a></h3> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code><span class=n>n</span><span class=o>=</span><span class=mi>13112061820685643239663831166928327119579425830632458568801544406506769461279590962772340249183569437559394200635526183698604582385769381159563710823689417274479549627596095398621182995891454516953722025068926293512505383125227579169778946631369961753587856344582257683672313230378603324005337788913902434023431887061454368566100747618582590270385918204656156089053519709536001906964008635708510672550219546894006091483520355436091053866312718431318498783637712773878423777467316605865516248176248780637132615807886272029843770186833425792049108187487338237850806203728217374848799250419859646871057096297020670904211</span>
+<span class=n>e</span><span class=o>=</span><span class=mi>3</span>
+
+<span class=n>m</span><span class=o>=</span><span class=n>random</span><span class=o>.</span><span class=n>getrandbits</span><span class=p>(</span><span class=mi>512</span><span class=p>)</span>
+
+<span class=n>c</span><span class=o>=</span><span class=nb>pow</span><span class=p>(</span><span class=n>m</span><span class=p>,</span><span class=n>e</span><span class=p>,</span><span class=n>n</span><span class=p>)</span><span class=o>=</span><span class=mi>15987554724003100295326076036413163634398600947695096857803937998969441763014731720375196104010794555868069024393647966040593258267888463732184495020709457560043050577198988363754703741636088089472488971050324654162166657678376557110492703712286306868843728466224887550827162442026262163340935333721705267432790268517</span>
+
+<span class=p>((</span><span class=n>m</span><span class=o>&gt;&gt;</span><span class=mi>72</span><span class=p>)</span><span class=o>&lt;&lt;</span><span class=mi>72</span><span class=p>)</span><span class=o>=</span><span class=mi>2519188594271759205757864486097605540135407501571078627238849443561219057751843170540261842677239681908736</span>
+
+<span class=n>long_to_bytes</span><span class=p>(</span><span class=n>m</span><span class=p>)</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s1>&#39;hex&#39;</span><span class=p>)</span><span class=o>=</span>
+</code></pre></div></td></tr></table></div> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/8e60344e76d6a17d46f2863fee2dfb99.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/76592cfcaa777915cd6e200bbb411fd2.svg>表示29，右移3位得到<img alt=image src=https://cdn.nlark.com/yuque/__latex/96dfc028779a6561cbf2cd9c9e6251a2.svg>，再左移三位得到<img alt=image src=https://cdn.nlark.com/yuque/__latex/2ff25d77eeb9dadd6aca4ec5d98a6cdd.svg>，表示24，缺少了101</p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/a98ffd39102357b8575e83e0f61d17d2.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/73b702c4c70282c3bd7e1aa70d21633a.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/6ba778a2b257d9e1c1b97d570c95bfaa.svg></p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>gmpy2</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+
+<span class=n>n</span><span class=o>=</span><span class=mi>13112061820685643239663831166928327119579425830632458568801544406506769461279590962772340249183569437559394200635526183698604582385769381159563710823689417274479549627596095398621182995891454516953722025068926293512505383125227579169778946631369961753587856344582257683672313230378603324005337788913902434023431887061454368566100747618582590270385918204656156089053519709536001906964008635708510672550219546894006091483520355436091053866312718431318498783637712773878423777467316605865516248176248780637132615807886272029843770186833425792049108187487338237850806203728217374848799250419859646871057096297020670904211</span>
+<span class=n>e</span><span class=o>=</span><span class=mi>3</span>
+
+<span class=n>c</span><span class=o>=</span><span class=mi>15987554724003100295326076036413163634398600947695096857803937998969441763014731720375196104010794555868069024393647966040593258267888463732184495020709457560043050577198988363754703741636088089472488971050324654162166657678376557110492703712286306868843728466224887550827162442026262163340935333721705267432790268517</span>
+
+
+<span class=n>m1</span> <span class=o>=</span> <span class=mi>2519188594271759205757864486097605540135407501571078627238849443561219057751843170540261842677239681908736</span>
+
+<span class=n>R</span><span class=o>.&lt;</span><span class=n>x</span><span class=o>&gt;</span> <span class=o>=</span> <span class=n>PolynomialRing</span><span class=p>(</span><span class=n>Zmod</span><span class=p>(</span><span class=n>n</span><span class=p>),</span> <span class=n>implementation</span><span class=o>=</span><span class=s1>&#39;NTL&#39;</span><span class=p>)</span>
+<span class=n>f</span> <span class=o>=</span> <span class=p>(</span><span class=n>m1</span><span class=o>+</span><span class=n>x</span><span class=p>)</span><span class=o>^</span><span class=mi>3</span><span class=o>-</span><span class=n>c</span>
+
+<span class=n>m_low</span> <span class=o>=</span> <span class=n>f</span><span class=o>.</span><span class=n>monic</span><span class=p>()</span><span class=o>.</span><span class=n>small_roots</span><span class=p>(</span><span class=n>X</span> <span class=o>=</span> <span class=mi>2</span><span class=o>**</span><span class=mi>72</span><span class=p>,</span> <span class=n>beta</span> <span class=o>=</span> <span class=mf>0.5</span><span class=p>,</span><span class=n>epsilon</span><span class=o>=</span><span class=mf>0.02</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
+
+<span class=nb>print</span><span class=p>(</span><span class=n>m_low</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>long_to_bytes</span><span class=p>(</span><span class=nb>int</span><span class=p>(</span><span class=n>m1</span><span class=o>+</span><span class=nb>int</span><span class=p>(</span><span class=n>m_low</span><span class=p>))))</span>
+</code></pre></div></td></tr></table></div> <h3 id=p>p低位丢失<a class=headerlink href=#p title="Permanent link">&para;</a></h3> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span>
+<span class=normal>8</span>
+<span class=normal>9</span></pre></div></td><td class=code><div><pre><span></span><code><span class=n>n</span><span class=o>=</span><span class=mi>12784625729032789592766625203074018101354917751492952685083808825504221816847310910447532133616954262271205877651255598995305639194329607493047941212754523879402744065076183778452640602625242851184095546100200565113016690161053808950384458996881574266573992526357954507491397978278604102524731393059303476350167738237822647246425836482533150025923051544431330502522043833872580483142594571802189321599016725741260254170793393777293145010525686561904427613648184843619301241414264343057368192416551134404100386155751297424616254697041043851852081071306219462991969849123668248321130382231769250865190227630009181759219</span>
+
+<span class=n>e</span><span class=o>=</span><span class=mi>65537</span>
+
+<span class=n>m</span><span class=o>=</span><span class=n>random</span><span class=o>.</span><span class=n>getrandbits</span><span class=p>(</span><span class=mi>512</span><span class=p>)</span>
+
+<span class=n>c</span><span class=o>=</span><span class=nb>pow</span><span class=p>(</span><span class=n>m</span><span class=p>,</span><span class=n>e</span><span class=p>,</span><span class=n>n</span><span class=p>)</span><span class=o>=</span><span class=mi>627824086157119245056478875800598959553774250161670787506083253960788230737588761787385686125828765665617567887904228030839535317987589608761534500003128247164233774794784231518212804270056404565710426613938264302998015421153393879729263551292024543756422702956470022959537221269172084619081368498693930550456153543628170306324206266216348386707008661128717431426237486511309767286175518238620230507201952867261283880986868752676549613958785288914989429224582849218395471672295410036858881836363364885164276983237312235831591858044908369376855484127614933545955544787160352042318378588039587911741028067576722790778</span>
+
+<span class=p>((</span><span class=n>p</span><span class=o>&gt;&gt;</span><span class=mi>128</span><span class=p>)</span><span class=o>&lt;&lt;</span><span class=mi>128</span><span class=p>)</span><span class=o>=</span><span class=mi>97522826022187678545924975588711975512906538181361325096919121233043973599759518562689050415761485716705615149641768982838255403594331293651224395590747133152128042950062103156564440155088882592644046069208405360324372057140890317518802130081198060093576841538008960560391380395697098964411821716664506908672</span>
+</code></pre></div></td></tr></table></div> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/58916c955ad48f868f9b4bdeec951c36.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/5aa028bbde3e3a6dafb9e26a1b233949.svg></p> <p><img alt=image src=https://cdn.nlark.com/yuque/__latex/d5410e8f169bfa28b28d82372c4b4f12.svg></p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span></pre></div></td><td class=code><div><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>gmpy2</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>Crypto.Util.number</span><span class=w> </span><span class=kn>import</span> <span class=o>*</span>
+
+<span class=n>n</span><span class=o>=</span><span class=mi>12784625729032789592766625203074018101354917751492952685083808825504221816847310910447532133616954262271205877651255598995305639194329607493047941212754523879402744065076183778452640602625242851184095546100200565113016690161053808950384458996881574266573992526357954507491397978278604102524731393059303476350167738237822647246425836482533150025923051544431330502522043833872580483142594571802189321599016725741260254170793393777293145010525686561904427613648184843619301241414264343057368192416551134404100386155751297424616254697041043851852081071306219462991969849123668248321130382231769250865190227630009181759219</span>
+
+<span class=n>e</span><span class=o>=</span><span class=mi>65537</span>
+
+
+<span class=n>c</span><span class=o>=</span><span class=mi>627824086157119245056478875800598959553774250161670787506083253960788230737588761787385686125828765665617567887904228030839535317987589608761534500003128247164233774794784231518212804270056404565710426613938264302998015421153393879729263551292024543756422702956470022959537221269172084619081368498693930550456153543628170306324206266216348386707008661128717431426237486511309767286175518238620230507201952867261283880986868752676549613958785288914989429224582849218395471672295410036858881836363364885164276983237312235831591858044908369376855484127614933545955544787160352042318378588039587911741028067576722790778</span>
+
+<span class=n>p1</span><span class=o>=</span><span class=mi>97522826022187678545924975588711975512906538181361325096919121233043973599759518562689050415761485716705615149641768982838255403594331293651224395590747133152128042950062103156564440155088882592644046069208405360324372057140890317518802130081198060093576841538008960560391380395697098964411821716664506908672</span>
+
+<span class=n>R</span><span class=o>.&lt;</span><span class=n>x</span><span class=o>&gt;</span> <span class=o>=</span> <span class=n>PolynomialRing</span><span class=p>(</span><span class=n>Zmod</span><span class=p>(</span><span class=n>n</span><span class=p>),</span> <span class=n>implementation</span><span class=o>=</span><span class=s1>&#39;NTL&#39;</span><span class=p>)</span>
+<span class=n>f</span> <span class=o>=</span> <span class=n>p1</span><span class=o>+</span><span class=n>x</span>
+
+<span class=n>p_d</span> <span class=o>=</span> <span class=n>f</span><span class=o>.</span><span class=n>monic</span><span class=p>()</span><span class=o>.</span><span class=n>small_roots</span><span class=p>(</span><span class=n>X</span> <span class=o>=</span> <span class=mi>2</span><span class=o>**</span><span class=mi>128</span><span class=p>,</span> <span class=n>beta</span> <span class=o>=</span> <span class=mf>0.5</span><span class=p>,</span><span class=n>epsilon</span><span class=o>=</span><span class=mf>0.02</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>p1</span><span class=o>+</span><span class=n>p_d</span><span class=p>)</span>
+<span class=n>p</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=n>p1</span><span class=o>+</span><span class=n>p_d</span><span class=p>)</span>
+<span class=n>q</span> <span class=o>=</span> <span class=n>n</span><span class=o>//</span><span class=n>p</span>
+
+<span class=n>phi_n</span> <span class=o>=</span> <span class=p>(</span><span class=n>p</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=p>(</span><span class=n>q</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span>
+<span class=n>d</span> <span class=o>=</span> <span class=n>inverse</span><span class=p>(</span><span class=n>e</span><span class=p>,</span> <span class=n>phi_n</span><span class=p>)</span>
+<span class=n>m</span> <span class=o>=</span> <span class=nb>pow</span><span class=p>(</span><span class=n>c</span><span class=p>,</span> <span class=n>d</span><span class=p>,</span> <span class=n>n</span><span class=p>)</span>
+
+
+<span class=nb>print</span><span class=p>(</span><span class=n>long_to_bytes</span><span class=p>(</span><span class=nb>int</span><span class=p>(</span><span class=n>m</span><span class=p>)))</span>
+</code></pre></div></td></tr></table></div> <aside class=md-source-file> <span class=md-source-file__fact> <span class=md-icon title=最后更新> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg> </span> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年7月27日 04:41:13 UTC">2025年7月27日</span> </span> <span class=md-source-file__fact> <span class=md-icon title=贡献者> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg> </span> <nav> <a href=mailto:2792663789@qq.com>Monday</a> </nav> </span> </aside> <h2 id=__comments>评论</h2> <!-- Insert generated snippet here --> <script src=https://giscus.app/client.js data-repo=natro92/HnuSec-Training-Website data-repo-id=R_kgDOMV0NrA data-category=Announcements data-category-id=DIC_kwDOMV0NrM4CgxEg data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=preferred_color_scheme data-lang=zh-CN data-loading=lazy crossorigin=anonymous async>
+  </script> <!-- Synchronize Giscus theme with palette --> <script>
+  var giscus = document.querySelector("script[src*=giscus]")
+
+  /* Set palette on initial load */
+  var palette = __md_get("__palette")
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark" : "light"
+    giscus.setAttribute("data-theme", theme)
+  }
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]")
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame")
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        )
+      }
+    })
+  })
+</script> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> 回到页面顶部 </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-social> <a href=https://github.com/natro92/HnuSec-Training-Website target=_blank rel=noopener title=github.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill=currentColor d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </a> <a href="https://qm.qq.com/cgi-bin/qm/qr?k=xxx&jump_from=webapi&authKey=xxx" target=_blank rel=noopener title=qm.qq.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill=currentColor d="M434.1 420.4c-11.5 1.4-44.9-52.7-44.9-52.7 0 31.3-16.1 72.2-51 101.8 16.8 5.2 54.8 19.2 45.8 34.4-7.3 12.3-125.5 7.9-159.6 4-34.1 3.8-152.3 8.3-159.6-4-9-15.2 28.9-29.2 45.8-34.4-34.9-29.5-51.1-70.4-51.1-101.8 0 0-33.3 54.1-44.9 52.7-5.4-.6-12.4-29.6 9.3-99.7 10.3-33 22-60.5 40.1-105.8C60.9 98 109.2-.1 224.3-.1 338-.1 387.5 96 384.6 214.9c18.1 45.2 29.9 72.9 40.1 105.8 21.8 70.1 14.7 99.1 9.3 99.7z"/></svg> </a> <a href=https://www.hnusec.com target=_blank rel=noopener title=www.hnusec.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 576 512"><!-- Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill=currentColor d="m48 195.8 209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1c-9.8-4-20.2-6.1-30.8-6.1s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160v296c0 13.3 10.7 24 24 24s24-10.7 24-24zm48 71.7V384c0 53 86 96 192 96s192-43 192-96V267.4l-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["content.code.annotate", "navigation.top", "navigation.tabs", "navigation.indexes", "navigation.expand", "navigation.sections", "navigation.prune"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script> <script src=../../assets/javascripts/bundle.50899def.min.js></script> <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script> </body> </html>
