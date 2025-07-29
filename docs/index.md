@@ -289,7 +289,41 @@ python实现基础的RSA,DES,AES加解密(ECB模式),尽力写，实在完成不
 
 链接: <https://pan.baidu.com/s/1ypq5-nsQPLooZZvtrndVbA?pwd=walt> 提取码: walt
 
+#### 💻 7月27日Crypto方向第二节课-公钥密码RSA
 
+##### 课前准备
+
+1. 了解rsa的加解密流程
+2. 了解格的相关知识点
+3. 了解copperSmith的相关知识点
+
+##### 课程内容
+
+详情见Crypto模块lesson-2
+
+- [讲义](./crypto/lesson-2.md)
+
+- rsa的部分常见攻击方法
+- 格的概念及运用
+- coppersmith定理的理解及运用
+
+##### 课程作业
+
+https://buuoj.cn/challenges#RSA2
+
+https://buuoj.cn/challenges#RSA3
+
+https://buuoj.cn/challenges#Dangerous%20RSA		
+
+https://buuoj.cn/challenges#RSA5	
+
+https://buuoj.cn/challenges#[BJDCTF2020]easyrsa	
+
+https://www.nssctf.cn/problem/2974	
+
+https://www.nssctf.cn/problem/3976	
+
+https://www.nssctf.cn/problem/2176)
 
 
 
