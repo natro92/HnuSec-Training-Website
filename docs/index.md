@@ -351,19 +351,18 @@ tea:https://www.nssctf.cn/problem/3327
 2. 深入了解掌握c语言中printf函数的用法
 3. GDB动态调试初步
    
-
 ##### 课程内容
 
 - [讲义](./pwn/lesson-3.md)
-
 - 格式化字符串漏洞
-
-
-##### 课程作业
-- [链接](https://www.nssctf.cn/problem/2932)
-- [链接](https://buuoj.cn/challenges#wdb_2018_2nd_easyfmt)
+- 任意地址泄露
+- 任意地址写
 - 
+##### 课程作业
+- [任意地址泄露](https://www.nssctf.cn/problem/2932)
+- [任意地址写修改got表](https://buuoj.cn/challenges#wdb_2018_2nd_easyfmt)
 
+  
 ### CTF
 
 这部分还在紧锣密鼓地安排中，课程开始前会公布。
