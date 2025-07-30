@@ -350,7 +350,7 @@ base64:https://ctf.xidian.edu.cn/training/14?challenge=562&tab=terminal
 
 tea:https://www.nssctf.cn/problem/3327
 
-#### 💻 7月28日Web方向第三节课-sql注入
+#### 💻 7月29日Web方向第三节课-sql注入
 
 ##### 讲义&作业
 
