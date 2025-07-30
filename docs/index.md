@@ -343,6 +343,21 @@ base64:https://ctf.xidian.edu.cn/training/14?challenge=562&tab=terminal
 安卓：https://ctf.xidian.edu.cn/training/14?challenge=563
 tea:https://www.nssctf.cn/problem/3327
 
+#### 💻 7月29日 WEB方向第三节课-sql注入
+
+##### 讲义
+
+讲义 https://www.yuque.com/yuqueyonghulcrjty/gy0gy7/abd11wwurweswo5w?singleDoc# 《sql注入课程准备》
+
+##### 课程作业
+1. 自行安装一个MySQL（无论什么系统windows或者linux都可）
+2. 将这节课前半部分的命令，操作自行做一遍
+3. （主要）搭建一个sqli-labs，可以使用docker搭建（https://hub.docker.com/r/acgpiano/sqli-labs），也用phpstudy搭建（https://github.com/Audi-1/sqli-labs）
+最少需要完成sqli-lab的前10关，有兴趣可以继续往下做
+4. 这里还有你必须要完成的几道题目
+[SWPUCTF 2021 新生赛]easy_sql
+[LitCTF 2023]这是什么？SQL ！注一下 ！（这道题有进阶做法，上传一个木马文件，可以尝试）
+
 
 ### CTF
 
