@@ -350,6 +350,11 @@ base64:https://ctf.xidian.edu.cn/training/14?challenge=562&tab=terminal
 
 tea:https://www.nssctf.cn/problem/3327
 
+#### 💻 7月28日Web方向第三节课-sql注入
+
+##### 讲义&作业
+
+web第三节课作业已经同步到讲义https://www.yuque.com/yuqueyonghulcrjty/gy0gy7/abd11wwurweswo5w?singleDoc# 《sql注入课程准备》
 
 ### CTF
 
