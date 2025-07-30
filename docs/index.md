@@ -354,7 +354,7 @@ tea:https://www.nssctf.cn/problem/3327
 
 ##### 讲义&作业
 
-web第三节课作业已经同步到讲义https://www.yuque.com/yuqueyonghulcrjty/gy0gy7/abd11wwurweswo5w?singleDoc# 《sql注入课程准备》
+web第三节课《sql注入课程准备》https://www.yuque.com/yuqueyonghulcrjty/gy0gy7/abd11wwurweswo5w?singleDoc
 
 ### CTF
 
