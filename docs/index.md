@@ -356,6 +356,12 @@ tea:https://www.nssctf.cn/problem/3327
 
 web第三节课《sql注入课程准备》https://www.yuque.com/yuqueyonghulcrjty/gy0gy7/abd11wwurweswo5w?singleDoc
 
+#### 💻 7月31日Pwn方向第二节课-shellcode
+
+##### 讲义&作业
+
+链接: https://pan.baidu.com/s/1qFhV1v_LdnF9Jpt8uLIexg?pwd=1i8r 提取码: 1i8r 
+
 ### CTF
 
 这部分还在紧锣密鼓地安排中，课程开始前会公布。
