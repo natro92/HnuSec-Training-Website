@@ -130,7 +130,7 @@ fmtstr_payload(offset, writes, numbwritten=0, write_size='byte')
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/49997581/1753813147117-2915f36f-94ce-4ad6-8d79-c926974ba5f6.png)
 
-这样我们就可以使用诸葛连弩了，我们使用格式化字符串漏洞，将offset_2改为offset_3，这样的话我们就可以实现一段四个链的地址了，像这样：
+我们使用格式化字符串漏洞，将offset_2改为offset_3，这样的话我们就可以实现一段四个链的地址了，像这样：
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/49997581/1753813147073-b10b3b15-06e5-43ac-a995-c1c46efc6e81.png)
 
